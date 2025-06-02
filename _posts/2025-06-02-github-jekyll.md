@@ -129,3 +129,8 @@ ci.yml に以下を追加
 
 Youtube、X なども更新しているのでよかったらみてください!!
 ゲーム開発もしているのでそちらの記事もぜひ ☺️
+
+YouTube チャンネル
+[たいようのゲーム開発チャンネル](https://www.youtube.com/@taiyou-game-w5t)  
+問い合わせはこちらまで
+taiyou.game.channel@gmail.com
