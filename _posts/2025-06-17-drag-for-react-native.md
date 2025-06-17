@@ -230,3 +230,13 @@ const panResponder = useMemo(
 現状ユーザーがドラッグを開始すると `wordPositions` 全体でループ処理してしまいます。  
  そのため、極端に単語数が多い場合などはカクカクになってしまいます。  
  なので、表示する単語数に制限をかけたりページごとに分割するたどの対策が必要になります。
+
+## おわりに
+
+Youtube、X なども更新しているのでよかったらみてください!!
+ゲーム開発もしているのでそちらの記事もぜひ ☺️
+
+YouTube チャンネル
+[たいようのゲーム開発チャンネル](https://www.youtube.com/@taiyou-game-w5t)
+問い合わせはこちらまで  
+taiyou.game.channel@gmail.com
