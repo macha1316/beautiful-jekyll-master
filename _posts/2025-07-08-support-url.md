@@ -25,4 +25,4 @@ taiyou.game.channel@gmail.com
 
 ## プライバシーポリシー
 
-[プライバシーポリシーはこちら](/privacy-policy)
+[プライバシーポリシーはこちら](/2025-07-08-privacy-policy-url/)
