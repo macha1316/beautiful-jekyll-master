@@ -13,7 +13,7 @@ author: taiyou
 何かお困りのことがあれば、下記までご連絡ください。
 
 サポートメール  
-taiyou.game.channel@gmail.com
+hiromacha1116@icloud.com
 
 ---
 
