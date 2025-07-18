@@ -4,18 +4,28 @@ title: 自己紹介
 subtitle:
 ---
 
-たいようといいます。
-趣味のゲーム開発の進捗と技術的なつぶやきをしています。
+たいようといいます。  
+アプリ開発と技術記事執筆が好きで、日々新しいことに挑戦しています。
 
-<!-- - I rock a great mustache
-- I'm extremely loyal to my family -->
+### スキル・できること
 
-### My story
+- フロントエンド: React, Next.js, TypeScript, JavaScript
+- バックエンド: Rust, C#, Golang, AWS, Docker
+- モバイル: React Native, Expo, Tauri
+- その他: ブログ運営、動画編集 など
 
-工事中 🚧
+### 取り組んでいること
 
-<!-- To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions. -->
+- 英語学習アプリ『Eigo Read』開発中
+- カジュアルゲームの個人開発
+- 技術記事を Qiita や自サイトで執筆
 
-### SNS
+### 趣味
 
-工事中 🚧
+- 筋トレ
+- ゲーム
+
+### お仕事も受付中
+
+- Web/アプリ開発、技術記事執筆などご相談ください
+- お気軽にメールください: hiromacha1116@icloud.com
