@@ -54,13 +54,6 @@ Jekyll では`_config.yml`に設定するだけで勝手に内部で設定して
 
 ## おわりに
 
-自分はアナリティクスをとっても簡単に設定できて感動しました ☺️  
-無料でここまでできるのに感謝です!
+その他の記事もぜひご覧ください！
 
-Youtube、X なども更新しているのでよかったらみてください!!  
-ゲーム開発もしているのでそちらの記事もぜひ ☺️
-
-YouTube チャンネル
-[たいようのゲーム開発チャンネル](https://www.youtube.com/@taiyou-game-w5t)  
-問い合わせはこちらまで
-taiyou.game.channel@gmail.com
+**お問い合わせ:** hiromacha1116@icloud.com

@@ -12,7 +12,7 @@ subtitle:
 - フロントエンド: React, Next.js, TypeScript, JavaScript
 - バックエンド: Rust, C#, Golang, AWS, Docker
 - モバイル: React Native, Expo, Tauri
-- その他: ブログ運営、動画編集 など
+- その他: サイト運営、動画編集 など
 
 ### 取り組んでいること
 

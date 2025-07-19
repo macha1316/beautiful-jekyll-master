@@ -233,10 +233,6 @@ const panResponder = useMemo(
 
 ## おわりに
 
-Youtube、X なども更新しているのでよかったらみてください!!
-ゲーム開発もしているのでそちらの記事もぜひ ☺️
+その他の記事もぜひご覧ください！
 
-YouTube チャンネル
-[たいようのゲーム開発チャンネル](https://www.youtube.com/@taiyou-game-w5t)
-問い合わせはこちらまで  
-taiyou.game.channel@gmail.com
+**お問い合わせ:** hiromacha1116@icloud.com
