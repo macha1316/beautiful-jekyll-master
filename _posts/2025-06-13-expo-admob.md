@@ -2,7 +2,7 @@
 layout: post
 title: expoでgoogle admobを導入してみた
 # subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
-cover-img: /assets/img/expo_admob.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/expo_admob.png
 share-img: /assets/img/expo_admob.png
 tags: [expo, admob, google admob]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Eigo Read サポート
-cover-img: /assets/img/eigo-read.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
 tags: [サポート, eigo read]

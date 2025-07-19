@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[FirebaseError: Firebase Storage: Object '' does not exist. (storage/object-not-found)]の時に確認すべきこと"
-cover-img: /assets/img/firestorage-logo.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/firestorage-logo.png
 share-img: /assets/img/firestorage-logo.png
 tags: [fireStorage, firebase, object-not-found, react, react-native, expo]

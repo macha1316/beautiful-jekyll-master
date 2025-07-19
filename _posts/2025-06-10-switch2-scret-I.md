@@ -2,7 +2,7 @@
 layout: post
 title: Switch2ひみつ展のエリアIへの行き方
 # subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
-cover-img: /assets/img/2025-06-10/scret.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-10/scret.png
 share-img: /assets/img/2025-06-10/scret.png
 tags: [ひみつ展, switch2]

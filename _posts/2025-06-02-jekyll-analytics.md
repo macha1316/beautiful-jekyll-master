@@ -2,7 +2,7 @@
 layout: post
 title: GitHub Pages × JekyllにGoogle Analyticsをつける
 # subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
-cover-img: /assets/img/GitHub.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
 tags: [tech, Jekyll]

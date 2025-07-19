@@ -2,7 +2,7 @@
 layout: post
 title: ランダムに単語を返してくれる random-word-api 使ってみた
 # subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
-cover-img: /assets/img/2025-06-17/random-word-api_bg.png
+cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.png
 share-img: /assets/img/2025-06-17/random-word-api_bg.png
 tags: [curl, api, typescript, random-word-api]
