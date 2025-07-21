@@ -21,19 +21,14 @@ common-js:
 
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
-<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
-{% include head.html %}
+  <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+  {% include head.html %}
 
-<body>
-  {% include gtm_body.html %}
-
-  {% include nav.html %}
-
-  {{ content }}
-
-  {% include footer.html %}
-
-  {% include footer-scripts.html %}
-
-</body>
+  <body>
+    <!-- admax -->
+    <script src="https://adm.shinobi.jp/s/a1ec7e895c3c1cda330f1fbc26871205"></script>
+    <!-- admax -->
+    {% include gtm_body.html %} {% include nav.html %} {{ content }} {% include
+    footer.html %} {% include footer-scripts.html %}
+  </body>
 </html>
