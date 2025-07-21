@@ -7,10 +7,44 @@ layout: base
 <main
   class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}"
 >
-  <div class="row">
-    <div
-      class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}"
-    >
+  <div class="main-row">
+    <div class="left-container">
+      <div>
+        <!-- admax -->
+        <script src="https://adm.shinobi.jp/s/891b90b77c0ece933c0125938b7a0bb2"></script>
+        <!-- admax -->
+      </div>
+      <div>
+        <strong>おすすめの記事</strong>
+        <ul class="sidebar-list">
+          <li><a href="/2025-06-24-eigo-read-1/">Eigo Read紹介</a></li>
+          <li>
+            <a href="/2025-07-19-fire-storage-err/"
+              >[FirebaseError: Firebase...</a
+            >
+          </li>
+          <li><a href="/2025-07-18-expo-env/">expoで作成したアプリを...</a></li>
+        </ul>
+        <strong>おすすめアプリ</strong>
+        <ul class="sidebar-list">
+          <li>
+            <a
+              href="https://apps.apple.com/app/eigo-read/id6748108116"
+              target="_blank"
+              >Eigo Read</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
+              target="_blank"
+              >倉庫番</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="center-container">
       {% if page.gh-repo %} {% assign gh_split = page.gh-repo | split:'/' %} {%
       assign gh_user = gh_split[0] %} {% assign gh_repo = gh_split[1] %}
 
@@ -112,6 +146,14 @@ layout: base
         {% endif %}
       </ul>
       {% include comments.html %}
+    </div>
+    <div class="right-container">
+      <div>
+        <!-- admax -->
+        <script src="https://adm.shinobi.jp/s/891b90b77c0ece933c0125938b7a0bb2"></script>
+        <!-- admax -->
+      </div>
+      <div></div>
     </div>
   </div>
 </main>

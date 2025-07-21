@@ -1129,3 +1129,52 @@ pre {
     display: inline-block;
   }
 }
+
+/* @media (max-width: 1200px) {
+  .right-container {
+    display: none;
+  }
+} */
+
+.main-row {
+  display: flex;
+}
+.left-container {
+  width: 200px;
+  min-width: 100px;
+  padding-right: 2.25rem;
+}
+
+.right-container {
+  width: 200px;
+  min-width: 100px;
+  padding-left: 2.25rem;
+  
+}
+
+.center-container {
+  flex: 1;
+  min-width: 0;
+  
+}
+
+/* 幅が狭いとき、サイドバー非表示 */
+@media (max-width: 900px) {
+  .right-container {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .left-container {
+    display: none;
+  }
+}
+
+.sidebar-list {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+}
+.sidebar-list li {
+  margin-bottom: 8px;
+  font-size: 0.98em;
+}
