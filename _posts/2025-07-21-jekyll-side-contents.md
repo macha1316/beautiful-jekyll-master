@@ -2,9 +2,9 @@
 layout: post
 title: "jekyll で作成したサイトにサイドバー広告つけてみた"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/firestorage-logo.png
-share-img: /assets/img/firestorage-logo.png
-tags: [fireStorage, firebase, object-not-found, react, react-native, expo]
+thumbnail-img: /assets/img/GitHub.png
+share-img: /assets/img/GitHub.png
+tags: [jekyll, github, 広告, 再度コンテンツ]
 author: taiyou
 ---
 
