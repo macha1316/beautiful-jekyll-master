@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Eigo Read プライバシーポリシー
+title: 英語長文リーダー プライバシーポリシー
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
-tags: [プライバシーポリシー, eigo read]
+tags: [プライバシーポリシー, 英語長文リーダー]
 author: taiyou
 ---
 
 プライバシーポリシー
 
-Eigo Read（以下「当アプリ」）は、ユーザーのプライバシーを尊重し、以下の方針に基づき個人情報を取り扱います。
+英語長文リーダー（以下「当アプリ」）は、ユーザーのプライバシーを尊重し、以下の方針に基づき個人情報を取り扱います。
 
 1. 収集する情報
 

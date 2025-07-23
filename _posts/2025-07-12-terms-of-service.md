@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Eigo Read 利用規約
+title: 英語長文リーダー 利用規約
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
-tags: [利用規約, eigo read]
+tags: [利用規約, 英語長文リーダー]
 author: taiyou
 ---
 
 利用規約
 
-この利用規約（以下、「本規約」といいます。）は、Eigo Read（以下、「本アプリ」といいます。）の利用条件を定めるものです。  
+この利用規約（以下、「本規約」といいます。）は、英語長文リーダー（以下、「本アプリ」といいます。）の利用条件を定めるものです。  
 本アプリをご利用になる前に、以下の規約を必ずお読みください。
 
 ⸻

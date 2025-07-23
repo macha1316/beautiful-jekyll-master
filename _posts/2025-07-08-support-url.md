@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Eigo Read サポート
+title: 英語長文リーダー サポート
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
-tags: [サポート, eigo read]
+tags: [サポート, 英語長文リーダー]
 author: taiyou
 ---
 
-# Eigo Read サポートページ
+# 英語長文リーダー サポートページ
 
 何かお困りのことがあれば、下記までご連絡ください。
 
