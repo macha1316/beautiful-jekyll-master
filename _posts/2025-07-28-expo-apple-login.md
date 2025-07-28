@@ -21,6 +21,7 @@ Expo + firebase で管理しているアプリに Apple SignIn を実装して�
 ## 完成形
 
 このような形で firebase の Authentication にアカウントが追加されます。
+<img src="/assets//img//2025-07-28/1.png" alt="sdk" style="max-width: 600px;" />
 <br>
 <br>
 
