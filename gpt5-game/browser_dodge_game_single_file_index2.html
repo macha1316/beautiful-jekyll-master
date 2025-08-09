@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Dodge! – Items & Sound</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #0f1226; color: #e6e9ff; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    #wrap { display: grid; place-items: center; height: 100%; }
+    canvas { background: radial-gradient(1200px 800px at 50% 30%, #1b2250, #0f1226); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35); touch-action: none; }
+    #hud { position: fixed; top: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; pointer-events: none; font-weight: 700; letter-spacing: .4px; }
+    .pill { backdrop-filter: blur(8px); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 8px 12px; }
+    #btns { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: none; gap: 16px; }
+    .btn { width: 96px; height: 96px; border-radius: 50%; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08); color: #fff; font-size: 28px; display: grid; place-items: center; user-select: none; }
+    .btn:active { transform: scale(.98); }
+    #overlay { position: fixed; inset: 0; display: grid; place-items: center; backdrop-filter: blur(6px); background: rgba(10,12,26,.55); }
+    #card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15); border-radius: 16px; padding: 24px; width: min(92vw, 420px); text-align: center; }
+    #card h1 { margin: 0 0 8px; font-size: 24px; }
+    #card p { margin: 6px 0 16px; color: #c8ccff; }
+    #card button { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,.2); background: #5865f2; color: #fff; font-weight: 700; font-size: 16px; }
+    @media (pointer: coarse) { #btns { display: flex; } }
+  </style>
+</head>
+<body>
+  <div id="wrap"><canvas id="game" width="420" height="700"></canvas></div>
+  <div id="hud">
+    <div class="pill">Score: <span id="score">0</span></div>
+    <div class="pill">Best: <span id="best">0</span></div>
+    <div class="pill" id="status">Ready</div>
+  </div>
+    <div class="pill">Best: <span id="best">0</span></div>
+  </div>
+  <div id="btns" aria-hidden="true">
+    <div class="btn" id="left">⟵</div>
+    <div class="btn" id="right">⟶</div>
+  </div>
+  <div id="overlay">
+    <div id="card">
+      <h1>Dodge!</h1>
+      <p>避けながらアイテムを取ってパワーアップ！</p>
+      <button id="start">Start</button>
+    </div>
+  </div>
+  <audio id="bgm" src="bgm.mp3" loop></audio>
+  <audio id="se-item" src="item.mp3"></audio>
+  <audio id="se-hit" src="hit.mp3"></audio>
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+
+    // ---- audio ----
+    let AC = null, bgm = null, bgmTimer = null;
+    function ensureAudio(){ if(!AC){ AC = new (window.AudioContext||window.webkitAudioContext)(); } }
+    function playBeep(freq=440, dur=0.08, vol=0.15){
+      if(!AC) return; const o = AC.createOscillator(); const g = AC.createGain();
+      o.type='sine'; o.frequency.value=freq; g.gain.value=vol; o.connect(g).connect(AC.destination);
+      const t=AC.currentTime; o.start(t); o.stop(t+dur);
+      g.gain.exponentialRampToValueAtTime(0.0001, t+dur);
+    }
+    function startBgm(){
+      ensureAudio();
+      stopBgm();
+      const g = AC.createGain(); g.gain.value=0.05; g.connect(AC.destination);
+      const o = AC.createOscillator(); o.type='triangle'; o.connect(g); o.start();
+      const notes = [220, 277, 330, 440, 330, 277]; let i=0;
+      bgmTimer = setInterval(()=>{ o.frequency.value = notes[i%notes.length]; i++; }, 280);
+      bgm = {o, g};
+    }
+    function stopBgm(){ if(bgm){ bgm.o.stop(); bgm.g.disconnect(); bgm=null; } if(bgmTimer){ clearInterval(bgmTimer); bgmTimer=null; } }
+
+    // ---- state ----
+    const state = {
+      playing: false,
+      t: 0,
+      score: 0,
+      best: Number(localStorage.getItem('best-dodge')||0),
+      player: { x: W/2, y: H-80, r: 18, vx: 0 },
+      inputs: { left: false, right: false },
+      obstacles: [],
+      items: [],
+      spawnEvery: 60, // enemy frames
+      itemEvery: 180, // item frames
+      shieldUntil: 0,
+      slowUntil: 0,
+    };
+    document.getElementById('best').textContent = state.best;
+    const statusEl = document.getElementById('status');
+
+    // ---- input ----
+    addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft' || e.key === 'a') state.inputs.left = true;
+      if (e.key === 'ArrowRight' || e.key === 'd') state.inputs.right = true;
+      if (!state.playing && (e.key === ' ' || e.key==='Enter')) start();
+    });
+    addEventListener('keyup', e => {
+      if (e.key === 'ArrowLeft' || e.key === 'a') state.inputs.left = false;
+      if (e.key === 'ArrowRight' || e.key === 'd') state.inputs.right = false;
+    });
+    // touch buttons
+    const leftBtn = document.getElementById('left');
+    const rightBtn = document.getElementById('right');
+    const setHold = (btn, key, on) => {
+      const p = e => { e.preventDefault(); state.inputs[key] = on; };
+      btn.addEventListener('pointerdown', p);
+      btn.addEventListener('pointerup', e=>{state.inputs[key]=false;});
+      btn.addEventListener('pointerleave', e=>{state.inputs[key]=false;});
+      btn.addEventListener('contextmenu', e=>e.preventDefault());
+    };
+    setHold(leftBtn, 'left', true);
+    setHold(rightBtn, 'right', true);
+
+    // ---- helpers ----
+    const R = Math.random;
+    function rand(min, max){ return R()*(max-min)+min; }
+    function clamp(v, mi, ma){ return Math.max(mi, Math.min(ma, v)); }
+    function now(){ return state.t; }
+    function hasShield(){ return state.shieldUntil > now(); }
+    function isSlow(){ return state.slowUntil > now(); }
+
+    // ---- gameplay ----
+    function reset(){
+      state.t = 0; state.score = 0; state.player.x = W/2; state.player.vx = 0;
+      state.obstacles = []; state.items = []; state.spawnEvery = 60; state.itemEvery = 180;
+      state.shieldUntil = 0; state.slowUntil = 0; statusEl.textContent = 'Ready';
+      document.getElementById('score').textContent = '0';
+    }
+
+    function start(){
+      reset();
+      state.playing = true;
+      document.getElementById('overlay').style.display = 'none';
+      ensureAudio(); AC.resume && AC.resume(); startBgm();
+      loop();
+    }
+
+    function end(){
+      state.playing = false; stopBgm();
+      if (state.score > state.best){ state.best = state.score; localStorage.setItem('best-dodge', state.best); }
+      document.getElementById('best').textContent = state.best;
+      const card = document.getElementById('card');
+      card.innerHTML = `<h1>Game Over</h1><p>Score: <b>${state.score}</b></p><button id="restart">Retry</button>`;
+      document.getElementById('overlay').style.display = 'grid';
+      document.getElementById('restart').onclick = start;
+    }
+
+    function spawnObstacle(){
+      const w = rand(30, 80);
+      const x = rand(10, W - w - 10);
+      let speed = rand(2.0, 4.5) + state.t*0.0008;
+      if (isSlow()) speed *= 0.5;
+      state.obstacles.push({ x, y: -20, w, h: rand(14, 24), v: speed });
+    }
+
+    function spawnItem(){
+      // types: shield, slow, coin
+      const types = ['shield','slow','coin'];
+      const type = types[(Math.random()*types.length)|0];
+      const x = rand(20, W-20); const y=-20; const v = rand(2.0,3.0);
+      state.items.push({type, x, y, r: 12, v});
+    }
+
+    function pickup(it){
+      if(it.type==='coin'){ state.score += 5; playBeep(880, 0.06, 0.12); }
+      if(it.type==='shield'){ state.shieldUntil = state.t + 60*6; statusEl.textContent='Shield'; playBeep(660,0.1,0.12); }
+      if(it.type==='slow'){ state.slowUntil = state.t + 60*4; statusEl.textContent='Slow'; playBeep(330,0.14,0.12); }
+      document.getElementById('score').textContent = state.score;
+    }
+
+    function update(){
+      state.t++;
+      // spawn rate accelerates
+      const enemyRate = Math.max(18, Math.floor(state.spawnEvery - state.t*0.01));
+      if (state.t % enemyRate === 0) spawnObstacle();
+      if (state.t % Math.max(120, Math.floor(state.itemEvery - state.t*0.005)) === 0) spawnItem();
+
+      // clear status when buffs end
+      if(!hasShield() && !isSlow()) statusEl.textContent = '—';
+
+      // player
+      const acc = 0.9; const fric = 0.86; const maxV = 6.2;
+      const dir = (state.inputs.left? -1:0) + (state.inputs.right? 1:0);
+      state.player.vx += dir*acc;
+      state.player.vx *= fric;
+      state.player.vx = clamp(state.player.vx, -maxV, maxV);
+      state.player.x = clamp(state.player.x + state.player.vx, 18, W-18);
+
+      // obstacles
+      for (const o of state.obstacles){ o.v = isSlow()? o.v*0.98 : o.v; o.y += o.v; }
+      state.obstacles = state.obstacles.filter(o => o.y < H+40);
+
+      // items
+      for (const it of state.items){ it.y += it.v; }
+      state.items = state.items.filter(it => it.y < H+30);
+
+      // scoring
+      if (state.t % 30 === 0){ state.score++; document.getElementById('score').textContent = state.score; }
+
+      // collisions (circle-rect) obstacles
+      const p = state.player;
+      for (const o of state.obstacles){
+        const cx = clamp(p.x, o.x, o.x+o.w);
+        const cy = clamp(p.y, o.y, o.y+o.h);
+        const dx = p.x - cx, dy = p.y - cy;
+        if (dx*dx + dy*dy < p.r*p.r){
+          if (hasShield()){
+            // consume shield
+            state.shieldUntil = 0; statusEl.textContent='—';
+            playBeep(520,0.09,0.12); // mild hit
+            // push obstacle away
+            o.y += 50;
+          } else {
+            playBeep(180,0.2,0.2); end();
+          }
+          break;
+        }
+      }
+      // item pickups (circle-circle)
+      for (let i=state.items.length-1;i>=0;i--){
+        const it = state.items[i];
+        const dx = state.player.x - it.x, dy = state.player.y - it.y;
+        if (dx*dx + dy*dy < (state.player.r+it.r)*(state.player.r+it.r)){
+          pickup(it); state.items.splice(i,1);
+        }
+      }
+    }
+
+    // ---- render ----
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+
+      // subtle star background
+      for (let i=0;i<24;i++){
+        const y = (state.t*0.6 + i*40) % (H+40) - 40;
+        ctx.globalAlpha = .12 + (i%3)*.05; ctx.fillStyle = '#c5cbff';
+        ctx.fillRect((i*37)%W, y, 2, 8);
+      }
+      ctx.globalAlpha = 1;
+
+      // player: ship style
+      const p = state.player;
+      // glow
+      const grd = ctx.createRadialGradient(p.x, p.y, 2, p.x, p.y, 38);
+      grd.addColorStop(0, '#9ad0ff'); grd.addColorStop(1, 'rgba(154,208,255,0)');
+      ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(p.x, p.y, 24, 0, Math.PI*2); ctx.fill();
+      // body
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(clamp(p.vx, -4, 4)*0.05);
+      ctx.fillStyle = '#8bd3ff';
+      ctx.beginPath();
+      ctx.moveTo(0, -18); // nose
+      ctx.lineTo(14, 14);
+      ctx.quadraticCurveTo(0, 8, -14, 14);
+      ctx.closePath(); ctx.fill();
+      // canopy
+      ctx.fillStyle = '#e6f6ff';
+      ctx.beginPath(); ctx.ellipse(0, -4, 6, 8, 0, 0, Math.PI*2); ctx.fill();
+      // shield ring
+      if (hasShield()){
+        ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(80,200,255,0.9)';
+        ctx.beginPath(); ctx.arc(0,0, 22, 0, Math.PI*2); ctx.stroke();
+      }
+      ctx.restore();
+
+      // obstacles
+      for (const o of state.obstacles){
+        ctx.fillStyle = 'rgba(255,255,255,.08)';
+        ctx.fillRect(o.x-6, o.y-6, o.w+12, o.h+12);
+        ctx.fillStyle = '#f25f5c';
+        ctx.fillRect(o.x, o.y, o.w, o.h);
+      }
+
+      // items
+      for (const it of state.items){
+        if (it.type==='coin'){ ctx.fillStyle = '#ffd166'; }
+        else if (it.type==='shield'){ ctx.fillStyle = '#4cc9f0'; }
+        else { ctx.fillStyle = '#bde0fe'; }
+        ctx.beginPath(); ctx.arc(it.x, it.y, it.r, 0, Math.PI*2); ctx.fill();
+        // icon mark
+        ctx.fillStyle = 'rgba(0,0,0,.25)';
+        if (it.type==='coin') { ctx.fillRect(it.x-4, it.y-8, 8, 16); }
+        if (it.type==='shield') { ctx.beginPath(); ctx.arc(it.x, it.y+2, 8, Math.PI, 0); ctx.lineTo(it.x, it.y-6); ctx.closePath(); ctx.fill(); }
+        if (it.type==='slow') { ctx.fillRect(it.x-6, it.y-2, 12, 4); }
+      }
+    }
+
+    function loop(){
+      if (!state.playing) return;
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    document.getElementById('start').onclick = start;
+
+    // resize to fit device while keeping aspect
+    function fit(){
+      const s = Math.min(innerWidth/ (W+0), innerHeight/(H+0));
+      canvas.style.width = Math.floor(W*s) + 'px';
+      canvas.style.height = Math.floor(H*s) + 'px';
+    }
+    addEventListener('resize', fit); fit();
+  </script>
+</body>
+</html>
