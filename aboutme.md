@@ -7,6 +7,8 @@ subtitle:
 たいようといいます。  
 アプリ開発と技術記事執筆が好きで、日々新しいことに挑戦しています。
 
+<img src="/assets//img//introduction.jpeg" alt="sdk" style="max-width: 300px;" />
+
 ### スキル・できること
 
 - フロントエンド: React, Next.js, TypeScript, JavaScript
