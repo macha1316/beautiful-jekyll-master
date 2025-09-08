@@ -2,8 +2,8 @@
 layout: post
 title: "ゆめ日記サポートページ"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-08-24/2.png
-share-img: /assets/img/2025-08-24/2.png
+thumbnail-img: /assets/img/dream_jurnal.png
+share-img: /assets/img/dream_jurnal.png
 tags: [ゆめ日記, サポートページ]
 author: taiyou
 ---
