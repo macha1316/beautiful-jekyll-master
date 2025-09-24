@@ -4,30 +4,31 @@ title: 自己紹介
 subtitle:
 ---
 
-たいようといいます。  
-アプリ開発と技術記事執筆が好きで、日々新しいことに挑戦しています。
+アプリ開発が好きで、日々新しいことに挑戦しています。
+そこで、なら開発中の様子やらを発信したら面白いのでは？と思いこのサイトと Youtube を立ち上げました。
 
-<img src="/assets//img//introduction.jpeg" alt="sdk" style="max-width: 300px;" />
+### 主な開発環境
 
-### スキル・できること
-
-- フロントエンド: React, Next.js, TypeScript, JavaScript
-- バックエンド: Rust, C#, Golang, AWS, Docker
-- モバイル: React Native, Expo, Tauri
-- その他: サイト運営、動画編集 など
+- Expo, React Native, TypeScript
+- Unity, C#
 
 ### 取り組んでいること
 
-- 英語学習アプリ『英語長文リーダー』開発中
-- カジュアルゲームの個人開発
-- 技術記事を Qiita や自サイトで執筆
+- IOS 向けアプリの制作
+- Youtube での発信
+- このサイト
 
-### 趣味
+### その他の趣味
 
 - 筋トレ
-- ゲーム
+- 本を読む
+- アニメを垂れ流し
+- Youtube 垂れ流し
 
-### お仕事も受付中
+### SNS
 
-- Web/アプリ開発、技術記事執筆などご相談ください
-- お気軽にメールください: hiromacha1116@icloud.com
+↓ 下部ヘッダーからどうぞ ↓
+
+### 連絡先
+
+お気軽にメールください: hiromacha1116@icloud.com
