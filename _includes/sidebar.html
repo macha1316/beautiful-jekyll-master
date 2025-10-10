@@ -1,0 +1,186 @@
+{% assign current_url = include.current_url | default: page.url %}
+{% assign recent_limit = include.recent_limit | default: 5 %}
+
+<div class="sidebar-stack">
+  <div class="sidebar-card">
+    <div class="sidebar-card__title">新着記事</div>
+    <ul class="sidebar-card__list">
+      {% assign recent_count = 0 %}
+      {% for post_item in site.posts %}
+        {% if post_item.url != current_url %}
+          {% assign thumb = post_item["thumbnail-img"] | default: post_item["cover-img"] | default: post_item["share-img"] %}
+          {% assign thumb_url = "" %}
+          {% if thumb %}
+            {% if thumb contains '://' %}
+              {% assign thumb_url = thumb %}
+            {% else %}
+              {% assign thumb_url = thumb | relative_url %}
+            {% endif %}
+          {% endif %}
+          <li>
+            <a
+              href="{{ post_item.url | relative_url }}"
+              class="sidebar-card__link {% if thumb_url != "" %}sidebar-card__link--media{% endif %}"
+            >
+              {% if thumb_url != "" %}
+                <span class="sidebar-card__thumb">
+                  <img
+                    src="{{ thumb_url }}"
+                    alt="{{ post_item.title | strip_html | escape }}"
+                    loading="lazy"
+                  />
+                </span>
+              {% endif %}
+              <span class="sidebar-card__content">
+                <span class="sidebar-card__text">
+                  {{ post_item.title | truncate: 38, "…" }}
+                </span>
+                <span class="sidebar-card__meta">
+                  {{ post_item.date | date: "%Y-%m-%d" }}
+                </span>
+              </span>
+            </a>
+          </li>
+          {% assign recent_count = recent_count | plus: 1 %}
+          {% if recent_count == recent_limit %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if recent_count == 0 %}
+        <li>
+          <span class="sidebar-card__empty">最新の記事はありません</span>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="sidebar-slot-ad">
+    <div class="sidebar-slot-ad__label">Sponsored</div>
+    <div class="sidebar-slot-ad__body">
+      <div class="sidebar-slot-ad__placeholder">
+      </div>
+    </div>
+    <div class="sidebar-slot-ad__note">広告</div>
+  </div>
+
+  <div class="sidebar-card sidebar-card--suggested">
+    <div class="sidebar-card__title">おすすめの記事</div>
+    <ul class="sidebar-card__list">
+      {% assign recommended_posts = site.data.sidebar.recommended_posts %}
+      {% if recommended_posts %}
+        {% for item in recommended_posts %}
+          {% assign item_thumb = item.image %}
+          {% assign item_thumb_url = "" %}
+          {% if item_thumb %}
+            {% if item_thumb contains '://' %}
+              {% assign item_thumb_url = item_thumb %}
+            {% else %}
+              {% assign item_thumb_url = item_thumb | relative_url %}
+            {% endif %}
+          {% endif %}
+          {% assign item_url = item.url %}
+          {% assign item_href = "" %}
+          {% if item_url %}
+            {% if item_url contains '://' %}
+              {% assign item_href = item_url %}
+            {% else %}
+              {% assign item_href = item_url | relative_url %}
+            {% endif %}
+          {% endif %}
+          <li>
+            <a
+              href="{{ item_href | default: '#' }}"
+              class="sidebar-card__link {% if item_thumb_url != "" %}sidebar-card__link--media{% endif %}"
+              {% if item_url contains '://' or item.external %}target="_blank" rel="noopener"{% endif %}
+            >
+              {% if item_thumb_url != "" %}
+                <span class="sidebar-card__thumb">
+                  <img
+                    src="{{ item_thumb_url }}"
+                    alt="{{ item.title | default: item.url | strip_html | escape }}"
+                    loading="lazy"
+                  />
+                </span>
+              {% endif %}
+              <span class="sidebar-card__content">
+                <span class="sidebar-card__text">
+                  {{ item.title | default: item.url | truncate: 40, "…" }}
+                </span>
+                {% if item.subtitle %}
+                  <span class="sidebar-card__meta">
+                    {{ item.subtitle }}
+                  </span>
+                {% endif %}
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li>
+          <span class="sidebar-card__empty">おすすめ記事が設定されていません</span>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="sidebar-card sidebar-card--apps">
+    <div class="sidebar-card__title">おすすめアプリ</div>
+    <ul class="sidebar-card__list">
+      {% assign recommended_apps = site.data.sidebar.recommended_apps %}
+      {% if recommended_apps %}
+        {% for item in recommended_apps %}
+          {% assign item_thumb = item.image %}
+          {% assign item_thumb_url = "" %}
+          {% if item_thumb %}
+            {% if item_thumb contains '://' %}
+              {% assign item_thumb_url = item_thumb %}
+            {% else %}
+              {% assign item_thumb_url = item_thumb | relative_url %}
+            {% endif %}
+          {% endif %}
+          {% assign item_url = item.url %}
+          {% assign item_href = "" %}
+          {% if item_url %}
+            {% if item_url contains '://' %}
+              {% assign item_href = item_url %}
+            {% else %}
+              {% assign item_href = item_url | relative_url %}
+            {% endif %}
+          {% endif %}
+          <li>
+            <a
+              href="{{ item_href | default: '#' }}"
+              class="sidebar-card__link {% if item_thumb_url != "" %}sidebar-card__link--media{% endif %}"
+              {% if item_url contains '://' or item.external %}target="_blank" rel="noopener"{% endif %}
+            >
+              {% if item_thumb_url != "" %}
+                <span class="sidebar-card__thumb">
+                  <img
+                    src="{{ item_thumb_url }}"
+                    alt="{{ item.title | default: item.url | strip_html | escape }}"
+                    loading="lazy"
+                  />
+                </span>
+              {% endif %}
+              <span class="sidebar-card__content">
+                <span class="sidebar-card__text">
+                  {{ item.title | default: item.url | truncate: 40, "…" }}
+                </span>
+                {% if item.subtitle %}
+                  <span class="sidebar-card__meta">
+                    {{ item.subtitle }}
+                  </span>
+                {% endif %}
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li>
+          <span class="sidebar-card__empty">おすすめアプリが設定されていません</span>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
