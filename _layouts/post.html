@@ -71,6 +71,61 @@ layout: base
   .right-container .sidebar-card__list li a:active {
     transform: translateY(1px);
   }
+  .right-container .sidebar-card__list li a.sidebar-card__link--media {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .right-container .sidebar-card__link--media {
+    gap: 12px;
+  }
+  .right-container .sidebar-card__meta {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: rgba(49, 69, 109, 0.58);
+  }
+  .right-container .sidebar-card__text {
+    color: inherit;
+    font-weight: 600;
+  }
+  .right-container .sidebar-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+  }
+  .right-container .sidebar-card__thumb {
+    width: 60px;
+    min-width: 60px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(59, 130, 246, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 22px -20px rgba(37, 99, 235, 0.7);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .right-container .sidebar-card__thumb img {
+    width: 100%;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    display: block;
+  }
+  .right-container .sidebar-card__link--media:hover .sidebar-card__thumb {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 26px -22px rgba(37, 99, 235, 0.8);
+  }
+  .right-container .sidebar-card__empty {
+    display: block;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    color: rgba(49, 69, 109, 0.6);
+  }
   .right-container .ext {
     opacity: 0.75;
     font-size: 0.82em;
@@ -225,6 +280,50 @@ layout: base
     </div>
     <div class="right-container">
       <div class="sidebar-stack">
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">新着記事</div>
+          <ul class="sidebar-card__list">
+            {% assign recent_count = 0 %} {% for post_item in site.posts %} {%
+            if post_item.url != page.url %} {% assign thumb =
+            post_item["thumbnail-img"] | default: post_item["cover-img"] |
+            default: post_item["share-img"] %} {% assign thumb_url = "" %} {% if
+            thumb %} {% if thumb contains '://' %} {% assign thumb_url = thumb
+            %} {% else %} {% assign thumb_url = thumb | relative_url %} {% endif
+            %} {% endif %}
+            <li>
+              <a
+                href="{{ post_item.url | relative_url }}"
+                class="sidebar-card__link {% if thumb %}sidebar-card__link--media{% endif %}"
+              >
+                {% if thumb %}
+                <span class="sidebar-card__thumb">
+                  <img
+                    src="{{ thumb_url }}"
+                    alt="{{ post_item.title | strip_html | escape }}"
+                    loading="lazy"
+                  />
+                </span>
+                {% endif %}
+                <span class="sidebar-card__content">
+                  <span class="sidebar-card__text">
+                    {{ post_item.title | truncate: 38, "…" }}
+                  </span>
+                  <span class="sidebar-card__meta">
+                    {{ post_item.date | date: "%Y-%m-%d" }}
+                  </span>
+                </span>
+              </a>
+            </li>
+            {% assign recent_count = recent_count | plus: 1 %} {% if
+            recent_count == 5 %} {% break %} {% endif %} {% endif %} {% endfor
+            %} {% if recent_count == 0 %}
+            <li>
+              <span class="sidebar-card__empty">最新の記事はありません</span>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
         <div class="sidebar-card">
           <div class="sidebar-card__title">おすすめの記事</div>
           <ul class="sidebar-card__list">
