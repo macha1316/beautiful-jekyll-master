@@ -1158,10 +1158,10 @@ pre {
 }
 
 .right-container {
-  width: 200px;
-  min-width: 100px;
+  width: clamp(260px, 24vw, 320px);
+  min-width: 200px;
   padding-left: 2.25rem;
-  
+  flex-shrink: 0;
 }
 
 .center-container {

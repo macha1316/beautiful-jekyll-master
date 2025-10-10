@@ -5,18 +5,25 @@ layout: base
 {% include header.html type="post" %}
 <style>
   /* Scoped to post layout only */
-  .left-container .sidebar-stack {
-    display: grid;
-    gap: 16px;
+  .right-container .sidebar-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  .left-container .sidebar-card {
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 12px;
-    padding: 16px 16px 12px;
-    background: #ffffff; /* force white for readability */
-    box-shadow: none;
+  .right-container .sidebar-card {
+    border: 1px solid rgba(203, 213, 225, 0.6);
+    border-radius: 18px;
+    padding: 20px 22px 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #fffbf5 42%, #f4fbff 100%);
+    color: #31456d;
+    box-shadow: 0 26px 48px -34px rgba(148, 163, 184, 0.55);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
-  .left-container .sidebar-card__title {
+  .right-container .sidebar-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 30px 52px -32px rgba(99, 179, 237, 0.52);
+  }
+  .right-container .sidebar-card__title {
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 0.01em;
@@ -24,9 +31,9 @@ layout: base
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #ffffff;
+    color: #274887;
   }
-  .left-container .sidebar-card__title::before {
+  .right-container .sidebar-card__title::before {
     content: "";
     width: 6px;
     height: 6px;
@@ -34,64 +41,76 @@ layout: base
     background: linear-gradient(180deg, #4f8cff, #7ec8ff);
     display: inline-block;
   }
-  .left-container .sidebar-card__list {
+  .right-container .sidebar-card__list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 4px;
+    gap: 6px;
   }
-  .left-container .sidebar-card__list li + li {
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  .right-container .sidebar-card__list li + li {
+    border-top: 1px solid rgba(191, 202, 218, 0.55);
+    padding-top: 6px;
   }
-  .left-container .sidebar-card__list li a {
+  .right-container .sidebar-card__list li a {
     display: block;
     text-decoration: none;
-    padding: 10px 0;
-    border-radius: 6px;
+    padding: 12px 0;
+    border-radius: 8px;
     line-height: 1.45;
     font-size: 0.97rem;
     font-weight: 500;
-    color: #ffffff;
-    transition: transform 0.05s ease, text-decoration-color 0.15s ease;
+    color: #3a5da0;
+    transition: background-color 0.15s ease, color 0.15s ease,
+      transform 0.05s ease;
   }
-  .left-container .sidebar-card__list li a:hover {
-    text-decoration: underline;
+  .right-container .sidebar-card__list li a:hover {
+    background-color: rgba(125, 211, 252, 0.22);
+    color: #22498b;
   }
-  .left-container .sidebar-card__list li a:active {
+  .right-container .sidebar-card__list li a:active {
     transform: translateY(1px);
   }
-  .left-container .ext {
-    opacity: 0.6;
-    font-size: 0.85em;
+  .right-container .ext {
+    opacity: 0.75;
+    font-size: 0.82em;
     margin-left: 6px;
-    color: #dddddd;
+    color: #6f8dc6;
   }
 
   /* Compact on smaller screens */
   @media (max-width: 991px) {
-    .left-container .sidebar-card {
+    .right-container .sidebar-card {
       padding: 12px;
     }
-    .left-container .sidebar-card__list li a {
+    .right-container .sidebar-card__list li a {
       padding: 8px;
     }
   }
 
   /* Dark mode support if site uses prefers-color-scheme */
   @media (prefers-color-scheme: dark) {
-    .left-container .sidebar-card {
-      background: #101113;
-      border-color: #2a2b2e;
-      box-shadow: none;
+    .right-container .sidebar-card {
+      background: linear-gradient(135deg, #101728 0%, #182645 100%);
+      border-color: rgba(148, 163, 184, 0.28);
+      box-shadow: 0 22px 36px -28px rgba(96, 165, 250, 0.6);
+      color: #e8f0ff;
+    }
+    .right-container .sidebar-card:hover {
+      box-shadow: 0 26px 44px -26px rgba(125, 211, 252, 0.68);
+    }
+    .right-container .sidebar-card__list li + li {
+      border-top: 1px solid rgba(148, 163, 184, 0.22);
+    }
+    .right-container .sidebar-card__list li a {
+      color: #e5edff;
+    }
+    .right-container .sidebar-card__list li a:hover {
+      background-color: rgba(148, 163, 184, 0.12);
       color: #ffffff;
     }
-    .left-container .sidebar-card__list li + li {
-      border-top: 1px solid #2a2b2e;
-    }
-    .left-container .sidebar-card__list li a:hover {
-      text-decoration: underline;
-      color: #ffffff;
+    .right-container .ext {
+      color: rgba(226, 232, 240, 0.6);
     }
   }
 </style>
@@ -100,53 +119,7 @@ layout: base
   class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}"
 >
   <div class="main-row">
-    <div class="left-container">
-      <div>
-        <!-- admax -->
-        <!-- <script src="https://adm.shinobi.jp/s/891b90b77c0ece933c0125938b7a0bb2"></script> -->
-        <!-- admax -->
-      </div>
-      <div class="sidebar-stack">
-        <div class="sidebar-card">
-          <div class="sidebar-card__title">おすすめの記事</div>
-          <ul class="sidebar-card__list">
-            <li>
-              <a href="/2025-06-24-eigo-read-1/">英語長文リーダー紹介</a>
-            </li>
-            <li>
-              <a href="/2025-07-19-fire-storage-err/"
-                >[FirebaseError: Firebase...</a
-              >
-            </li>
-            <li>
-              <a href="/2025-07-18-expo-env/">expoで作成したアプリを...</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sidebar-card">
-          <div class="sidebar-card__title">おすすめアプリ</div>
-          <ul class="sidebar-card__list">
-            <li>
-              <a
-                href="https://apps.apple.com/app/eigo-read/id6748108116"
-                target="_blank"
-              >
-                英語長文リーダー <span class="ext">↗</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
-                target="_blank"
-              >
-                倉庫番 <span class="ext">↗</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div class="left-container"></div>
     <div class="center-container">
       {% if page.gh-repo %} {% assign gh_split = page.gh-repo | split:'/' %} {%
       assign gh_user = gh_split[0] %} {% assign gh_repo = gh_split[1] %}
@@ -251,12 +224,46 @@ layout: base
       {% include comments.html %}
     </div>
     <div class="right-container">
-      <div>
-        <!-- admax -->
-        <!-- <script src="https://adm.shinobi.jp/s/891b90b77c0ece933c0125938b7a0bb2"></script> -->
-        <!-- admax -->
+      <div class="sidebar-stack">
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">おすすめの記事</div>
+          <ul class="sidebar-card__list">
+            <li>
+              <a href="/2025-06-24-eigo-read-1/">英語長文リーダー紹介</a>
+            </li>
+            <li>
+              <a href="/2025-07-19-fire-storage-err/"
+                >[FirebaseError: Firebase...</a
+              >
+            </li>
+            <li>
+              <a href="/2025-07-18-expo-env/">expoで作成したアプリを...</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card__title">おすすめアプリ</div>
+          <ul class="sidebar-card__list">
+            <li>
+              <a
+                href="https://apps.apple.com/app/eigo-read/id6748108116"
+                target="_blank"
+              >
+                英語長文リーダー <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
+                target="_blank"
+              >
+                倉庫番 <span class="ext">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </main>
