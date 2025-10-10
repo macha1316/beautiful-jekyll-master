@@ -120,6 +120,14 @@ layout: base
     transform: translateY(-2px);
     box-shadow: 0 18px 26px -22px rgba(37, 99, 235, 0.8);
   }
+  .right-container .sidebar-card--suggested .sidebar-card__list li a,
+  .right-container .sidebar-card--apps .sidebar-card__list li a {
+    font-size: clamp(0.9rem, 0.95rem, 1rem);
+  }
+  .right-container .sidebar-card--apps .sidebar-card__text,
+  .right-container .sidebar-card--suggested .sidebar-card__text {
+    line-height: 1.35;
+  }
   .right-container .sidebar-card__empty {
     display: block;
     padding: 12px 0;
@@ -324,42 +332,125 @@ layout: base
           </ul>
         </div>
 
-        <div class="sidebar-card">
+        <div class="sidebar-card sidebar-card--suggested">
           <div class="sidebar-card__title">おすすめの記事</div>
           <ul class="sidebar-card__list">
-            <li>
-              <a href="/2025-06-24-eigo-read-1/">英語長文リーダー紹介</a>
-            </li>
-            <li>
-              <a href="/2025-07-19-fire-storage-err/"
-                >[FirebaseError: Firebase...</a
-              >
-            </li>
-            <li>
-              <a href="/2025-07-18-expo-env/">expoで作成したアプリを...</a>
-            </li>
+            {% assign recommended_posts = site.data.sidebar.recommended_posts %}
+            {% if recommended_posts %}
+              {% for item in recommended_posts %}
+                {% assign item_thumb = item.image %}
+                {% assign item_thumb_url = "" %}
+                {% if item_thumb %}
+                  {% if item_thumb contains '://' %}
+                    {% assign item_thumb_url = item_thumb %}
+                  {% else %}
+                    {% assign item_thumb_url = item_thumb | relative_url %}
+                  {% endif %}
+                {% endif %}
+                {% assign item_url = item.url %}
+                {% assign item_href = "" %}
+                {% if item_url %}
+                  {% if item_url contains '://' %}
+                    {% assign item_href = item_url %}
+                  {% else %}
+                    {% assign item_href = item_url | relative_url %}
+                  {% endif %}
+                {% endif %}
+                <li>
+                  <a
+                    href="{{ item_href | default: '#' }}"
+                    class="sidebar-card__link {% if item_thumb_url != "" %}sidebar-card__link--media{% endif %}"
+                    {% if item_url contains '://' or item.external %}target="_blank" rel="noopener"{% endif %}
+                  >
+                    {% if item_thumb_url != "" %}
+                      <span class="sidebar-card__thumb">
+                        <img
+                          src="{{ item_thumb_url }}"
+                          alt="{{ item.title | default: item.url | strip_html | escape }}"
+                          loading="lazy"
+                        />
+                      </span>
+                    {% endif %}
+                    <span class="sidebar-card__content">
+                      <span class="sidebar-card__text">
+                        {{ item.title | default: item.url | truncate: 40, "…" }}
+                        {% if item_url contains '://' or item.external %}
+                        {% endif %}
+                      </span>
+                      {% if item.subtitle %}
+                        <span class="sidebar-card__meta">
+                          {{ item.subtitle }}
+                        </span>
+                      {% endif %}
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            {% else %}
+              <li>
+                <span class="sidebar-card__empty">おすすめ記事が設定されていません</span>
+              </li>
+            {% endif %}
           </ul>
         </div>
 
-        <div class="sidebar-card">
+        <div class="sidebar-card sidebar-card--apps">
           <div class="sidebar-card__title">おすすめアプリ</div>
           <ul class="sidebar-card__list">
-            <li>
-              <a
-                href="https://apps.apple.com/app/eigo-read/id6748108116"
-                target="_blank"
-              >
-                英語長文リーダー <span class="ext">↗</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
-                target="_blank"
-              >
-                倉庫番 <span class="ext">↗</span>
-              </a>
-            </li>
+            {% assign recommended_apps = site.data.sidebar.recommended_apps %}
+            {% if recommended_apps %}
+              {% for item in recommended_apps %}
+                {% assign item_thumb = item.image %}
+                {% assign item_thumb_url = "" %}
+                {% if item_thumb %}
+                  {% if item_thumb contains '://' %}
+                    {% assign item_thumb_url = item_thumb %}
+                  {% else %}
+                    {% assign item_thumb_url = item_thumb | relative_url %}
+                  {% endif %}
+                {% endif %}
+                {% assign item_url = item.url %}
+                {% assign item_href = "" %}
+                {% if item_url %}
+                  {% if item_url contains '://' %}
+                    {% assign item_href = item_url %}
+                  {% else %}
+                    {% assign item_href = item_url | relative_url %}
+                  {% endif %}
+                {% endif %}
+                <li>
+                  <a
+                    href="{{ item_href | default: '#' }}"
+                    class="sidebar-card__link {% if item_thumb_url != "" %}sidebar-card__link--media{% endif %}"
+                    {% if item_url contains '://' or item.external %}target="_blank" rel="noopener"{% endif %}
+                  >
+                    {% if item_thumb_url != "" %}
+                      <span class="sidebar-card__thumb">
+                        <img
+                          src="{{ item_thumb_url }}"
+                          alt="{{ item.title | default: item.url | strip_html | escape }}"
+                          loading="lazy"
+                        />
+                      </span>
+                    {% endif %}
+                    <span class="sidebar-card__content">
+                      <span class="sidebar-card__text">
+                        {{ item.title | default: item.url | truncate: 40, "…" }}
+                      </span>
+                      {% if item.subtitle %}
+                        <span class="sidebar-card__meta">
+                          {{ item.subtitle }}
+                        </span>
+                      {% endif %}
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            {% else %}
+              <li>
+                <span class="sidebar-card__empty">おすすめアプリが設定されていません</span>
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>
