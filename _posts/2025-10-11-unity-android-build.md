@@ -2,8 +2,8 @@
 layout: post
 title: "UnityでBuildしたAABファイルでGoogle Playでデバッグモードで著名されていますのエラーが出る時の対処法"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/icon.png
-share-img: /assets/img/icon.png
+thumbnail-img: /assets/img/unity.png
+share-img: /assets/img/unity.png
 tags: [Google Play, AAB, Unity]
 author: taiyou
 ---
