@@ -2,10 +2,54 @@
 layout: base
 ---
 
-{% include header.html type="post" %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 <main
   class="layout-post {% if page.full-width %}container-fluid{% else %}container-md{% endif %}"
 >
+  <div class="post-compact-header {% if page.full-width %}post-compact-header--wide{% endif %}">
+    <div class="post-compact-header__inner">
+      {% if page.title %}
+        <h1 class="post-compact-header__title">
+          {{ page.title | strip_html }}
+        </h1>
+      {% endif %}
+      {% if page.subtitle %}
+        <p class="post-compact-header__subtitle">
+          {{ page.subtitle | strip_html }}
+        </p>
+      {% endif %}
+      {% if page.author or page.date or page.last-updated or page.readtime %}
+        <div class="post-compact-header__meta">
+          {% if page.author %}
+            <span class="post-compact-header__meta-item">
+              By <strong>{{ page.author | strip_html }}</strong>
+            </span>
+          {% endif %}
+          {% if page.date %}
+            <span class="post-compact-header__meta-item">
+              {{ page.date | date: date_format }}
+            </span>
+          {% endif %}
+          {% if page.last-updated %}
+            <span class="post-compact-header__meta-item">
+              Updated {{ page.last-updated | date: date_format }}
+            </span>
+          {% endif %}
+          {% if page.readtime %}
+            {% capture readtime_text %}
+              {% include readtime.html %}
+            {% endcapture %}
+            {% assign readtime_clean = readtime_text | strip_html | replace: '&middot;', '' | replace: '·', '' | strip %}
+            {% if readtime_clean != "" %}
+              <span class="post-compact-header__meta-item">
+                {{ readtime_clean }}
+              </span>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
   <div class="main-row">
     <div class="left-container"></div>
     <div class="center-container center-container--post">
