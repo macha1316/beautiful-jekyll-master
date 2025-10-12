@@ -29,6 +29,7 @@ let BeautifulJekyllJS = {
     BeautifulJekyllJS.initImgs();
 
     BeautifulJekyllJS.initSearch();
+    BeautifulJekyllJS.initToc();
   },
 
   initNavbar : function() {
@@ -134,6 +135,100 @@ let BeautifulJekyllJS = {
         $("body").removeClass("overflow-hidden");
       }
     });
+  },
+
+  initToc : function() {
+    const tocContainer = document.querySelector("[data-post-toc]");
+    const tocList = tocContainer ? tocContainer.querySelector("[data-post-toc-list]") : null;
+    const postContent = document.querySelector(".blog-post");
+
+    if (!tocContainer || !tocList || !postContent) {
+      return;
+    }
+
+    const headings = Array.from(postContent.querySelectorAll("h1, h2, h3"));
+    if (!headings.length) {
+      return;
+    }
+
+    const tocEntries = [];
+    const usedIds = new Set();
+
+    headings.forEach((heading, index) => {
+      const text = heading.textContent.trim();
+      if (!text) {
+        return;
+      }
+
+      const level = Math.min(parseInt(heading.tagName.replace("H", ""), 10) || 1, 3);
+
+      let id = heading.getAttribute("id");
+      if (id) {
+        if (usedIds.has(id)) {
+          id = null;
+        } else {
+          usedIds.add(id);
+        }
+      }
+
+      if (!id) {
+        const baseSlug = BeautifulJekyllJS.slugify(text) || `section-${index + 1}`;
+        id = baseSlug;
+        let counter = 2;
+        while (usedIds.has(id)) {
+          id = `${baseSlug}-${counter++}`;
+        }
+        heading.id = id;
+        usedIds.add(id);
+      }
+
+      tocEntries.push({
+        id,
+        text,
+        level,
+      });
+    });
+
+    if (!tocEntries.length) {
+      return;
+    }
+
+    tocList.innerHTML = "";
+
+    tocEntries.forEach((entry) => {
+      const item = document.createElement("li");
+      item.className = `post-toc__item post-toc__item--level-${entry.level}`;
+
+      const link = document.createElement("a");
+      link.className = "post-toc__link";
+      link.setAttribute("href", `#${entry.id}`);
+      link.textContent = entry.text;
+
+      item.appendChild(link);
+      tocList.appendChild(item);
+    });
+
+    tocContainer.hidden = false;
+  },
+
+  slugify : function(text) {
+    if (text === null || typeof text === "undefined") {
+      return "";
+    }
+
+    let result = String(text).trim();
+
+    if (typeof result.normalize === "function") {
+      result = result.normalize("NFKD");
+    }
+
+    return result
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^\p{Letter}\p{Number}\s\-ぁ-んァ-ヶ一-龥々ー]/gu, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
   }
 };
 

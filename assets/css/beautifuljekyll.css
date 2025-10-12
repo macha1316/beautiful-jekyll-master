@@ -1570,6 +1570,21 @@ pre {
   .post-compact-header__meta-item:not(:first-child)::before {
     color: rgba(148, 163, 184, 0.6);
   }
+  .post-toc {
+    background: rgba(30, 64, 175, 0.28);
+    border-color: rgba(96, 165, 250, 0.35);
+    box-shadow: 0 26px 48px -38px rgba(59, 130, 246, 0.45);
+  }
+  .post-toc__title {
+    color: rgba(226, 232, 240, 0.9);
+  }
+  .post-toc__link {
+    color: rgba(191, 219, 254, 0.92);
+  }
+  .post-toc__link:hover {
+    color: #bfdbfe;
+    background: rgba(59, 130, 246, 0.28);
+  }
 }
 
 /* --- Enhanced theme refresh --- */
@@ -1647,6 +1662,98 @@ main.container-fluid {
 
 .post-compact-header__meta-item strong {
   font-weight: 600;
+}
+
+.post-toc {
+  background: rgba(191, 219, 254, 0.28);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 22px;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 46px -38px rgba(30, 64, 175, 0.45);
+}
+
+.post-toc[hidden] {
+  display: none;
+}
+
+.post-toc__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #1f3f75;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-toc__title::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  box-shadow: 0 6px 18px -12px rgba(37, 99, 235, 0.9);
+}
+
+.post-toc__nav {
+  margin: 0;
+}
+
+.post-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.post-toc__item {
+  margin: 0;
+}
+
+.post-toc__item--level-2 {
+  padding-left: 1rem;
+  font-size: 0.92em;
+}
+
+.post-toc__item--level-3 {
+  padding-left: 1.75rem;
+  font-size: 0.88em;
+}
+
+.post-toc__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #1e3a8a;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.4;
+  padding: 0.15rem 0.25rem;
+  border-radius: 12px;
+  transition: color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.post-toc__link:hover {
+  color: #1d4ed8;
+  background: rgba(59, 130, 246, 0.16);
+  transform: translateX(2px);
+}
+
+@media (min-width: 1200px) {
+  .post-toc {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-toc {
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 main .main-row {
