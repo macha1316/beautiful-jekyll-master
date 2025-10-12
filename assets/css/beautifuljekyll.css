@@ -1201,6 +1201,8 @@ pre {
   min-width: 200px;
   padding-left: 2.25rem;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .center-container {
@@ -1236,6 +1238,14 @@ pre {
   flex-direction: column;
   gap: 20px;
 }
+
+/* 自動スクロール */
+/* @media (min-width: 901px) {
+  .right-container .sidebar-stack {
+    position: sticky;
+    top: clamp(72px, 10vh, 110px);
+  }
+} */
 
 .right-container .sidebar-card {
   border: 1px solid rgba(203, 213, 225, 0.6);
@@ -1491,7 +1501,7 @@ main.container-fluid {
 
 main .main-row {
   /* gap: clamp(2rem, 5vw, 3.5rem); */
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 main .center-container {

@@ -1,7 +1,4 @@
 recommended_posts:
-  - title: "英語長文リーダー紹介"
-    url: "/2025-06-24-eigo-read-1/"
-    image: "/assets/img/eigo-read.png"
   - title: "[FirebaseError: Firebase Storageのエラー解消]"
     url: "/2025-07-19-fire-storage-err/"
     image: "/assets/img/firestorage-logo.png"
@@ -10,11 +7,15 @@ recommended_posts:
     image: "/assets/img/expo.png"
 
 recommended_apps:
-  - title: "英語長文リーダー"
-    url: "https://apps.apple.com/app/eigo-read/id6748108116"
-    image: "/assets/img/eigo-read.png"
+  - title: "消える倉庫番"
+    url: "https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
+    image: "/assets/img/blind_sokoban.png"
     external: true
-  - title: "倉庫番"
+  - title: "アイデアメモ"
     url: "https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
     image: "/assets/img/app_icon.png"
+    external: true
+  - title: "ゆめ日記"
+    url: "https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687"
+    image: "/assets/img/dream.png"
     external: true
