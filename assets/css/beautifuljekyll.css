@@ -1263,8 +1263,8 @@ pre {
 }
 
 .right-container .sidebar-card__title {
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.9rem;
   letter-spacing: 0.01em;
   margin-bottom: 8px;
   display: flex;
@@ -1483,13 +1483,26 @@ pre {
 }
 
 .right-container .sidebar-card--suggested .sidebar-card__list li a,
-.right-container .sidebar-card--apps .sidebar-card__list li a {
-  font-size: clamp(0.9rem, 0.95rem, 1rem);
+.right-container .sidebar-card--suggested .sidebar-card__list li .sidebar-card__link,
+.right-container .sidebar-card--apps .sidebar-card__list li a,
+.right-container .sidebar-card--apps .sidebar-card__list li .sidebar-card__link {
+  font-size: clamp(0.85rem, 0.92rem, 0.96rem);
 }
 
 .right-container .sidebar-card--apps .sidebar-card__text,
 .right-container .sidebar-card--suggested .sidebar-card__text {
   line-height: 1.35;
+  font-weight: 500;
+}
+
+.right-container .sidebar-card--recent .sidebar-card__list li a,
+.right-container .sidebar-card--recent .sidebar-card__list li .sidebar-card__link {
+  font-size: clamp(0.85rem, 0.92rem, 0.96rem);
+}
+
+.right-container .sidebar-card--recent .sidebar-card__text {
+  line-height: 1.35;
+  font-weight: 500;
 }
 
 .right-container .sidebar-card__empty {
