@@ -1,0 +1,28 @@
+{% assign bubble_side = include.side | default: "left" | downcase %}
+{% assign bubble_text = include.message | default: include.text %}
+<div class="speech-bubble speech-bubble--{{ bubble_side }}">
+  {% if include.avatar %}
+  <div class="speech-bubble__avatar">
+    <img
+      src="{{ include.avatar | absolute_url }}"
+      alt="{{ include.name | default: "Avatar" | escape }}"
+      loading="lazy"
+    />
+  </div>
+  {% endif %}
+  <div class="speech-bubble__body">
+    {% if include.name or include.role %}
+    <div class="speech-bubble__meta">
+      {% if include.name %}
+      <span class="speech-bubble__name">{{ include.name }}</span>
+      {% endif %}
+      {% if include.role %}
+      <span class="speech-bubble__role">{{ include.role }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="speech-bubble__text">
+      {{ bubble_text | markdownify }}
+    </div>
+  </div>
+</div>

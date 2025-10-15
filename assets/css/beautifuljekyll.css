@@ -20,7 +20,7 @@ layout: null
 
   /* common CSS variables */
   --body-font: 'Noto Sans JP', 'Yu Gothic', 'Segoe UI', Arial, sans-serif;
-  --header-font: 'Montserrat', 'Noto Sans JP', 'Segoe UI', Arial, sans-serif;
+  --header-font: 'Noto Sans JP', 'Yu Gothic', 'Segoe UI', Arial, sans-serif;
   --mid-col: #5d6a89;
   --h2-bg: rgba(37, 99, 235, 0.08);
   --h2-border-col: rgba(37, 99, 235, 0.6);
@@ -649,6 +649,127 @@ footer .footer-custom-content {
   font-weight: 800;
 }
 
+/* --- Speech bubbles --- */
+
+.speech-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.speech-bubble--right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  margin-left: auto;
+}
+
+.speech-bubble__avatar {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.10);
+  flex-shrink: 0;
+}
+
+.speech-bubble__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.speech-bubble__body {
+  position: relative;
+  max-width: 40rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 1rem;
+  --bubble-bg: rgba(255, 255, 255, 0.96);
+  background-color: var(--bubble-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.10);
+}
+
+.speech-bubble__body::after {
+  content: "";
+  position: absolute;
+  top: 1.05rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bubble-bg);
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+}
+
+.speech-bubble--left .speech-bubble__body::after {
+  left: -0.5rem;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+
+.speech-bubble--right .speech-bubble__body::after {
+  right: -0.5rem;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.speech-bubble__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--header-font);
+}
+
+.speech-bubble--right .speech-bubble__body,
+.speech-bubble--right .speech-bubble__text {
+  text-align: right;
+}
+
+.speech-bubble--right .speech-bubble__meta {
+  justify-content: flex-end;
+}
+
+.speech-bubble__name {
+  font-weight: 700;
+  color: var(--text-col);
+}
+
+.speech-bubble__role {
+  font-size: 0.8125rem;
+  color: var(--mid-col);
+}
+
+.speech-bubble__text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .speech-bubble {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .speech-bubble--right {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .speech-bubble__avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .speech-bubble__body {
+    width: 100%;
+  }
+  .speech-bubble--left .speech-bubble__body::after {
+    left: 0.9rem;
+    right: auto;
+  }
+  .speech-bubble--right .speech-bubble__body::after {
+    right: 0.9rem;
+    left: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .post-preview .post-title {
     font-size: 1.5rem;
@@ -1040,8 +1161,37 @@ pre {
   margin-top: 0;
 }
 
+.blog-post p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin: 0 0 1.5rem 1.5rem;
+  line-height: 1.7;
+}
+
+.blog-post li + li {
+  margin-top: 0.5rem;
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post h1 {
+  margin-bottom: 1.5rem;
+}
+
 .blog-post img {
+  display: block;
   max-width: 100%;
+  width: auto;
+  margin: 1.75rem auto;
 }
 
 .blog-post .caption {
@@ -1061,11 +1211,12 @@ pre {
   border-width: 0.25rem;
   border-radius: 0.1875rem;
   border-color: var(--mid-col);
+  margin: 2.5rem auto;
 }
 
 .blog-post blockquote {
-  padding: 0.625rem 1.25rem;
-  margin: 0 0 1.25rem;
+  padding: 0.75rem 1.75rem;
+  margin: 1.75rem 0;
   font-size: 1.1rem;
   border-left: 0.3125rem solid #eee;
 }
