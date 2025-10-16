@@ -92,11 +92,15 @@ layout: base
         ></iframe>
         {% endcase %} {% endfor %} {% endif %}
       </div>
-      {% endif %} {% if page.before-content %}
+      {% endif %}
+      {% if page.before-content %}
       <div class="before-content">
         {% for file in page.before-content %} {% include {{ file }} %} {% endfor
         %}
       </div>
+      {% endif %}
+      {% if page.social-share %}
+        {% include social-share.html %}
       {% endif %}
 
       <div class="post-toc" data-post-toc hidden>
@@ -123,13 +127,13 @@ layout: base
         <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
         {% endfor %}
       </div>
-      {% endif %} {% if page.after-content %}
+      {% endif %}
+      {% if page.after-content %}
       <div class="after-content">
         {% for file in page.after-content %} {% include {{ file }} %} {% endfor
         %}
       </div>
-      {% endif %} {% if page.social-share %} {% include social-share.html %} {%
-      endif %}
+      {% endif %}
 
       <ul class="pagination blog-pager">
         {% if page.previous.url %}
