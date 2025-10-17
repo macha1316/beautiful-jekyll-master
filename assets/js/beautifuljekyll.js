@@ -6,6 +6,7 @@ let BeautifulJekyllJS = {
   numImgs : null,
 
   init : function() {
+    BeautifulJekyllJS.initTheme();
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
 
     // Shorten the navbar after scrolling a little bit down
@@ -30,6 +31,85 @@ let BeautifulJekyllJS = {
 
     BeautifulJekyllJS.initSearch();
     BeautifulJekyllJS.initToc();
+  },
+
+  initTheme : function() {
+    const storageKey = "beautifuljekyll-theme";
+    const root = document.documentElement;
+    const toggle = document.querySelector("[data-theme-toggle]");
+    const icon = toggle ? toggle.querySelector("[data-theme-toggle-icon]") : null;
+    const text = toggle ? toggle.querySelector("[data-theme-toggle-text]") : null;
+    const prefersDark = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+    const getStoredTheme = () => {
+      try {
+        return window.localStorage.getItem(storageKey);
+      } catch (err) {
+        return null;
+      }
+    };
+
+    const setStoredTheme = (theme) => {
+      try {
+        window.localStorage.setItem(storageKey, theme);
+      } catch (err) {
+        /* noop */
+      }
+    };
+
+    const applyTheme = (theme, persist) => {
+      const nextTheme = theme === "dark" ? "dark" : "light";
+      root.setAttribute("data-theme", nextTheme);
+      if (persist) {
+        setStoredTheme(nextTheme);
+      }
+      if (toggle) {
+        toggle.setAttribute(
+          "aria-label",
+          nextTheme === "dark" ? "ライトモードに切り替え" : "ダークモードに切り替え"
+        );
+        toggle.setAttribute("aria-pressed", nextTheme === "dark" ? "true" : "false");
+      }
+      if (icon) {
+        icon.classList.toggle("fa-sun", nextTheme === "dark");
+        icon.classList.toggle("fa-moon", nextTheme !== "dark");
+      }
+      if (text) {
+        text.textContent = nextTheme === "dark" ? "ライト" : "ダーク";
+      }
+    };
+
+    const storedTheme = getStoredTheme();
+    const initialTheme =
+      storedTheme ||
+      root.getAttribute("data-theme") ||
+      (prefersDark && prefersDark.matches ? "dark" : "light");
+
+    applyTheme(initialTheme, false);
+
+    if (toggle) {
+      toggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        const currentTheme = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+        applyTheme(nextTheme, true);
+      });
+    }
+
+    if (prefersDark) {
+      const handlePreferenceChange = (event) => {
+        if (getStoredTheme() !== null) {
+          return;
+        }
+        applyTheme(event.matches ? "dark" : "light", false);
+      };
+
+      if (typeof prefersDark.addEventListener === "function") {
+        prefersDark.addEventListener("change", handlePreferenceChange);
+      } else if (typeof prefersDark.addListener === "function") {
+        prefersDark.addListener(handlePreferenceChange);
+      }
+    }
   },
 
   initNavbar : function() {

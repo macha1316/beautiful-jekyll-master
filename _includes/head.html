@@ -12,6 +12,23 @@
     rel="stylesheet"
   />
 
+  <script>
+    (function () {
+      var storageKey = "beautifuljekyll-theme";
+      var root = document.documentElement;
+      var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+      try {
+        var storedTheme = window.localStorage.getItem(storageKey);
+        var theme = storedTheme || (prefersDark && prefersDark.matches ? "dark" : "light");
+        root.setAttribute("data-theme", theme);
+      } catch (err) {
+        if (prefersDark && prefersDark.matches) {
+          root.setAttribute("data-theme", "dark");
+        }
+      }
+    })();
+  </script>
+
   <script
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9739269591131632"

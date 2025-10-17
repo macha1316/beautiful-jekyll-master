@@ -10,15 +10,15 @@ tags: [Expo, android]
 author: たいよう
 ---
 
-{% capture bubble_dev %}
+{% capture bubble_dev_taiyou_intro %}
 Mac で android 端末でテストしたいがエラーで落ちてしまう 😭
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
 
-{% capture bubble_dev %}
+{% capture bubble_dev_josyu_intro %}
 Emulator っていうのを先に立ち上げるんだよね!
 {% endcapture %}
-{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev %}
+{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev_josyu_intro %}
 
 # はじめに
 
