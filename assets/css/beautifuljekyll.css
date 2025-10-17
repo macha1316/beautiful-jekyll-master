@@ -570,8 +570,11 @@ footer .footer-custom-content {
 }
 .post-preview .post-subtitle {
   margin: 0;
-  font-weight: 300;
   margin-bottom: 0.625rem;
+  font-family: var(--body-font);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--mid-col);
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
@@ -601,12 +604,6 @@ footer .footer-custom-content {
   margin-left: 0.625rem;
   width: 16rem;
   max-width: 100%;
-}
-.post-preview .post-image {
-  filter: grayscale(40%);
-}
-.post-preview .post-image:hover {
-  filter: grayscale(0%);
 }
 .post-preview .post-image img {
   display: block;
