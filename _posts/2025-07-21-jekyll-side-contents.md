@@ -4,7 +4,7 @@ title: "jekyll で作成したサイトにサイドバー広告つけてみた"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
-tags: [jekyll]
+tags: [Jekyll]
 author: taiyou
 ---
 

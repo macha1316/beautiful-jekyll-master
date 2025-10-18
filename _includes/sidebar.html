@@ -162,6 +162,68 @@
     </ul>
   </div>
 
+  <div class="sidebar-card sidebar-card--tags">
+    <div class="sidebar-card__title">タグ</div>
+    {% assign configured_tags = site.data.sidebar.tag_list | default: site.sidebar_tag_list %}
+    {% assign use_configured_tags = configured_tags and configured_tags.size > 0 %}
+    {% if use_configured_tags %}
+      {% assign sidebar_tags = configured_tags %}
+    {% else %}
+      {% assign sidebar_tags = site.tags | sort %}
+    {% endif %}
+    {% if sidebar_tags and sidebar_tags.size > 0 %}
+      {% assign displayed_tags = 0 %}
+      <div class="sidebar-card__folders">
+        {% for tag_item in sidebar_tags %}
+          {% if use_configured_tags %}
+            {% assign tag_name = tag_item %}
+            {% assign tag_posts = site.tags[tag_name] %}
+          {% else %}
+            {% assign tag_name = tag_item | first %}
+            {% assign tag_posts = tag_item | last %}
+          {% endif %}
+          {% if tag_posts and tag_posts.size > 0 %}
+            {% assign tag_has_current = false %}
+            {% for tagged_post in tag_posts %}
+              {% if tagged_post.url == current_url %}
+                {% assign tag_has_current = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            <details class="sidebar-card__folder-details">
+              <summary class="sidebar-card__folder-summary">
+                <span class="sidebar-card__folder-icon">
+                  <i class="fas fa-folder"></i>
+                </span>
+                <span class="sidebar-card__folder-label">{{ tag_name }}</span>
+                <span class="sidebar-card__folder-count">{{ tag_posts | size }}</span>
+              </summary>
+              <ul class="sidebar-card__folder-items">
+                {% assign sorted_tag_posts = tag_posts | sort: "date" | reverse %}
+                {% for post_item in sorted_tag_posts %}
+                  <li class="sidebar-card__folder-item">
+                    <a
+                      href="{{ post_item.url | relative_url }}"
+                      class="sidebar-card__link{% if post_item.url == current_url %} sidebar-card__link--active{% endif %}"
+                    >
+                      {{ post_item.title | strip_html | truncate: 38, "…" }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+            {% assign displayed_tags = displayed_tags | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if displayed_tags == 0 %}
+        <div class="sidebar-card__empty">表示可能なタグが見つかりません</div>
+      {% endif %}
+    {% else %}
+      <div class="sidebar-card__empty">タグが登録されていません</div>
+    {% endif %}
+  </div>
+
     <div class="sidebar-card sidebar-card--recent">
     <div class="sidebar-card__title">新着記事</div>
     <ul class="sidebar-card__list">

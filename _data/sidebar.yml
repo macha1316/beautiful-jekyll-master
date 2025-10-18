@@ -46,3 +46,9 @@ recommended_apps:
         url: "https://play.google.com/store/apps/details?id=com.anonymous.yumejournal"
         external: true
         icon: "/assets/img/googe_store.png"
+
+tag_list:
+  - Expo
+  - Unity
+  - エラー解決
+  - 初心者必見
