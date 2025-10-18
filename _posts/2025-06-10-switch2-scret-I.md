@@ -5,7 +5,7 @@ title: Switch2ひみつ展のエリアIへの行き方
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-10/scret.png
 share-img: /assets/img/2025-06-10/scret.png
-tags: [ひみつ展, switch2]
+tags: [その他]
 author: taiyou
 ---
 

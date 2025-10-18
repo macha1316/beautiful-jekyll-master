@@ -4,7 +4,7 @@ title: "SONYのWH-1000XM6購入初日レビュー✨"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-08-24/2.png
 share-img: /assets/img/2025-08-24/2.png
-tags: [SONY, WH-1000XM6, レビュー]
+tags: [お話]
 author: taiyou
 ---
 

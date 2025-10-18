@@ -5,7 +5,7 @@ title: GitHub Pages × Jekyllでブログを作るときにつまづいたこと
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
-tags: [tech, Jekyll]
+tags: [Jekyll]
 author: taiyou
 ---
 

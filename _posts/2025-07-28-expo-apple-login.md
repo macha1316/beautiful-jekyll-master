@@ -4,7 +4,7 @@ title: "expo + firebaseアプリにAppleサインインの実装(EXPO SDK53)"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
-tags: [expo, apple signin, apple, サインイン]
+tags: [Expo]
 author: taiyou
 ---
 

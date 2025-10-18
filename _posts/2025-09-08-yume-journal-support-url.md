@@ -4,7 +4,7 @@ title: "ゆめ日記サポートページ"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/dream_jurnal.png
 share-img: /assets/img/dream_jurnal.png
-tags: [ゆめ日記, サポートページ]
+tags: []
 author: taiyou
 ---
 

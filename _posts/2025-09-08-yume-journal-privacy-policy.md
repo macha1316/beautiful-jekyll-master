@@ -4,7 +4,7 @@ title: "ゆめ日記プライバシーポリシー"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/dream_jurnal.png
 share-img: /assets/img/dream_jurnal.png
-tags: [ゆめ日記, プライバシーポリシー]
+tags: []
 author: taiyou
 ---
 

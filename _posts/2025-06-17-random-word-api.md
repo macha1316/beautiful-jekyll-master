@@ -5,7 +5,7 @@ title: ランダムに単語を返してくれる random-word-api 使ってみ�
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.png
 share-img: /assets/img/2025-06-17/random-word-api_bg.png
-tags: [curl, api, typescript, random-word-api]
+tags: [API]
 author: taiyou
 ---
 

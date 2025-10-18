@@ -4,7 +4,7 @@ title: "消える倉庫番サポートページ"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/blind_sokoban.png
 share-img: /assets/img/blind_sokoban.png
-tags: [消える倉庫番, サポートページ]
+tags: []
 author: taiyou
 ---
 

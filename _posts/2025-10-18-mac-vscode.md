@@ -6,7 +6,7 @@ description: ""
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-18_2/samune.png
 share-img: /assets/img/2025-10-18_2/samune.png
-tags: [Mac, VSCode, ショートカット]
+tags: [Mac, VSCode, 初心者必見]
 author: たいよう
 ---
 

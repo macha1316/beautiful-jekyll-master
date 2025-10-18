@@ -4,7 +4,7 @@ title: "Parallaxプライバシーポリシー"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/icon.png
 share-img: /assets/img/icon.png
-tags: [Parallax, プライバシーポリシー]
+tags: []
 author: taiyou
 ---
 

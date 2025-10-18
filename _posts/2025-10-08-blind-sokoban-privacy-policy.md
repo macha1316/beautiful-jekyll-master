@@ -4,7 +4,7 @@ title: "消える倉庫番プライバシーポリシー"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/blind_sokoban.png
 share-img: /assets/img/blind_sokoban.png
-tags: [消える倉庫番, プライバシーポリシー]
+tags: []
 author: taiyou
 ---
 

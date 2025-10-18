@@ -4,7 +4,7 @@ title: "UnityでBuildしたAABファイルでGoogle Playでデバッグモード
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/unity.png
 share-img: /assets/img/unity.png
-tags: [Google Play, AAB, Unity]
+tags: [Google Play, Unity, エラー解決]
 author: taiyou
 ---
 

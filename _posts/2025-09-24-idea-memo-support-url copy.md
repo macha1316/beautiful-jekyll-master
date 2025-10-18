@@ -4,7 +4,7 @@ title: "Idea Memo Spark Support Page"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/app_icon.png
 share-img: /assets/img/app_icon.png
-tags: [Idea Memo Spark, サポートページ]
+tags: []
 author: taiyou
 ---
 

@@ -4,7 +4,7 @@ title: 英語長文リーダー サポート
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
-tags: [サポート, 英語長文リーダー]
+tags: []
 author: taiyou
 ---
 

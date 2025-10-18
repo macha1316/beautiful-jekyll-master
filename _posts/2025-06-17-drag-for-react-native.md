@@ -5,7 +5,7 @@ title: React Native PanResponderGestureState で「タップ位置から単語�
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/react-native.png
 share-img: /assets/img/react-native.png
-tags: [expo, react, react-native, lingofy, PanResponderGestureState]
+tags: [Expo]
 author: taiyou
 ---
 

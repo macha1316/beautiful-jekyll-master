@@ -6,7 +6,7 @@ description: "ExpoでビルドしたAndroidアプリをGoogle Play Consoleにア
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-15/samune.png
 share-img: /assets/img/2025-10-15/samune.png
-tags: [Expo, android, 16KB]
+tags: [Expo, エラー解決]
 author: taiyou
 ---
 

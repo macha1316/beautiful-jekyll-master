@@ -4,7 +4,7 @@ title: "ゆめ日記利用規約"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/dream_jurnal.png
 share-img: /assets/img/dream_jurnal.png
-tags: [ゆめ日記, 利用規約]
+tags: []
 author: taiyou
 ---
 

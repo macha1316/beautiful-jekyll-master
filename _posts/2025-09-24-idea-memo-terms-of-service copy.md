@@ -4,7 +4,7 @@ title: "Idea Memo Spark Terms of Service"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/app_icon.png
 share-img: /assets/img/app_icon.png
-tags: [Idea Memo Spark, 利用規約]
+tags: []
 author: taiyou
 ---
 

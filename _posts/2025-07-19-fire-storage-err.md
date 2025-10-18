@@ -4,7 +4,7 @@ title: "[FirebaseError: Firebase Storage: Object '' does not exist. (storage/obj
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/firestorage-logo.png
 share-img: /assets/img/firestorage-logo.png
-tags: [fireStorage, firebase, object-not-found, react, react-native, expo]
+tags: [Firebase, Expo, エラー解決]
 author: taiyou
 ---
 

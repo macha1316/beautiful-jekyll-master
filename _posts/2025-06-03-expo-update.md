@@ -5,7 +5,7 @@ title: Expo SDK を アップデートした時にライブラリの互換性を
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-03/expo_logo.png
 share-img: /assets/img/2025-06-03/expo_logo.png
-tags: [tech, expo]
+tags: [Expo]
 author: taiyou
 ---
 

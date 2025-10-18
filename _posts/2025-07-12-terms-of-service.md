@@ -4,7 +4,7 @@ title: 英語長文リーダー 利用規約
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/eigo-read.png
 share-img: /assets/img/eigo-read.png
-tags: [利用規約, 英語長文リーダー]
+tags: []
 author: taiyou
 ---
 
