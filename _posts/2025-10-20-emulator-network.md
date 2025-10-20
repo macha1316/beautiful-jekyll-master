@@ -6,7 +6,7 @@ description: "Android Emulatorの通信ができないときにDNSを指定し�
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-20/samune.png
 share-img: /assets/img/2025-10-20/samune.png
-tags: [Emulator, Android, エラー解決]
+tags: [Expo, Emulator, Android, エラー解決]
 author: たいよう
 ---
 
