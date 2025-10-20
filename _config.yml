@@ -21,9 +21,9 @@ author: たいよう
 
 navbar-links:
   私について👨‍💻: "aboutme"
-  カテゴリ:
-    - Expoの記事: "tags/#expo"
-    - 英語長文リーダー: "tags/#英語長文リーダー"
+  # カテゴリ:
+  #   - Expoの記事: "tags/#expo"
+  #   - 英語長文リーダー: "tags/#英語長文リーダー"
 
 ################
 # --- Logo --- #
