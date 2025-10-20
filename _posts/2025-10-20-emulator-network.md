@@ -4,8 +4,8 @@ title: "Emulatorがインターネットに接続されない時の対処法"
 subtitle: "DNS設定でネット接続を取り戻す手順"
 description: "Android Emulatorの通信ができないときにDNSを指定して復旧する方法を紹介します"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-18_2/samune.png
-share-img: /assets/img/2025-10-18_2/samune.png
+thumbnail-img: /assets/img/2025-10-20/samune.png
+share-img: /assets/img/2025-10-20/samune.png
 tags: [Emulator, Android, エラー解決]
 author: たいよう
 ---
