@@ -6,7 +6,7 @@ description: "RevenueCat で Missing Google Play package エラーを解消す�
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-21/samune.png
 share-img: /assets/img/2025-10-21/samune.png
-tags: [Google Play Console]
+tags: [Google Play Console, RevenueCat]
 author: たいよう
 ---
 
