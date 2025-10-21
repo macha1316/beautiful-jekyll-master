@@ -4,8 +4,8 @@ title: "Unable to properly validate credentials due to the missing Google Play p
 subtitle: "RevenueCat で Missing Google Play package エラーが出たときのメモ"
 description: "RevenueCat で Missing Google Play package エラーを解消するためにバンドル ID を設定し直した手順を紹介します。"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-21/samune.png
-share-img: /assets/img/2025-10-21/samune.png
+thumbnail-img: /assets/img/2025-10-21_2/samune.png
+share-img: /assets/img/2025-10-21_2/samune.png
 tags: [Google Play Console, RevenueCat]
 author: たいよう
 ---
