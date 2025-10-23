@@ -31,6 +31,7 @@ let BeautifulJekyllJS = {
 
     BeautifulJekyllJS.initSearch();
     BeautifulJekyllJS.initToc();
+    BeautifulJekyllJS.initCopyButtons();
   },
 
   initTheme : function() {
@@ -289,6 +290,111 @@ let BeautifulJekyllJS = {
     });
 
     tocContainer.hidden = false;
+  },
+
+  initCopyButtons : function() {
+    if (typeof document === "undefined") {
+      return;
+    }
+
+    const codeBlocks = document.querySelectorAll("pre > code");
+    if (!codeBlocks.length) {
+      return;
+    }
+
+    const supportsClipboardApi =
+      typeof navigator !== "undefined" &&
+      navigator.clipboard &&
+      typeof navigator.clipboard.writeText === "function";
+
+    const copyText = async (text) => {
+      if (supportsClipboardApi) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch (error) {
+          /* fall back to execCommand */
+        }
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "absolute";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+
+      const selection = document.getSelection();
+      const selected =
+        selection && selection.rangeCount > 0
+          ? selection.getRangeAt(0)
+          : null;
+      textarea.select();
+      let result = false;
+      try {
+        result = document.execCommand("copy");
+      } catch (error) {
+        result = false;
+      }
+      document.body.removeChild(textarea);
+
+      if (selected && selection) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+
+      return result;
+    };
+
+    codeBlocks.forEach((codeBlock) => {
+      const pre = codeBlock.closest("pre");
+      if (!pre) {
+        return;
+      }
+
+      const container =
+        codeBlock.closest("figure.highlight") ||
+        codeBlock.closest(".highlight") ||
+        pre;
+
+      if (!container || container.classList.contains("code-copy-ready")) {
+        return;
+      }
+
+      container.classList.add("code-copy-ready");
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "code-copy-button";
+      button.setAttribute("aria-label", "コマンドをコピー");
+      button.textContent = "コピー";
+
+      const setButtonState = (state) => {
+        if (state === "copied") {
+          button.classList.add("code-copy-button--copied");
+          button.textContent = "コピーしました";
+        } else if (state === "error") {
+          button.classList.add("code-copy-button--error");
+          button.textContent = "コピーできませんでした";
+        } else {
+          button.classList.remove("code-copy-button--copied", "code-copy-button--error");
+          button.textContent = "コピー";
+        }
+      };
+
+      button.addEventListener("click", async () => {
+        setButtonState("working");
+        const succeeded = await copyText(codeBlock.innerText.trimEnd());
+        setButtonState(succeeded ? "copied" : "error");
+        if (succeeded) {
+          setTimeout(() => setButtonState("ready"), 2000);
+        } else {
+          setTimeout(() => setButtonState("ready"), 3000);
+        }
+      });
+
+      container.appendChild(button);
+    });
   },
 
   slugify : function(text) {
