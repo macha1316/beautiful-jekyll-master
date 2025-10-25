@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Google Adsenseの審査に意外とあっさりと通ったので意識したこと"
-subtitle: ""
-description: ""
+title: "Google Adsenseの審査に通ったので意識したこと"
+subtitle: "雑記ブログでも通過できた準備と運用のコツ"
+description: "申請から 2 日で Adsense 審査を通過したときに意識したコンテンツ改善、画像活用、広告配置をまとめました。"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-23/samune.png
-share-img: /assets/img/2025-10-23/samune.png
+thumbnail-img: /assets/img/2025-10-25/samune.png
+share-img: /assets/img/2025-10-25/samune.png
 tags: [Google Adsense, 雑談]
 ---
 
