@@ -4,8 +4,8 @@ title: "Error: The operation couldn’t be completed. (PHPhotosErrorDomain error
 subtitle: "iCloud 上の動画を取るときの 3164 対策"
 description: "expo-image-pickerを使って、動画をライブラリから取得しようとした時に起きました。"
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-11-04/samune.png
-share-img: /assets/img/2025-11-04/samune.png
+thumbnail-img: /assets/img/2025-11-10/samune.png
+share-img: /assets/img/2025-11-10/samune.png
 tags: [Expo, react-native, エラー解決]
 ---
 
