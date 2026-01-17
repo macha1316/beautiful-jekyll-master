@@ -24,8 +24,8 @@ layout: base
             post.thumbnail-img }} {% elsif post.cover-img %} {% if
             post.cover-img.first %} {{ post.cover-img[0].first.first }} {% else
             %} {{ post.cover-img }} {% endif %} {% else %} {% endif %} {%-
-            endcapture -%} {% assign thumbnail = thumbnail | strip %}
-            {% if thumbnail != "" %}
+            endcapture -%} {% assign thumbnail = thumbnail | strip %} {% if
+            thumbnail != "" %}
             <div class="post-image">
               <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
                 <img
@@ -38,21 +38,17 @@ layout: base
             <a href="{{ post.url | absolute_url }}">
               <h2 class="post-title">{{ post.title | strip_html }}</h2>
 
-              {% if post.subtitle %}
+              <!-- {% if post.subtitle %}
               <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
-              {% endif %}
+              {% endif %} -->
             </a>
 
-            {% if post.author %}
-            <span>By <strong>{{ post.author | strip_html }}</strong></span>
-            {% endif %}
             <p class="post-meta">
-              {% assign date_format = site.date_format | default: "%Y-%m-%d"
-              %} {{ post.date | date: date_format }}
+              {% assign date_format = site.date_format | default: "%Y-%m-%d" %}
+              {{ post.date | date: date_format }}
             </p>
 
-            {% unless site.feed_show_excerpt == false %}
-            {% endunless %}
+            {% unless site.feed_show_excerpt == false %} {% endunless %}
           </article>
         </li>
         {% endfor %}
