@@ -98,6 +98,11 @@
               </a>
               {% assign store_links = item.store_links %}
               {% if store_links %}
+                {% if item.store_note %}
+                  <p class="sidebar-card__store-note">
+                    {{ item.store_note | strip_html }}
+                  </p>
+                {% endif %}
                 <div class="sidebar-card__store-links">
                   {% for store in store_links %}
                     {% assign store_url = store.url %}

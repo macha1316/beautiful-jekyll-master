@@ -1647,8 +1647,15 @@ html[data-theme="dark"] .code-copy-button--error {
   display: flex;
   gap: 8px;
   margin-top: 8px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.right-container .sidebar-card__store-note {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.85rem;
+  color: var(--mid-col);
+  text-align: left;
 }
 
 .right-container .sidebar-card__store-link {
