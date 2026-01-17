@@ -1662,7 +1662,7 @@ html[data-theme="dark"] .code-copy-button--error {
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.15;
   background: rgba(255, 255, 255, 0.92);
   color: #1e3a8a;
   border: 1px solid rgba(37, 99, 235, 0.22);
@@ -1683,8 +1683,7 @@ html[data-theme="dark"] .code-copy-button--error {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
 }
 
 .right-container .sidebar-card__store-icon img {
@@ -1699,6 +1698,7 @@ html[data-theme="dark"] .code-copy-button--error {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  line-height: 1;
 }
 
 .right-container .sidebar-card__thumb {
