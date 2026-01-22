@@ -13,7 +13,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 Android Emulator が突然ネットに繋がらなくなり、開発が止まってしまったので対処手順をまとめました。
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

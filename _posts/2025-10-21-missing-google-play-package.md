@@ -13,7 +13,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 RevenueCat と Google Play Console の連携で詰まったポイントを、備忘録も兼ねてまとめました。
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

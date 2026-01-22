@@ -12,7 +12,7 @@ tags: [Google Adsense, 雑談]
 {% capture bubble_dev_taiyou_intro %}
 広告審査通すのに意識したことを書いていきます
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

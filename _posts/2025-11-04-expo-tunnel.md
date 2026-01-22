@@ -12,7 +12,7 @@ tags: [Expo, react-native, エラー解決]
 {% capture bubble_dev_taiyou_intro %}
 外で Expo Go が使えなくて困っている人の役に立てば幸いです ☺️
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

@@ -13,7 +13,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 この記事だけ見れば必須のコマンドは一通り覚えられると思う！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 {% capture bubble_dev_josyu_intro %}
 Windows コマンドは載せてないから注意ね

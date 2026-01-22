@@ -13,7 +13,7 @@ tags: [Mac, ユーティリティ]
 {% capture bubble_dev_taiyou_intro %}
 たくさんスクショをとる人にとっては嬉しい実装だと思う
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

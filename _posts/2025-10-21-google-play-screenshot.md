@@ -13,7 +13,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 どこでスクショを変えられるのかわからず結構な時間が溶けてしまった。。。
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # 解決方法
 

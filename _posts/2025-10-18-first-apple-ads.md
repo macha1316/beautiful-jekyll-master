@@ -13,7 +13,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 初めて Apple Ads に自分のアプリの広告を出してみたよ！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 {% capture bubble_dev_josyu_intro %}
 効果あるのかな 🤔
@@ -23,7 +23,7 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 実際の数値を見てみよう！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
 # はじめに
 

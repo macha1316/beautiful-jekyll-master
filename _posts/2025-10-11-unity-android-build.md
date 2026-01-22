@@ -11,7 +11,7 @@ author: taiyou
 {% capture bubble_dev %}
 Android 向けリリースはやることが多い。。。
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev %}
 
 # はじめに
 

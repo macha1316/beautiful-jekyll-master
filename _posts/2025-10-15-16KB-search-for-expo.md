@@ -13,7 +13,7 @@ author: taiyou
 {% capture bubble_dev %}
 先日初めて android 向けにアプリをリリースしました
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev %}
 
 {% capture bubble_dev %}
 いいね！
@@ -23,7 +23,7 @@ author: taiyou
 {% capture bubble_dev %}
 けど、アプリが 16KB に対応していないって怒られてしまって。。。
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/bear.jpeg" message=bubble_dev %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev %}
 
 {% capture bubble_dev %}
 なにそれ。。とりあえず解説みていこう
