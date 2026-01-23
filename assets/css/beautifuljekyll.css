@@ -646,6 +646,72 @@ footer .footer-custom-content {
   border: 0;
 }
 
+/* --- Related posts (in article) --- */
+
+.related-posts .posts-list {
+  margin: 0;
+}
+
+.related-posts .post-preview {
+  margin: 0.5rem 0;
+  padding: 0;
+  border: 0;
+}
+
+.related-posts .post-preview > article {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.related-posts .post-preview > article:hover,
+.related-posts .post-preview > article:focus-within {
+  transform: none;
+  box-shadow: none;
+}
+
+.related-posts .post-preview:last-child > article {
+  border-bottom: 0;
+}
+
+.related-posts .post-preview h2 {
+  background: none;
+  padding: 0;
+  border: 0;
+}
+
+.related-posts .post-preview .post-title {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+}
+
+.related-posts__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.related-posts .post-preview .post-image {
+  float: none;
+  margin: 0 0 0 auto;
+  width: 10.5rem;
+  max-width: 40%;
+}
+
+.related-posts .post-preview .post-meta {
+  margin-bottom: 0;
+  margin-top: -0.8rem;
+}
+
 .posts-list .post-preview .post-image {
   margin-left: 1.5rem;
 }

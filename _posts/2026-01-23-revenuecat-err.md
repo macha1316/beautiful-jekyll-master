@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Could not validate subscriptions API permissionsに対する対処"
+subtitle: "Play Console未公開が原因だった話"
+description: "RevenueCatがサブスク情報を取得できないエラーは、アプリ未公開が原因。クローズドでも公開が必要。"
+cover-img: /assets/img/header.png
+thumbnail-img: /assets/img/2025-11-15/samune.png
+share-img: /assets/img/2025-11-15/samune.png
+tags: [エラー解決, RevenueCat]
+category: errlog
+---
+
+{% capture bubble_dev_taiyou_intro %}
+考え中
+{% endcapture %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+
+# はじめに
+
+こんにちは、個人開発者のたいようです。  
+今回はRecenueCatを使ってAndroidの課金システムを実装していた時に起きた`Could not validate subscriptions API permissions`という問題に対する対処方法について書いていきます。  
+非常にシンプルな原因だったのですが、他にも同様のエラーで悩んでいる人のために残しておこうと思います。
+
+<img src="/assets/img/2026-01-23/1.png" alt="sdk" style=" height: auto; max-height: 600px" />
+
+# 結論
+
+Google Play Consoleでアプリのリリースをすればエラーは解消されます。  
+というのも、RevenueCat はアプリを一度も Play ストアに公開していない状態だと、サブスク情報を取得できません。なので、クローズドトラックでいいので公開しましょう。
+
+<img src="/assets/img/2026-01-23/2.png" alt="sdk" style=" height: auto; max-height: 600px" />
+
+# おわりに
+
+[参考にしたコミュニティーチャット](https://community.revenuecat.com/general-questions-7/could-not-validate-subscription-api-permission-2983)
+
+ご質問などがあればコメントやメールで教えていただけるとうれしいです。お時間があるときに他の記事や私のアプリも覗いていただけるとうれしいです。
+
+# 関連記事
+
+{% assign related_posts = site.posts | where_exp: "post", "post.url == '/2025-10-21-missing-google-play-package/'" %}
+{% include related-posts.html posts=related_posts %}

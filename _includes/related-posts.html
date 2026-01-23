@@ -1,0 +1,34 @@
+{% assign posts = include.posts | default: empty %}
+{% if posts.size > 0 %}
+<div class="related-posts">
+  <ul class="posts-list list-unstyled" role="list">
+    {% for post in posts %}
+    <li class="post-preview">
+      <article>
+        {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
+        post.thumbnail-img }} {% elsif post.cover-img %} {% if post.cover-img.first
+        %} {{ post.cover-img[0].first.first }} {% else %} {{ post.cover-img }} {%
+        endif %} {% else %} {% endif %} {%- endcapture -%} {% assign thumbnail =
+        thumbnail | strip %} {% if thumbnail != "" %}
+        <div class="post-image">
+          <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+            <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail" />
+          </a>
+        </div>
+        {% endif %}
+        <div class="related-posts__content">
+          <a href="{{ post.url | absolute_url }}">
+            <h2 class="post-title">{{ post.title | strip_html }}</h2>
+          </a>
+
+          <p class="post-meta">
+            {% assign date_format = site.date_format | default: "%Y-%m-%d" %} {{
+            post.date | date: date_format }}
+          </p>
+        </div>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
