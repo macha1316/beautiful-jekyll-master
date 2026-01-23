@@ -5,6 +5,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/firestorage-logo.png
 share-img: /assets/img/firestorage-logo.png
 tags: [Firebase, Expo, エラー解決]
+category: errlog
 author: taiyou
 ---
 

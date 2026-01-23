@@ -7,6 +7,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-17/no_device2.png
 share-img: /assets/img/2025-10-17/no_device2.png
 tags: [Expo, エラー解決]
+category: errlog
 author: たいよう
 ---
 

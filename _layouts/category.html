@@ -1,0 +1,84 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main
+  class="layout-home {% if page.full-width %}container-fluid{% else %}container-md{% endif %}"
+>
+  <div class="main-row">
+    <div class="left-container"></div>
+    <div class="center-container center-container--home">
+      {{ content }} {% assign posts = paginator.posts | default: site.posts %}
+
+      <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+      <ul class="posts-list list-unstyled" role="list">
+        {% for post in posts %}
+        <li class="post-preview">
+          <article>
+            {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
+            post.thumbnail-img }} {% elsif post.cover-img %} {% if
+            post.cover-img.first %} {{ post.cover-img[0].first.first }} {% else
+            %} {{ post.cover-img }} {% endif %} {% else %} {% endif %} {%-
+            endcapture -%} {% assign thumbnail = thumbnail | strip %} {% if
+            thumbnail != "" %}
+            <div class="post-image">
+              <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+                <img
+                  src="{{ thumbnail | absolute_url }}"
+                  alt="Post thumbnail"
+                />
+              </a>
+            </div>
+            {% endif %}
+            <a href="{{ post.url | absolute_url }}">
+              <h2 class="post-title">{{ post.title | strip_html }}</h2>
+
+              <!-- {% if post.subtitle %}
+              <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
+              {% endif %} -->
+            </a>
+
+            <p class="post-meta">
+              {% assign date_format = site.date_format | default: "%Y-%m-%d" %}
+              {{ post.date | date: date_format }}
+            </p>
+
+            {% unless site.feed_show_excerpt == false %} {% endunless %}
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {% if paginator.total_pages > 1 %}
+      <ul class="pagination main-pager">
+        {% if paginator.previous_page %}
+        <li class="page-item previous">
+          <a
+            class="page-link"
+            href="{{ paginator.previous_page_path | absolute_url }}"
+          >
+            <i class="fas fa-arrow-left" alt="Newer Posts"></i>
+            <span class="d-none d-sm-inline-block">Newer Posts</span>
+          </a>
+        </li>
+        {% endif %} {% if paginator.next_page %}
+        <li class="page-item next">
+          <a
+            class="page-link"
+            href="{{ paginator.next_page_path | absolute_url }}"
+          >
+            <span class="d-none d-sm-inline-block">Older Posts</span>
+            <i class="fas fa-arrow-right" alt="Older Posts"></i>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="right-container">
+      {% include sidebar.html current_url=page.url %}
+    </div>
+  </div>
+</main>

@@ -7,6 +7,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-11-10/samune.png
 share-img: /assets/img/2025-11-10/samune.png
 tags: [Expo, react-native, エラー解決]
+category: errlog
 ---
 
 {% capture bubble_dev_taiyou_intro %}

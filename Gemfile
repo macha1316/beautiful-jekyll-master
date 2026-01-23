@@ -16,3 +16,4 @@ gemspec
 
 gem "logger"
 gem "bigdecimal"
+gem "jekyll-paginate-v2"

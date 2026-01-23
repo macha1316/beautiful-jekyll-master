@@ -7,6 +7,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-25/samune.png
 share-img: /assets/img/2025-10-25/samune.png
 tags: [Google Adsense, 雑談]
+category: perso-dev
 ---
 
 {% capture bubble_dev_taiyou_intro %}
