@@ -17,7 +17,9 @@ category: errlog
 
 # はじめに
 
-Firebase の機能を React Native（Expo）アプリに導入して iOS ビルドを実行したところ、ネイティブ依存の組み合わせが原因で `The following Swift pods cannot yet be integrated as static libraries` や `include of non-modular header inside framework module 'RNFBApp...` といったエラーに遭遇しました。この記事では `expo-build-properties` プラグインによる設定でどのように対処したかを、原因とともに順を追って説明します。同じような問題に直面している方の参考になればと思います。
+Firebase の機能を React Native（Expo）アプリに導入して iOS ビルドを実行したところ、ネイティブ依存の組み合わせが原因で `The following Swift pods cannot yet be integrated as static libraries` や `include of non-modular header inside framework module 'RNFBApp...` といったエラーに遭遇しました。
+
+この記事では `expo-build-properties` プラグインによる設定でどのように対処したかを、原因とともに順を追って説明します。同じような問題に直面している方の参考になればと思います。
 
 # The following Swift pods cannot yet be integrated as static libraries に対する対応
 
@@ -42,9 +44,10 @@ Firebase の機能を React Native（Expo）アプリに導入して iOS ビル�
 }
 ```
 
-- `deploymentTarget`: Firebase やその他のライブラリが要求する最小 iOS バージョンに合わせる
-- `useModularHeaders`: CocoaPods にモジュラーヘッダの依存関係を正しく解決させる
-- `useFrameworks`: `static` を指定することで Swift/CocoaPods 側の仕様に合わせてビルド
+<br>
+・`deploymentTarget`: Firebase やその他のライブラリが要求する最小 iOS バージョンに合わせる  
+・`useModularHeaders`: CocoaPods にモジュラーヘッダの依存関係を正しく解決させる  
+・`useFrameworks`: `static` を指定することで Swift/CocoaPods 側の仕様に合わせてビルド
 
 この設定を加えることで当初のエラーは解消され、Xcode のプロジェクト構造も Expo の自動管理のまま変更する必要がありません。
 
