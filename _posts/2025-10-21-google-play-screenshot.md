@@ -7,7 +7,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-21/samune.png
 share-img: /assets/img/2025-10-21/samune.png
 tags: [Google Play Console]
-category: perso-dev
+category: errlog
 author: たいよう
 ---
 

@@ -6,7 +6,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.png
 share-img: /assets/img/2025-06-17/random-word-api_bg.png
 tags: [API]
-category: perso-dev
+category: errlog
 author: taiyou
 ---
 
@@ -54,7 +54,7 @@ export const getRandomWord = async () => {
     {
       method: "GET",
       headers: { "Content-Type": "application/json" },
-    }
+    },
   );
   const words = await res.json();
   console.log("Random Words:", words);

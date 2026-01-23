@@ -6,7 +6,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/expo_admob.png
 share-img: /assets/img/expo_admob.png
 tags: [Expo, Google Admob]
-category: perso-dev
+category: errlog
 author: taiyou
 ---
 

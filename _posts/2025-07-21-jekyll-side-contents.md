@@ -5,7 +5,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
 tags: [Jekyll]
-category: perso-dev
+category: errlog
 author: taiyou
 ---
 

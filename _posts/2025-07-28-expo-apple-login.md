@@ -5,7 +5,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
 tags: [Expo]
-category: perso-dev
+category: errlog
 author: taiyou
 ---
 
@@ -73,7 +73,7 @@ const useSignInContainer = () => {
       const nonce = nonceGen(32); // ランダム文字列（ノンス）を生成
       const digestedNonce = await Crypto.digestStringAsync(
         Crypto.CryptoDigestAlgorithm.SHA256,
-        nonce
+        nonce,
       ); // SHA256でノンスをハッシュ化
       const result = await AppleAuthentication.signInAsync({
         requestedScopes: [

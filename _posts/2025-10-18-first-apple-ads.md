@@ -7,7 +7,7 @@ cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-10-18/samune.png
 share-img: /assets/img/2025-10-18/samune.png
 tags: [Apple Ads]
-category: perso-dev
+category: errlog
 author: たいよう
 ---
 
