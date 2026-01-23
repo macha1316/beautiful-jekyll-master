@@ -10,11 +10,6 @@ tags: [エラー解決, RevenueCat]
 category: errlog
 ---
 
-{% capture bubble_dev_taiyou_intro %}
-考え中
-{% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
-
 # はじめに
 
 こんにちは、個人開発者のたいようです。  
