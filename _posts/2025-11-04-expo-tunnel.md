@@ -15,13 +15,13 @@ category: errlog
 {% endcapture %}
 {% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# はじめに
+## はじめに
 
 自宅の Wi-Fi だと問題なく `Expo Go` で接続できるのに、外出先の Wi-Fi ではうまくつながらないという問題に直面しました。
 
 <!-- 画像貼る -->
 
-# 対処方法
+## 対処方法
 
 `npx expo start --tunnel` を使うと、インターネット経由のトンネルが張られ、同じネットワークにいない端末からでも Expo Dev Server にアクセスできるようになります。外部 Wi-Fi でポートが塞がれているときの切り札です。
 
@@ -44,7 +44,7 @@ sudo npm install -g @expo/ngrok@^4.1.0 --unsafe-perm
 
 <img src="/assets/img/2025-11-04/5.png" alt="sdk" style=" height: auto; max-height: 600px" />
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️

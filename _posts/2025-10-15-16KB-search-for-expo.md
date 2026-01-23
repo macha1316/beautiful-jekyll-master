@@ -31,7 +31,7 @@ author: taiyou
 {% endcapture %}
 {% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev %}
 
-# はじめに
+## はじめに
 
 Expo で android 向けにアップロードし終えひと段落かと思いきや、このような警告が出てきたことはないでしょうか。
 `アプリは16KBメモリのページサイズをサポートしている必要があります`
@@ -40,9 +40,9 @@ Expo で android 向けにアップロードし終えひと段落かと思いき
 
 よくわからず放置していたのですが、いつかは解消しないといけないことなので重い腰を上げて問題解決してみました。
 
-# ライブラリを調べる
+## ライブラリを調べる
 
-## Google Play Console での作業
+### Google Play Console での作業
 
 最初に何の`.so`かを突き止めます。
 Google Play Console で問題が起きているプロジェクトに入り、以下の画像の`最新のリリースとApp Bundle`へ進みます。
@@ -55,7 +55,7 @@ Google Play Console で問題が起きているプロジェクトに入り、以
 
 <img src="/assets/img/2025-10-15/5.png" alt="sdk" style=" height: auto;" />
 
-## Expo プロジェクト内での作業
+### Expo プロジェクト内での作業
 
 まず Expo プロジェクトのルートにいきます。
 すでに android 向けにビルドしているはずなので
@@ -95,7 +95,7 @@ grep -i renderscript deps.txt
 
 <img src="/assets/img/2025-10-15/4.png" alt="sdk" style=" height: auto;" />
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 ぜひサイドバーからアプリの閲覧、メールなどもお待ちしています ☺️

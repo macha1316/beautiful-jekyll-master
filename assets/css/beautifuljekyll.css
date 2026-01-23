@@ -83,18 +83,7 @@ h1 {
   font-size: 2rem;
 }
 h2 {
-  font-size: 1.875rem;
-}
-/* Enhance H2 readability with background and accent bar */
-.blog-post h2,
-.center-container h2,
-.post-preview h2,
-h2 {
-  background-color: var(--h2-bg);
-  padding: 0.55rem 0.85rem;
-  align-items: center;
-  border-left: 0.3125rem solid var(--h2-border-col);
-  border-radius: 0.1875rem;
+  font-size: 1.75rem;
 }
 h3 {
   font-size: 1.5rem;

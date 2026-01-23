@@ -15,13 +15,13 @@ category: errlog
 {% endcapture %}
 {% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# はじめに
+## はじめに
 
 Firebase の機能を React Native（Expo）アプリに導入して iOS ビルドを実行したところ、ネイティブ依存の組み合わせが原因で `The following Swift pods cannot yet be integrated as static libraries` や `include of non-modular header inside framework module 'RNFBApp...` といったエラーに遭遇しました。
 
 この記事では `expo-build-properties` プラグインによる設定でどのように対処したかを、原因とともに順を追って説明します。同じような問題に直面している方の参考になればと思います。
 
-# The following Swift pods cannot yet be integrated as static libraries に対する対応
+## The following Swift pods cannot yet be integrated as static libraries に対する対応
 
 このエラーは、Swift ポッドが静的ライブラリ（static）として統合されたときに、モジュールの互換性やアーキテクチャ要件を満たしていないために発生します。Firebase を含むいくつかのライブラリは静的リンクとの相性が悪く、Expo が生成するデフォルト設定となじまないケースがあります。
 
@@ -51,7 +51,7 @@ Firebase の機能を React Native（Expo）アプリに導入して iOS ビル�
 
 この設定を加えることで当初のエラーは解消され、Xcode のプロジェクト構造も Expo の自動管理のまま変更する必要がありません。
 
-# include of non-modular header inside framework module 'RNFBApp... に対する対応
+## include of non-modular header inside framework module 'RNFBApp... に対する対応
 
 ただし先の設定で `useModularHeaders: true` を有効にすると、React Native のヘッダが framework モジュール内で「non-modular」として扱われるようになり、`include of non-modular header inside framework module 'RNFBApp...` のようなビルドエラーが発生することがあります。これは CocoaPods のモジュール化周りで React Native のソースコードが直接組み込まれていないためです。
 
@@ -77,7 +77,7 @@ Firebase の機能を React Native（Expo）アプリに導入して iOS ビル�
 
 この設定は React Native の依存関係をソースから組み込むため少しビルド時間が伸びますが、モジュール互換性の問題を避けたい場合には安定した解決策になります。
 
-# おわりに
+## おわりに
 
 `expo-build-properties` を使って Expo の iOS 設定をカスタムすることで、Firebase をはじめとする Swift ポッドとの静的リンクの問題や React Native のヘッダのモジュール化のエラーに対処できました。今回紹介した設定をそのまま使っても安全ですが、アプリの要件に応じて `deploymentTarget` などの値を調整してください。
 

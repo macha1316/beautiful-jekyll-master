@@ -21,20 +21,20 @@ Emulator っていうのを先に立ち上げるんだよね!
 {% endcapture %}
 {% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev_josyu_intro %}
 
-# はじめに
+## はじめに
 
 Expo なら Mac で簡単に android 向けのテストが可能です。しかし、少しだけ環境を整えるのに苦労したので備忘録も込めて記事にしました。
 
 <img src="/assets/img/2025-10-17/1.png" alt="sdk" style=" height: auto;" />
 
-# Emulator を立ち上げる
+## Emulator を立ち上げる
 
 このエラーが出る時はバックグラウンドで Emulator が立ち上がっていないのが原因です。
 まずは、Android Studio を立ち上げます。  
 もしまだインストールしていない場合は、こちらからインストールしましょう。
 [Android Studio インストールページ](https://developer.android.com/studio?hl=ja)
 
-## Android Studio アプリ起動
+### Android Studio アプリ起動
 
 こちらの`More Actions`から`Virtual Device Manager`を選択
 
@@ -48,7 +48,7 @@ Device を選択して`Play▶️`を押します。
 
 <img src="/assets/img/2025-10-17/5.png" alt="sdk" style=" height: auto;" />
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 ぜひサイドバーからアプリの閲覧、メールなどもお待ちしています ☺️

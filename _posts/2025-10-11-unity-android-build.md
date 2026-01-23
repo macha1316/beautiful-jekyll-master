@@ -14,7 +14,7 @@ Android 向けリリースはやることが多い。。。
 {% endcapture %}
 {% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev %}
 
-# はじめに
+## はじめに
 
 Unity でビルドした `aab ファイル`を Google Play Console で提出しようとした時に
 次のような警告がでてきました。
@@ -23,7 +23,7 @@ Unity でビルドした `aab ファイル`を Google Play Console で提出し�
 
 この警告を解消する方法を丁寧に解説していきます!
 
-# KeyStore からリリース用署名キーを作成する
+## KeyStore からリリース用署名キーを作成する
 
 <img src="/assets/img/2025-10-11/2.png" alt="sdk" style=" height: auto;" />
 

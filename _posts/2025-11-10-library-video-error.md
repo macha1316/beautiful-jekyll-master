@@ -15,7 +15,7 @@ category: errlog
 {% endcapture %}
 {% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# 症状
+## 症状
 
 `expo-image-picker` でライブラリから動画を取得しようとしたときに、下記のダイアログが表示され、動画が選択できませんでした。
 
@@ -23,11 +23,11 @@ category: errlog
 Error: The operation couldn’t be completed. (PHPhotosErrorDomain error 3164.)
 ```
 
-# 原因
+## 原因
 
 動画が iCloud にのみ存在していて、まだ端末にダウンロードされていない状態でした。iOS は一度編集モードなどを挟んでユーザー操作を確認できるフローであれば、自動的にダウンロード処理を走らせてくれます。
 
-# 対処方法
+## 対処方法
 
 オプションに `allowsEditing = true` を加える。
 これで、自動的に iCloud から動画がダウンロードされ、エラーが消えました。
@@ -43,7 +43,7 @@ const result = await ImagePicker.launchImageLibraryAsync({
 });
 ```
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️

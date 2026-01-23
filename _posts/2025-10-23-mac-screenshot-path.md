@@ -16,7 +16,7 @@ category: errlog
 {% endcapture %}
 {% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# はじめに
+## はじめに
 
 最近ブログの更新や、動画制作においてスクショを撮ることが増えてきました。
 Mac の場合、デフォルトがデスクトップなので素材を撮り終わった頃にはデスクトップがぐちゃぐちゃになっていて、その時点で結構萎えます。なので、簡単に保存場所を変えることができたら楽だなーと思いシェルで作ってみました。
@@ -27,9 +27,9 @@ Mac の場合、デフォルトがデスクトップなので素材を撮り終�
 <!-- こちらの動画も併せてご覧になると、迷わずに実装できると思います ↓ -->
 <!-- 動画 -->
 
-# 実装
+## 実装
 
-## 実装例 1
+### 実装例 1
 
 `そこまで頻繁に保存場所を変えないという方は実装例 1` で OK です。  
 こちらのコマンドを`terminal`を開いてそのままコピーアンドペーストしてみてください。  
@@ -43,7 +43,7 @@ mkdir -p ~/Desktop/テスト && defaults write com.apple.screencapture location 
 あなたの好きな場所に保存したい場合、上記コマンドの`~/Desktop/テスト`この箇所だけ変更したいパスに書き換えます。  
 2 箇所あるのでどちらも書き換えてください。
 
-## 実装例 2
+### 実装例 2
 
 `頻繁に保存箇所を変更したい方はこちらの実装例 2`の方が適していると思います。
 
@@ -58,7 +58,7 @@ mkdir -p ~/Desktop/テスト && defaults write com.apple.screencapture location 
 
 ```sh
 #!/bin/bash
-# 使い方: set_screenshot_path.sh ~/Desktop/Screenshots
+## 使い方: set_screenshot_path.sh ~/Desktop/Screenshots
 
 if [ -z "$1" ]; then
   echo "❌ 保存先パスを指定してください。"
@@ -66,7 +66,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-# ~ を展開して絶対パスに変換
+## ~ を展開して絶対パスに変換
 TARGET_PATH=$(eval echo "$1")
 
 mkdir -p "$TARGET_PATH"
@@ -106,7 +106,7 @@ set_screenshot_path.sh ~/Desktop/スクショ用
 <br>
 いつでも`terminal`から呼び出せるので使い倒してみてください！
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️

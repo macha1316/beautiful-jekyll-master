@@ -16,22 +16,22 @@ Android Emulator が突然ネットに繋がらなくなり、開発が止まっ
 {% endcapture %}
 {% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# はじめに
+## はじめに
 
 Android Emulator でブラウザも API 通信も通らなくなり、アプリの動作確認ができなくなるトラブルに遭遇しました。再インストールなど大掛かりな対応をする前に、DNS を指定して立ち上げ直すだけで解決できたので、忘備録として残しておきます。
 
 <img src="/assets/img/2025-10-20/1.png" alt="sdk" style=" height: auto; max-height: 600px" />
 
-# 解決方法
+## 解決方法
 
-## Emulator で使う端末名を調べる
+### Emulator で使う端末名を調べる
 
 `Android Studio`で使用する端末名を調べます。
 私は`Medium_Phone_API_36.0`です。
 
 <img src="/assets/img/2025-10-20/5.png" alt="sdk" style=" height: auto; max-height: 600px" />
 
-## Terminal から Emulator を立ち上げる
+### Terminal から Emulator を立ち上げる
 
 以下のようにコマンドをターミナルで打ちます。  
 ⚠️ `Medium_Phone_API_36.0`の部分はあなたの端末名に変更してください。
@@ -50,7 +50,7 @@ cd Library/Android/sdk/emulator
 
 <img src="/assets/img/2025-10-20/2.png" alt="sdk" style=" height: auto; max-height: 600px" />
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️

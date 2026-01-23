@@ -16,13 +16,13 @@ author: たいよう
 {% endcapture %}
 {% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
 
-# 解決方法
+## 解決方法
 
 以下のように`ユーザーを増やす`のタブ -> `ストアの掲載情報`から修正できます。
 
 <img src="/assets/img/2025-10-21/1.png" alt="sdk" style=" height: auto; max-height: 600px" />
 
-# おわり
+## おわり
 
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️
