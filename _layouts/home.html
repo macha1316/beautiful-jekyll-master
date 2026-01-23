@@ -11,85 +11,92 @@ layout: base
     <div class="left-container"></div>
     <div class="center-container center-container--home">
       {{ content }} {% assign posts = site.posts %} {% assign category_order =
-      "app-Intro,perso-dev,errlog" | split: "," %} {% assign
-      category_home_limit = site.pagination.per_page | default:
-      site.category_home_limit | default: 10 %}
-
-      {% assign category_labels = "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び"
-        | split: "," %}
-      {% for cat in category_order %}
-      {% assign category_posts = posts | where_exp: "post", "post.categories contains cat" %}
-      {% assign category_label = cat %}
-      {% for item in category_labels %}
-        {% assign parts = item | split: ":" %}
-        {% if parts[0] == cat %}
-          {% assign category_label = parts[1] %}
-        {% endif %}
-      {% endfor %}
-      {% if category_posts.size > 0 %}
+      "app-Intro,perso-dev,errlog" | split: "," %} {% assign category_home_limit
+      = site.pagination.per_page | default: site.category_home_limit | default:
+      10 %} {% assign category_labels =
+      "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び" |
+      split: "," %} {% for cat in category_order %} {% assign category_posts =
+      posts | where_exp: "post", "post.categories contains cat" %} {% assign
+      category_label = cat %} {% for item in category_labels %} {% assign parts
+      = item | split: ":" %} {% if parts[0] == cat %} {% assign category_label =
+      parts[1] %} {% endif %} {% endfor %} {% if category_posts.size > 0 %}
       <section class="category-group">
-        <h2 class="post-title">{{ category_label }}</h2>
-        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-        <ul class="posts-list list-unstyled" role="list">
-          <!-- admax -->
-          <!-- <script src="https://adm.shinobi.jp/s/ccf636bbf7be7949aad2090c3ec82faa"></script> -->
-          <!-- admax -->
-          {% for post in category_posts limit: category_home_limit %}
-          <li class="post-preview">
-            <article>
-              {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
-              post.thumbnail-img }} {% elsif post.cover-img %} {% if
-              post.cover-img.first %} {{ post.cover-img[0].first.first }} {% else
-              %} {{ post.cover-img }} {% endif %} {% else %} {% endif %} {%-
-              endcapture -%} {% assign thumbnail = thumbnail | strip %} {% if
-              thumbnail != "" %}
-              <div class="post-image">
-                <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-                  <img
-                    src="{{ thumbnail | absolute_url }}"
-                    alt="Post thumbnail"
-                  />
+        <h1 class="post-title category-title">
+          <button
+            class="category-toggle"
+            type="button"
+            data-category-toggle
+            aria-expanded="true"
+            aria-controls="category-body-{{ cat }}"
+          >
+            <span class="category-toggle__text">{{ category_label }}</span>
+            <span class="category-toggle__icon" aria-hidden="true">∨</span>
+          </button>
+        </h1>
+        <div class="category-body" id="category-body-{{ cat }}">
+          <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+          <ul class="posts-list list-unstyled" role="list">
+            <!-- admax -->
+            <!-- <script src="https://adm.shinobi.jp/s/ccf636bbf7be7949aad2090c3ec82faa"></script> -->
+            <!-- admax -->
+            {% for post in category_posts limit: category_home_limit %}
+            <li class="post-preview">
+              <article>
+                {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
+                post.thumbnail-img }} {% elsif post.cover-img %} {% if
+                post.cover-img.first %} {{ post.cover-img[0].first.first }} {%
+                else %} {{ post.cover-img }} {% endif %} {% else %} {% endif %}
+                {%- endcapture -%} {% assign thumbnail = thumbnail | strip %} {%
+                if thumbnail != "" %}
+                <div class="post-image">
+                  <a
+                    href="{{ post.url | absolute_url }}"
+                    aria-label="Thumbnail"
+                  >
+                    <img
+                      src="{{ thumbnail | absolute_url }}"
+                      alt="Post thumbnail"
+                    />
+                  </a>
+                </div>
+                {% endif %}
+                <a href="{{ post.url | absolute_url }}">
+                  <h2 class="post-title">{{ post.title | strip_html }}</h2>
+
+                  <!-- {% if post.subtitle %}
+                  <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
+                  {% endif %} -->
                 </a>
-              </div>
-              {% endif %}
-              <a href="{{ post.url | absolute_url }}">
-                <h2 class="post-title">{{ post.title | strip_html }}</h2>
 
-                <!-- {% if post.subtitle %}
-                <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
-                {% endif %} -->
+                <p class="post-meta">
+                  {% assign date_format = site.date_format | default: "%Y-%m-%d"
+                  %} {{ post.date | date: date_format }}
+                </p>
+
+                {% unless site.feed_show_excerpt == false %} {% endunless %}
+              </article>
+            </li>
+            {% endfor %}
+            <!-- admax -->
+            <!-- <script src="https://adm.shinobi.jp/s/ccf636bbf7be7949aad2090c3ec82faa"></script> -->
+            <!-- admax -->
+          </ul>
+          {% if category_posts.size > category_home_limit %}
+          <ul class="pagination main-pager">
+            <li class="page-item next">
+              <a
+                class="page-link"
+                href="{{ '/category/' | append: cat | append: '/page/2/' | absolute_url }}"
+              >
+                <span class="d-none d-sm-inline-block">Older Posts</span>
+                <i class="fas fa-arrow-right" alt="Older Posts"></i>
               </a>
-
-              <p class="post-meta">
-                {% assign date_format = site.date_format | default: "%Y-%m-%d" %}
-                {{ post.date | date: date_format }}
-              </p>
-
-              {% unless site.feed_show_excerpt == false %} {% endunless %}
-            </article>
-          </li>
-          {% endfor %}
-          <!-- admax -->
-          <!-- <script src="https://adm.shinobi.jp/s/ccf636bbf7be7949aad2090c3ec82faa"></script> -->
-          <!-- admax -->
-        </ul>
-        {% if category_posts.size > category_home_limit %}
-        <ul class="pagination main-pager">
-          <li class="page-item next">
-            <a
-              class="page-link"
-              href="{{ '/category/' | append: cat | append: '/page/2/' | absolute_url }}"
-            >
-              <span class="d-none d-sm-inline-block">Older Posts</span>
-              <i class="fas fa-arrow-right" alt="Older Posts"></i>
-            </a>
-          </li>
-        </ul>
-        {% endif %}
+            </li>
+          </ul>
+          {% endif %}
+        </div>
       </section>
-      {% endif %}
-      {% endfor %}
-
+      {% endif %} {% endfor %}
     </div>
     <div class="right-container">
       {% include sidebar.html current_url=page.url %}

@@ -32,6 +32,7 @@ let BeautifulJekyllJS = {
     BeautifulJekyllJS.initSearch();
     BeautifulJekyllJS.initToc();
     BeautifulJekyllJS.initCopyButtons();
+    BeautifulJekyllJS.initCategoryToggles();
   },
 
   initTheme : function() {
@@ -215,6 +216,24 @@ let BeautifulJekyllJS = {
         $("#beautifuljekyll-search-overlay").hide();
         $("body").removeClass("overflow-hidden");
       }
+    });
+  },
+
+  initCategoryToggles : function() {
+    const toggles = document.querySelectorAll("[data-category-toggle]");
+    if (!toggles.length) {
+      return;
+    }
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const group = toggle.closest(".category-group");
+        if (!group) {
+          return;
+        }
+        const isCollapsed = group.classList.toggle("is-collapsed");
+        toggle.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+      });
     });
   },
 
