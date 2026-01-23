@@ -21,7 +21,7 @@ layout: base
       = item | split: ":" %} {% if parts[0] == cat %} {% assign category_label =
       parts[1] %} {% endif %} {% endfor %} {% if category_posts.size > 0 %}
       <section class="category-group">
-        <h1 class="post-title category-title">
+        <h2 class="post-title category-title">
           <button
             class="category-toggle"
             type="button"
@@ -32,7 +32,7 @@ layout: base
             <span class="category-toggle__text">{{ category_label }}</span>
             <span class="category-toggle__icon" aria-hidden="true">∨</span>
           </button>
-        </h1>
+        </h2>
         <div class="category-body" id="category-body-{{ cat }}">
           <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
           <ul class="posts-list list-unstyled" role="list">
@@ -61,7 +61,7 @@ layout: base
                 </div>
                 {% endif %}
                 <a href="{{ post.url | absolute_url }}">
-                  <h2 class="post-title">{{ post.title | strip_html }}</h2>
+                  <h3 class="post-title">{{ post.title | strip_html }}</h3>
 
                   <!-- {% if post.subtitle %}
                   <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>

@@ -634,6 +634,11 @@ footer .footer-custom-content {
   padding: 0;
   border: 0;
 }
+.layout-home .posts-list .post-preview .post-image {
+  float: left;
+  margin-left: 0;
+  margin-right: 0.625rem;
+}
 
 /* --- Related posts (in article) --- */
 
