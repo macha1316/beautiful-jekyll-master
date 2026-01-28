@@ -54,7 +54,7 @@ social-network-links:
   github: "macha1316"
   twitter: "@taichan111613"
   # patreon: DeanAttali
-  youtube: "@unity7821"
+  # youtube: "@unity7821"
   # whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
@@ -100,7 +100,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "Taiyo DevLab"
+url-pretty: "Taiyo Tech Blog"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
