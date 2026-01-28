@@ -770,7 +770,10 @@ footer .footer-custom-content {
 .post-preview .post-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 7rem;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }
 .post-preview .post-image-short {
   margin-top: 0;
@@ -793,7 +796,10 @@ footer .footer-custom-content {
 .post-preview .post-image-small img {
   display: inline-block;
   max-width: 100%;
-  height: auto;
+  height: 7rem;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }
 @media (max-width: 500px) {
   .post-preview .post-image {
@@ -1426,7 +1432,7 @@ html[data-theme="dark"] .code-copy-button--error {
 .blog-post h2,
 .blog-post h3,
 .blog-post h4 {
-  margin-top: 2.25rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -1438,7 +1444,7 @@ html[data-theme="dark"] .code-copy-button--error {
   display: block;
   max-width: 100%;
   width: auto;
-  margin: 1.75rem auto;
+  margin: 1.75rem 0;
 }
 
 .blog-post .caption {

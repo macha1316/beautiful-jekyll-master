@@ -8,9 +8,9 @@ recommended_posts:
 
 recommended_apps:
   - title: "Skima タスク管理 時間管理"
-    url: "https://apps.apple.com/app/id6756102586"
+    url: "/2026-01-26-app-introduce-skima/"
     image: "/assets/img/Skima.png"
-    external: true
+    external: false
     store_note: "今にフォーカスしたタスク管理アプリ。時間の使い方が上手くなる"
     store_links:
       - label: "App Store"
