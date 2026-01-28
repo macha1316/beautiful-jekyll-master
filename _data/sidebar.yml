@@ -1,10 +1,10 @@
 recommended_posts:
-  - title: "[FirebaseError: Firebase Storageのエラー解消]"
-    url: "/2025-07-19-fire-storage-err/"
-    image: "/assets/img/firestorage-logo.png"
-  - title: "expoで作成したアプリを本番環境へ"
-    url: "/2025-07-18-expo-env/"
-    image: "/assets/img/expo.png"
+  - title: "Skima タスク管理 時間管理"
+    url: "/2026-01-26-app-introduce-skima/"
+    image: "/assets/img/Skima.png"
+  - title: "3ヶ月全振りで個人アプリ開発だけして分かった、やってよかったこと／今ならやらないこと"
+    url: "/2026-01-23-three-month-dev/"
+    image: "/assets/img/2026-01-23/samune.png"
 
 recommended_apps:
   - title: "Skima タスク管理 時間管理"
