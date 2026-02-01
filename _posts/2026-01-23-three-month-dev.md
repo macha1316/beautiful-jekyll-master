@@ -200,3 +200,9 @@ XやProduct Huntでの発信、ストアスクショの改善など、
 
 結果が出てから書くのではなく、  
 **出ていない今だから書けることを、これからも書いていきます。**
+
+## 関連記事
+
+{% assign related_urls = "/2026-02-01-app-introduce-yume-journal/|/2026-01-26-app-introduce-skima/|/2026-01-23-revenuecat-err/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
+{% include related-posts.html posts=related_posts %}

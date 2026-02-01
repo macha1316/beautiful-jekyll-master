@@ -85,3 +85,9 @@ Skimaは「考える」より「始める」を助けます。
 少しの作業でも、使った時間はしっかり積み上がります。
 
 もしよかったら、ぜひ使ってみてください。
+
+## 関連記事
+
+{% assign related_urls = "/2026-02-01-app-introduce-yume-journal/|/2026-01-23-revenuecat-err/|/2026-01-23-three-month-dev/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
+{% include related-posts.html posts=related_posts %}

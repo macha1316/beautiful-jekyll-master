@@ -82,3 +82,9 @@ Firebase の機能を React Native（Expo）アプリに導入して iOS ビル�
 `expo-build-properties` を使って Expo の iOS 設定をカスタムすることで、Firebase をはじめとする Swift ポッドとの静的リンクの問題や React Native のヘッダのモジュール化のエラーに対処できました。今回紹介した設定をそのまま使っても安全ですが、アプリの要件に応じて `deploymentTarget` などの値を調整してください。
 
 ご質問や追加のエラーがあればコメントやメールで教えていただけるとうれしいです。お時間があるときに他の記事やプロジェクトも覗いていただけるとうれしいです ☺️
+
+## 関連記事
+
+{% assign related_urls = "/2026-01-20-google-play-uploadl-err/|/2025-11-10-library-video-error/|/2025-11-04-expo-tunnel/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
+{% include related-posts.html posts=related_posts %}

@@ -34,3 +34,9 @@ firebase を無料枠で使用している場合、料金不要のロケーシ�
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
+
+## 関連記事
+
+{% assign related_urls = "/2026-01-20-google-play-uploadl-err/|/2025-11-15-expo-build-properties/|/2025-11-10-library-video-error/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
+{% include related-posts.html posts=related_posts %}

@@ -96,3 +96,9 @@ post.html の row クラスを以下のように書き換えます。
 [倉庫番](https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687)
 
 **お問い合わせ:** hiromacha1116@icloud.com
+
+## 関連記事
+
+{% assign related_urls = "/2025-07-21-ads-app/|/2025-06-02-github-jekyll/|/2025-06-02-jekyll-analytics/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
+{% include related-posts.html posts=related_posts %}

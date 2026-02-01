@@ -33,5 +33,6 @@ Google Play Consoleでアプリのリリースをすればエラーは解消さ�
 
 ## 関連記事
 
-{% assign related_posts = site.posts | where_exp: "post", "post.url == '/2025-10-21-missing-google-play-package/'" %}
+{% assign related_urls = "/2026-01-20-google-play-uploadl-err/|/2025-11-15-expo-build-properties/|/2025-11-10-library-video-error/" | split: "|" %}
+{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
 {% include related-posts.html posts=related_posts %}
