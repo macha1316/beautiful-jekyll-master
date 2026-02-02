@@ -2,7 +2,43 @@
 {% assign recent_limit = include.recent_limit | default: 5 %}
 
 <div class="sidebar-stack">
+  <div class="sidebar-card sidebar-card--profile">
+    <div class="sidebar-card__profile">
+      <div class="sidebar-card__profile-header">
+        {% if site.avatar %}
+          <div class="sidebar-card__profile-avatar">
+            <img
+              src="{{ site.avatar | relative_url }}"
+              alt="{{ site.author | default: 'Author' | strip_html }}"
+              loading="lazy"
+            />
+          </div>
+        {% endif %}
+        <div class="sidebar-card__profile-name">
+          {{ site.author | default: "名前" }}
+        </div>
+        <a
+          class="sidebar-card__profile-x"
+          href="https://x.com/taichan111613"
+          target="_blank"
+          rel="noopener"
+          aria-label="X"
+          title="X"
+        >
+          <svg viewBox="0 0 1200 1227" aria-hidden="true" focusable="false">
+            <path d="M714.4 519.9 1160 0H1057L670.7 456.4 352.4 0H0l468.4 681.6L0 1227h103l406-479.8L847.6 1227H1200L714.4 519.9ZM559.2 706.5l-46.6-66.6L148.8 79.7h153.4l293.8 420.2 46.6 66.6 381.5 545.6H870.7L559.2 706.5Z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="sidebar-card__profile-desc">
+        {{ site.sidebar_intro | default: "個人でアプリを作っている人です。
+        個人開発の学び・開発中に詰まったこと・エラーの対処法を、このブログに書いていきます。
+        たまに技術以外のことも書きます。" }}
+      </p>
+    </div>
+  </div>
 
+  {% comment %}
   <div class="sidebar-card sidebar-card--suggested">
     <div class="sidebar-card__title">おすすめの記事</div>
     <ul class="sidebar-card__list">
@@ -44,6 +80,7 @@
       {% endif %}
     </ul>
   </div>
+  {% endcomment %}
 
   <div class="sidebar-card sidebar-card--apps">
     <div class="sidebar-card__title">おすすめ新着アプリ</div>
@@ -149,6 +186,7 @@
     </ul>
   </div>
 
+  {% comment %}
   <div class="sidebar-card sidebar-card--tags">
     <div class="sidebar-card__title">タグ</div>
     {% assign configured_tags = site.data.sidebar.tag_list | default: site.sidebar_tag_list %}
@@ -210,7 +248,9 @@
       <div class="sidebar-card__empty">タグが登録されていません</div>
     {% endif %}
   </div>
+  {% endcomment %}
 
+  {% comment %}
     <div class="sidebar-card sidebar-card--recent">
     <div class="sidebar-card__title">新着記事</div>
     <ul class="sidebar-card__list">
@@ -245,4 +285,5 @@
       {% endif %}
     </ul>
   </div>
+  {% endcomment %}
 </div>
