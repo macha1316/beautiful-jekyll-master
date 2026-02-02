@@ -83,8 +83,3 @@ Firebase の機能を React Native（Expo）アプリに導入して iOS ビル�
 
 ご質問や追加のエラーがあればコメントやメールで教えていただけるとうれしいです。お時間があるときに他の記事やプロジェクトも覗いていただけるとうれしいです ☺️
 
-## 関連記事
-
-{% assign related_urls = "/2026-01-20-google-play-uploadl-err/|/2025-11-10-library-video-error/|/2025-11-04-expo-tunnel/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

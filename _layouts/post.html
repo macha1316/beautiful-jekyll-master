@@ -6,47 +6,40 @@ layout: base
 <main
   class="layout-post {% if page.full-width %}container-fluid{% else %}container-md{% endif %}"
 >
-  <div class="post-compact-header {% if page.full-width %}post-compact-header--wide{% endif %}">
+  <div
+    class="post-compact-header {% if page.full-width %}post-compact-header--wide{% endif %}"
+  >
     <div class="post-compact-header__inner">
       {% if page.title %}
-        <h1 class="post-compact-header__title">
-          {{ page.title | strip_html }}
-        </h1>
-      {% endif %}
-      {% if page.subtitle %}
-        <p class="post-compact-header__subtitle">
-          {{ page.subtitle | strip_html }}
-        </p>
-      {% endif %}
-      {% if page.author or page.date or page.last-updated or page.readtime %}
-        <div class="post-compact-header__meta">
-          {% if page.author %}
-            <span class="post-compact-header__meta-item">
-              By <strong>{{ page.author | strip_html }}</strong>
-            </span>
-          {% endif %}
-          {% if page.date %}
-            <span class="post-compact-header__meta-item">
-              {{ page.date | date: date_format }}
-            </span>
-          {% endif %}
-          {% if page.last-updated %}
-            <span class="post-compact-header__meta-item">
-              Updated {{ page.last-updated | date: date_format }}
-            </span>
-          {% endif %}
-          {% if page.readtime %}
-            {% capture readtime_text %}
-              {% include readtime.html %}
-            {% endcapture %}
-            {% assign readtime_clean = readtime_text | strip_html | replace: '&middot;', '' | replace: '·', '' | strip %}
-            {% if readtime_clean != "" %}
-              <span class="post-compact-header__meta-item">
-                {{ readtime_clean }}
-              </span>
-            {% endif %}
-          {% endif %}
-        </div>
+      <h1 class="post-compact-header__title">{{ page.title | strip_html }}</h1>
+      {% endif %} {% if page.subtitle %}
+      <p class="post-compact-header__subtitle">
+        {{ page.subtitle | strip_html }}
+      </p>
+      {% endif %} {% if page.author or page.date or page.last-updated or
+      page.readtime %}
+      <div class="post-compact-header__meta">
+        {% if page.author %}
+        <span class="post-compact-header__meta-item">
+          By <strong>{{ page.author | strip_html }}</strong>
+        </span>
+        {% endif %} {% if page.date %}
+        <span class="post-compact-header__meta-item">
+          {{ page.date | date: date_format }}
+        </span>
+        {% endif %} {% if page.last-updated %}
+        <span class="post-compact-header__meta-item">
+          Updated {{ page.last-updated | date: date_format }}
+        </span>
+        {% endif %} {% if page.readtime %} {% capture readtime_text %} {%
+        include readtime.html %} {% endcapture %} {% assign readtime_clean =
+        readtime_text | strip_html | replace: '&middot;', '' | replace: '·', ''
+        | strip %} {% if readtime_clean != "" %}
+        <span class="post-compact-header__meta-item">
+          {{ readtime_clean }}
+        </span>
+        {% endif %} {% endif %}
+      </div>
       {% endif %}
     </div>
   </div>
@@ -92,16 +85,13 @@ layout: base
         ></iframe>
         {% endcase %} {% endfor %} {% endif %}
       </div>
-      {% endif %}
-      {% if page.before-content %}
+      {% endif %} {% if page.before-content %}
       <div class="before-content">
         {% for file in page.before-content %} {% include {{ file }} %} {% endfor
         %}
       </div>
-      {% endif %}
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
+      {% endif %} {% if page.social-share %} {% include social-share.html %} {%
+      endif %}
 
       <div class="post-toc" data-post-toc hidden>
         <div class="post-toc__title">目次</div>
@@ -120,15 +110,14 @@ layout: base
       <!-- <script src="https://adm.shinobi.jp/s/ccf636bbf7be7949aad2090c3ec82faa"></script> -->
       <!-- admax -->
 
-      {% if page.tags.size > 0 %}
+      {% include related-posts.html limit=3 %} {% if page.tags.size > 0 %}
       <div class="blog-tags">
         <span>Tags:</span>
         {% for tag in page.tags %}
         <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
         {% endfor %}
       </div>
-      {% endif %}
-      {% if page.after-content %}
+      {% endif %} {% if page.after-content %}
       <div class="after-content">
         {% for file in page.after-content %} {% include {{ file }} %} {% endfor
         %}

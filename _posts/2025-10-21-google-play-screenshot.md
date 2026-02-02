@@ -27,8 +27,3 @@ author: たいよう
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️
 
-## 関連記事
-
-{% assign related_urls = "/2025-10-21-missing-google-play-package/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

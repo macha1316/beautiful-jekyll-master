@@ -49,8 +49,3 @@ sudo npm install -g @expo/ngrok@^4.1.0 --unsafe-perm
 いかがだったでしょうか。今回の記事が少しでも参考になったら幸いです。  
 よければサイドバーからアプリをチェックしたり、メールで感想を送ってもらえたらうれしいです ☺️
 
-## 関連記事
-
-{% assign related_urls = "/2026-01-20-google-play-uploadl-err/|/2025-11-15-expo-build-properties/|/2025-11-10-library-video-error/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

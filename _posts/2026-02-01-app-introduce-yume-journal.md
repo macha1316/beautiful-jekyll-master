@@ -67,8 +67,3 @@ AIのカテゴリ整理で、夢に表れる感情や思考のパターンが見
 
 ## 最後に
 
-## 関連記事
-
-{% assign related_urls = "/2026-01-26-app-introduce-skima/|/2026-01-23-revenuecat-err/|/2026-01-23-three-month-dev/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

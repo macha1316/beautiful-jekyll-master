@@ -97,8 +97,3 @@ post.html の row クラスを以下のように書き換えます。
 
 **お問い合わせ:** hiromacha1116@icloud.com
 
-## 関連記事
-
-{% assign related_urls = "/2025-07-21-ads-app/|/2025-06-02-github-jekyll/|/2025-06-02-jekyll-analytics/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

@@ -59,8 +59,3 @@ Jekyll では`_config.yml`に設定するだけで勝手に内部で設定して
 
 **お問い合わせ:** hiromacha1116@icloud.com
 
-## 関連記事
-
-{% assign related_urls = "/2025-07-21-ads-app/|/2025-07-21-jekyll-side-contents/|/2025-06-02-github-jekyll/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}

@@ -1,5 +1,35 @@
 {% assign posts = include.posts | default: empty %}
+{% assign limit = include.limit | default: 3 %}
+{% if posts == empty or posts.size == 0 %}
+  {% assign posts = "" | split: "" %}
+  {% assign max_tags = page.tags | size %}
+  {% if max_tags and max_tags > 0 %}
+    {% assign levels = (1..max_tags) | reverse %}
+    {% for level in levels %}
+      {% for post in site.posts %}
+        {% if post.url != page.url %}
+          {% assign match_count = 0 %}
+          {% for tag in page.tags %}
+            {% if post.tags contains tag %}
+              {% assign match_count = match_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if match_count == level %}
+            {% assign posts = posts | push: post %}
+          {% endif %}
+          {% if posts.size >= limit %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if posts.size >= limit %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
 {% if posts.size > 0 %}
+<h2>関連記事</h2>
 <div class="related-posts">
   <ul class="posts-list list-unstyled" role="list">
     {% for post in posts %}

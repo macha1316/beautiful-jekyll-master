@@ -76,8 +76,3 @@ random-word-api
 
 **お問い合わせ:** hiromacha1116@icloud.com
 
-## 関連記事
-
-{% assign related_urls = "/2025-06-29-wordnik/" | split: "|" %}
-{% assign related_posts = site.posts | where_exp: "post", "related_urls contains post.url" %}
-{% include related-posts.html posts=related_posts %}
