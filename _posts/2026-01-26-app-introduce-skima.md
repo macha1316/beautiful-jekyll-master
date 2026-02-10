@@ -1,26 +1,26 @@
 ---
 layout: post
-title: "Skima タスク管理 時間管理"
-subtitle: "Skimaのアプリ紹介"
+title: "focus now タスク管理 時間管理"
+subtitle: "focus nowのアプリ紹介"
 description: ""
 cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/Skima.png
-share-img: /assets/img/Skima.png
-tags: [Skima]
+thumbnail-img: /assets/img/focus_now.png
+share-img: /assets/img/focus_now.png
+tags: [focus now]
 category: app-Intro
 ---
 
 ## アプリ概要
 
-Skima（スキマ）は、完璧な予定を立てるためのタスク管理アプリではありません。  
+focus nowは、完璧な予定を立てるためのタスク管理アプリではありません。  
 「今」を無駄にしないためのアプリです。  
-Skimaは、**今やることを明確にできる**タスクアプリです。
+focus nowは、**今やることを明確にできる**タスクアプリです。
 
 ## こんな人におすすめ
 
 やるべきことはあるのに、  
 何から手をつければいいか分からず、時間だけが過ぎてしまう。  
-Skimaは、そんな状態を減らすために作られました。
+focus nowは、そんな状態を減らすために作られました。
 
 ## 主な特徴
 
@@ -53,36 +53,35 @@ Skimaは、そんな状態を減らすために作られました。
 よく使うタスクは保存して、いつでも呼び出せます。  
 細かい設定や計画は必要ありません。
 
-## Skimaを使うと何が嬉しいのか
+## focus nowを使うと何が嬉しいのか
 
 ### 1. 何もしないでダラダラする時間が減る
 
-ダラダラしそうなときは、まずSkimaを起動して「今やること」をつぶやくだけ。  
+ダラダラしそうなときは、まずfocus nowを起動して「今やること」をつぶやくだけ。  
 口に出すと、その内容がすぐタスクとして表示されます。  
 やることと時間が目の前に並ぶと、自然と「よし、やるか」という気持ちになれます。
 
 ### 2. 予定のズレが起きにくくなる
 
 「あと少しだけ」と思って、30分、1時間と延びてしまうことはよくあります。  
-Skimaでは終了時間が来たら次のタスクに切り替わるので、  
+focus nowでは終了時間が来たら次のタスクに切り替わるので、  
 決めた時間を守りやすくなります。
 
 ### 3. 実績として残る
 
 普段の作業時間って、意外と記録していないものです。  
-Skimaなら取り組んだタスクがジャンル別に自動で残ります。  
+focus nowなら取り組んだタスクがジャンル別に自動で残ります。  
 あとから見返すと「これだけやってきたんだ」と実感でき、  
 小さな達成感が次の行動につながります。
 
 ## ダウンロードはこちらから
 
-[Skima iOS](https://apps.apple.com/app/id6756102586)  
-[Skima Android](https://play.google.com/store/apps/details?id=com.hiromacha1116.Skima)
+[focus now iOS](https://apps.apple.com/app/id6756102586)  
+[focus now Android](https://play.google.com/store/apps/details?id=com.hiromacha1116.skima)
 
 ## 最後に
 
-Skimaは「考える」より「始める」を助けます。  
+focus nowは「考える」より「始める」を助けます。  
 少しの作業でも、使った時間はしっかり積み上がります。
 
 もしよかったら、ぜひ使ってみてください。
-

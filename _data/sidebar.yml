@@ -1,15 +1,15 @@
 recommended_posts:
-  - title: "Skima タスク管理 時間管理"
+  - title: "focus now タスク管理 時間管理"
     url: "/2026-01-26-app-introduce-skima/"
-    image: "/assets/img/Skima.png"
+    image: "/assets/img/focus_now.png"
   - title: "3ヶ月全振りで個人アプリ開発だけして分かった、やってよかったこと／今ならやらないこと"
     url: "/2026-01-23-three-month-dev/"
     image: "/assets/img/2026-01-23/samune.png"
 
 recommended_apps:
-  - title: "Skima タスク管理 時間管理"
+  - title: "focus now タスク管理 時間管理"
     url: "/2026-01-26-app-introduce-skima/"
-    image: "/assets/img/Skima.png"
+    image: "/assets/img/focus_now.png"
     external: false
     store_note: "今にフォーカスしたタスク管理アプリ。時間の使い方が上手くなる"
     store_links:
