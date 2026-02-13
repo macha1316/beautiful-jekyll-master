@@ -1653,7 +1653,7 @@ html[data-theme="dark"] .code-copy-button--error {
 }
 
 .right-container {
-  width: clamp(260px, 24vw, 320px);
+  width: clamp(280px, 22vw, 360px);
   min-width: 200px;
   padding-left: 2.25rem;
   flex-shrink: 0;
@@ -2557,6 +2557,16 @@ main.container-md,
 main.container-fluid {
   padding-top: clamp(3.25rem, 6.5vw, 5rem);
   padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+/* HOME / category pages: use a wider canvas on large monitors */
+main.layout-home.container-md {
+  max-width: min(1360px, calc(100vw - 6rem));
+}
+
+/* Post pages: also use a wider canvas on large monitors */
+main.layout-post.container-md {
+  max-width: min(1360px, calc(100vw - 5.5rem));
 }
 
 .post-compact-header {
