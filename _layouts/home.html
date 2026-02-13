@@ -11,10 +11,10 @@ layout: base
     <div class="left-container"></div>
     <div class="center-container center-container--home">
       {{ content }} {% assign posts = site.posts %} {% assign category_order =
-      "app-Intro,perso-dev,errlog" | split: "," %} {% assign category_home_limit
+      "app-Intro,perso-dev,app-dev-beginner,errlog,chat" | split: "," %} {% assign category_home_limit
       = site.pagination.per_page | default: site.category_home_limit | default:
       10 %} {% assign category_labels =
-      "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び" |
+      "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び,app-dev-beginner:アプリ開発初心者向け,chat:雑談" |
       split: "," %} {% for cat in category_order %} {% assign category_posts =
       posts | where_exp: "post", "post.categories contains cat" %} {% assign
       category_label = cat %} {% for item in category_labels %} {% assign parts
@@ -29,7 +29,10 @@ layout: base
             aria-expanded="true"
             aria-controls="category-body-{{ cat }}"
           >
-            <span class="category-toggle__text">{{ category_label }}</span>
+            <span class="category-toggle__head">
+              <span class="category-toggle__text">{{ category_label }}</span>
+              <span class="category-toggle__count">{{ category_posts.size }}</span>
+            </span>
             <span class="category-toggle__icon" aria-hidden="true">∨</span>
           </button>
         </h2>
