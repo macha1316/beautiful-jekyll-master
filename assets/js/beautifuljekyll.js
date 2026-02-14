@@ -33,6 +33,7 @@ let BeautifulJekyllJS = {
     BeautifulJekyllJS.initToc();
     BeautifulJekyllJS.initCopyButtons();
     BeautifulJekyllJS.initCategoryToggles();
+    BeautifulJekyllJS.initSidebarFollow();
   },
 
   initTheme : function() {
@@ -414,6 +415,122 @@ let BeautifulJekyllJS = {
 
       container.appendChild(button);
     });
+  },
+
+  initSidebarFollow : function() {
+    const sidebar = document.querySelector(".right-container .sidebar-stack");
+    if (!sidebar || typeof window === "undefined") {
+      return;
+    }
+
+    const desktopQuery = window.matchMedia("(min-width: 901px)");
+    const bottomGap = 16;
+
+    let previousY = window.pageYOffset || 0;
+    let shiftY = 0;
+    let maxShiftY = 0;
+    let stickyStartY = 0;
+    let ticking = false;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const getStickyTop = () => {
+      const topValue = parseFloat(window.getComputedStyle(sidebar).top);
+      return Number.isFinite(topValue) ? topValue : 72;
+    };
+
+    const applyShift = () => {
+      if (!desktopQuery.matches || maxShiftY <= 0) {
+        sidebar.style.transform = "";
+        return;
+      }
+      sidebar.style.transform = `translateY(${-shiftY}px)`;
+    };
+
+    const recalc = () => {
+      if (!desktopQuery.matches) {
+        shiftY = 0;
+        maxShiftY = 0;
+        stickyStartY = 0;
+        previousY = window.pageYOffset || 0;
+        applyShift();
+        return;
+      }
+
+      const stickyTop = getStickyTop();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+      const sidebarHeight = sidebar.scrollHeight;
+      const availableHeight = Math.max(0, viewportHeight - stickyTop - bottomGap);
+
+      maxShiftY = Math.max(0, sidebarHeight - availableHeight);
+      shiftY = clamp(shiftY, 0, maxShiftY);
+
+      const rect = sidebar.getBoundingClientRect();
+      const naturalTop = rect.top + (window.pageYOffset || 0) + shiftY;
+      stickyStartY = Math.max(0, naturalTop - stickyTop);
+
+      applyShift();
+    };
+
+    const onScroll = () => {
+      const currentY = window.pageYOffset || 0;
+      const deltaY = currentY - previousY;
+      previousY = currentY;
+
+      if (!desktopQuery.matches || maxShiftY <= 0) {
+        if (shiftY !== 0) {
+          shiftY = 0;
+          applyShift();
+        }
+        return;
+      }
+
+      if (currentY <= stickyStartY) {
+        if (shiftY !== 0) {
+          shiftY = 0;
+          applyShift();
+        }
+        return;
+      }
+
+      if (deltaY === 0) {
+        return;
+      }
+
+      const nextShift = clamp(shiftY + deltaY, 0, maxShiftY);
+      if (nextShift !== shiftY) {
+        shiftY = nextShift;
+        applyShift();
+      }
+    };
+
+    const requestScrollUpdate = () => {
+      if (ticking) {
+        return;
+      }
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        onScroll();
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+    window.addEventListener("resize", recalc);
+
+    if (typeof desktopQuery.addEventListener === "function") {
+      desktopQuery.addEventListener("change", recalc);
+    } else if (typeof desktopQuery.addListener === "function") {
+      desktopQuery.addListener(recalc);
+    }
+
+    sidebar.addEventListener("toggle", recalc, true);
+    sidebar.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("load", recalc);
+    });
+
+    recalc();
+    setTimeout(recalc, 120);
   },
 
   slugify : function(text) {

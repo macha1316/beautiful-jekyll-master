@@ -1695,13 +1695,14 @@ html[data-theme="dark"] .code-copy-button--error {
   gap: 20px;
 }
 
-/* 自動スクロール */
-/* @media (min-width: 901px) {
+/* スクロール追従（デスクトップ） */
+@media (min-width: 901px) {
   .right-container .sidebar-stack {
     position: sticky;
     top: clamp(72px, 10vh, 110px);
+    will-change: transform;
   }
-} */
+}
 
 .right-container .sidebar-card {
   border: 1px solid rgba(203, 213, 225, 0.6);
