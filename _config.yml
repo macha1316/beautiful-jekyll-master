@@ -11,6 +11,8 @@
 
 # Name of website
 title: たいようテックブログ
+url: "https://taiyou-tech-blog.com"
+baseurl: ""
 
 # Your name to show in the footer
 author: たいよう
