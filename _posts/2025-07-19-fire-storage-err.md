@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "[FirebaseError: Firebase Storage: Object '' does not exist. (storage/object-not-found)]の時に確認すべきこと"
+subtitle: "Firebase Storageのobject-not-foundエラー原因と解決メモ"
+description: "Firebase Storageでobject-not-foundエラーが発生したときに確認したポイントと、実際に解決できた原因を共有します。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/firestorage-logo.png
 share-img: /assets/img/firestorage-logo.png
@@ -34,4 +36,3 @@ firebase を無料枠で使用している場合、料金不要のロケーシ�
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

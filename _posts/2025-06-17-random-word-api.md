@@ -1,7 +1,8 @@
 ---
 layout: post
 title: ランダムに単語を返してくれる random-word-api 使ってみた
-# subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
+subtitle: "random-word-apiの基本的な使い方をcurlで確認"
+description: "ランダムな英単語を返すrandom-word-apiの使い方を、curlコマンドとレスポンス例を使ってわかりやすく紹介します。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.png
 share-img: /assets/img/2025-06-17/random-word-api_bg.png
@@ -75,4 +76,3 @@ random-word-api
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

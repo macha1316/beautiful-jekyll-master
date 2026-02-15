@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "expo + firebaseアプリにAppleサインインの実装(EXPO SDK53)"
+subtitle: "Expo SDK53でFirebase AuthenticationにAppleサインインを導入"
+description: "Expo SDK53とFirebase環境でAppleサインインを実装した手順と、つまずきやすいポイントを実体験ベースでまとめました。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
@@ -118,4 +120,3 @@ const useSignInContainer = () => {
 [倉庫番](https://apps.apple.com/us/app/%E6%8E%98%E3%81%A3%E3%81%A6%E9%81%8B%E3%81%B6%E6%96%B0%E6%84%9F%E8%A6%9A%E5%80%89%E5%BA%AB%E7%95%AA%E3%82%B2%E3%83%BC%E3%83%A0/id1610742687)
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

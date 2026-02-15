@@ -3,7 +3,7 @@ layout: post
 title: "複利で伸びる1つの習慣『Atomic Habits』を読んで本当によかった。。"
 subtitle: "習慣は気合いではなく設計で変えられる"
 description: "James Clear著『Atomic Habits』を読んで、日々の行動を続けるために実践したい考え方を感想ベースでまとめました。"
-cover-img: /assets/img//2026-02-15/atomic_habits.jpg
+cover-img: /assets/img/2026-02-15/atomic_habits.jpg
 tags: [雑談, 読書感想]
 category: chat
 categories: [chat]

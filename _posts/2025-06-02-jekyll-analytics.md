@@ -1,7 +1,8 @@
 ---
 layout: post
 title: GitHub Pages × JekyllにGoogle Analyticsをつける
-# subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
+subtitle: "JekyllブログにGoogle Analyticsを設定する手順メモ"
+description: "GitHub Pages × Jekyllで作ったブログにGoogle Analyticsを設定する流れを、備忘録としてわかりやすくまとめました。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
@@ -58,4 +59,3 @@ Jekyll では`_config.yml`に設定するだけで勝手に内部で設定して
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

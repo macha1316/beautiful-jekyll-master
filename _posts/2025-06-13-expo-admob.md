@@ -1,7 +1,8 @@
 ---
 layout: post
 title: expoでgoogle admobを導入してみた
-# subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
+subtitle: "Expo SDK53でAdMobのリワードとバナー広告を実装する"
+description: "Expo SDK53環境でGoogle AdMobを導入し、リワード広告とバナー広告をテストするまでの手順を実践ベースで解説します。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/expo_admob.png
 share-img: /assets/img/expo_admob.png
@@ -151,4 +152,3 @@ npm run ios
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Expo SDK を アップデートした時にライブラリの互換性を合わせる
-# subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
+subtitle: "Expo SDK更新時の依存ライブラリ整合性を取る手順"
+description: "Expo SDKをアップデートしたときに発生したライブラリ互換性の問題を、expo doctorなどの手順で解消する方法をまとめました。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/2025-06-03/expo_logo.png
 share-img: /assets/img/2025-06-03/expo_logo.png
@@ -39,4 +40,3 @@ npx expo upgrade
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "UnityでBuildしたAABファイルでGoogle Playでデバッグモードで著名されていますのエラーが出る時の対処法"
+subtitle: "Google Playのデバッグ署名エラーをUnity側で解消する手順"
+description: "Unityで生成したAAB提出時にGoogle Play Consoleで発生するデバッグ署名エラーについて、原因と対処手順を解説します。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/unity.png
 share-img: /assets/img/unity.png

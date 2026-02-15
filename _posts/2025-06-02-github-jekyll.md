@@ -1,7 +1,8 @@
 ---
 layout: post
 title: GitHub Pages × Jekyllでブログを作るときにつまづいたことまとめ
-# subtitle: Rubyや設定ファイルなど初心者がハマりがちなポイント
+subtitle: "初心者がGitHub PagesとJekyll構築で詰まったエラー対処まとめ"
+description: "GitHub Pages × Jekyllでブログを公開する際に実際につまずいたポイントと解決手順を、初心者目線でまとめました。"
 cover-img: /assets/img/header.png
 thumbnail-img: /assets/img/GitHub.png
 share-img: /assets/img/GitHub.png
@@ -128,4 +129,3 @@ ci.yml に以下を追加
 その他の記事もぜひご覧ください！
 
 **お問い合わせ:** hiromacha1116@icloud.com
-
