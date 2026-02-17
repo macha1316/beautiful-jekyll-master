@@ -150,9 +150,6 @@ When asked to optimize a post, do all of the following:
 
 - 対象記事: [GitHub Pages × JekyllにGoogle Analyticsを設定する手順]({% post_url 2025-06-02-jekyll-analytics %})
 
-やったことはシンプルで、`jekyll-post-seo` を呼び出して
-`title` / `subtitle` / `description` / 見出し構成 / 内部リンクを順番に整えるだけです。
-
 実際に変わったポイントはこんな感じでした。
 
 1. タイトルを「手順が分かる形」に変更して検索意図と一致させる
