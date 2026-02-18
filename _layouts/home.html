@@ -11,11 +11,11 @@ layout: base
     <div class="left-container"></div>
     <div class="center-container center-container--home">
       {{ content }} {% assign posts = site.posts %} {% assign category_order =
-      "perso-dev,app-dev-beginner,errlog,chat,app-Intro" | split: "," %} {% assign category_home_limit
-      = site.pagination.per_page | default: site.category_home_limit | default:
-      10 %} {% assign category_labels =
-      "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び,app-dev-beginner:アプリ開発初心者向け,chat:雑談" |
-      split: "," %} {% for cat in category_order %} {% assign category_posts =
+      "perso-dev,chat,app-dev-beginner,errlog,app-Intro" | split: "," %} {%
+      assign category_home_limit = site.pagination.per_page | default:
+      site.category_home_limit | default: 10 %} {% assign category_labels =
+      "errlog:トラブル・検証,app-Intro:アプリ紹介,perso-dev:個人開発の学び,app-dev-beginner:アプリ開発初心者向け,chat:雑談"
+      | split: "," %} {% for cat in category_order %} {% assign category_posts =
       posts | where_exp: "post", "post.categories contains cat" %} {% assign
       category_label = cat %} {% for item in category_labels %} {% assign parts
       = item | split: ":" %} {% if parts[0] == cat %} {% assign category_label =
@@ -31,7 +31,9 @@ layout: base
           >
             <span class="category-toggle__head">
               <span class="category-toggle__text">{{ category_label }}</span>
-              <span class="category-toggle__count">{{ category_posts.size }}</span>
+              <span class="category-toggle__count"
+                >{{ category_posts.size }}</span
+              >
             </span>
             <span class="category-toggle__icon" aria-hidden="true">∨</span>
           </button>
@@ -45,6 +47,11 @@ layout: base
             {% for post in category_posts limit: category_home_limit %}
             <li class="post-preview">
               <article>
+                <a
+                  class="post-card-overlay"
+                  href="{{ post.url | absolute_url }}"
+                  aria-label="{{ post.title | strip_html }}"
+                ></a>
                 {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
                 post.thumbnail-img }} {% elsif post.cover-img %} {% if
                 post.cover-img.first %} {{ post.cover-img[0].first.first }} {%
@@ -52,24 +59,17 @@ layout: base
                 {%- endcapture -%} {% assign thumbnail = thumbnail | strip %} {%
                 if thumbnail != "" %}
                 <div class="post-image">
-                  <a
-                    href="{{ post.url | absolute_url }}"
-                    aria-label="Thumbnail"
-                  >
-                    <img
-                      src="{{ thumbnail | absolute_url }}"
-                      alt="Post thumbnail"
-                    />
-                  </a>
+                  <img
+                    src="{{ thumbnail | absolute_url }}"
+                    alt="Post thumbnail"
+                  />
                 </div>
                 {% endif %}
-                <a href="{{ post.url | absolute_url }}">
-                  <h3 class="post-title">{{ post.title | strip_html }}</h3>
+                <h3 class="post-title">{{ post.title | strip_html }}</h3>
 
-                  <!-- {% if post.subtitle %}
-                  <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
-                  {% endif %} -->
-                </a>
+                <!-- {% if post.subtitle %}
+                <h3 class="post-subtitle">{{ post.subtitle | strip_html }}</h3>
+                {% endif %} -->
 
                 <p class="post-meta">
                   {% assign date_format = site.date_format | default: "%Y-%m-%d"
