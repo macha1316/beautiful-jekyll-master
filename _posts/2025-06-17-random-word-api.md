@@ -3,9 +3,9 @@ layout: post
 title: ランダムに単語を返してくれる random-word-api 使ってみた
 subtitle: "random-word-apiの基本的な使い方をcurlで確認"
 description: "ランダムな英単語を返すrandom-word-apiの使い方を、curlコマンドとレスポンス例を使ってわかりやすく紹介します。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.png
-share-img: /assets/img/2025-06-17/random-word-api_bg.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.webp
+share-img: /assets/img/2025-06-17/random-word-api_bg.webp
 tags: [API]
 category: errlog
 author: taiyou
@@ -25,7 +25,7 @@ curl "https://random-word-api.herokuapp.com/word?number=5"
 
 おー！ 下記のような結果が返ってきました
 `["sleepovers","tedders","recalculating","kenning","timesaver"]`
-<img src="/assets//img//2025-06-17/random-word-api.png" alt="scret" style="max-width: 600px;" />
+<img src="/assets/img/2025-06-17/random-word-api.webp" alt="scret" style="max-width: 600px;" />
 
 ## コマンド解説
 

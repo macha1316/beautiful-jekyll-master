@@ -3,9 +3,9 @@ layout: post
 title: "GitHub Pages × JekyllにGoogle Analyticsを設定する手順"
 subtitle: "計測IDを設定して公開ブログのアクセス計測を始める"
 description: "GitHub Pages × JekyllブログにGoogle Analytics（GA4）を設定する手順をまとめました。計測IDの発行から _config.yml の反映、計測確認までを短く解説します。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/GitHub.png
-share-img: /assets/img/GitHub.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/GitHub.webp
+share-img: /assets/img/GitHub.webp
 tags: [Jekyll, GitHub Pages, Google Analytics]
 category: errlog
 author: taiyou
@@ -40,14 +40,14 @@ GitHub Pages + Jekyll でブログを作ったあと、
 プロパティ作成後、計測ID（`G-XXXXXXXXXX`）が発行されます。  
 このIDを Jekyll 側に設定します。
 
-![Google Analyticsで計測IDを確認する画面](/assets/img/2025-06-02/gtag.png)
+![Google Analyticsで計測IDを確認する画面](/assets/img/2025-06-02/gtag.webp)
 
 <br>
 
 Jekyll では `_config.yml` に設定するだけで gtag を反映できます。  
 `_config.yml` 内で `gtag` を検索します。
 
-![Jekyllの_config.ymlにgtagを設定する例](/assets/img/2025-06-02/gtag2.png)
+![Jekyllの_config.ymlにgtagを設定する例](/assets/img/2025-06-02/gtag2.webp)
 
 ```yaml
 #gtag: "G-XXXXXXXXXX"
@@ -62,7 +62,7 @@ Jekyll では `_config.yml` に設定するだけで gtag を反映できます�
 `commit -> push` で GitHub Pages が再デプロイされたら、  
 Google Analytics のリアルタイム画面でアクセスが入るか確認します。
 
-![Google Analyticsのリアルタイム計測確認](/assets/img/2025-06-02/gtag3.png)
+![Google Analyticsのリアルタイム計測確認](/assets/img/2025-06-02/gtag3.webp)
 
 計測できていれば設定完了です。
 

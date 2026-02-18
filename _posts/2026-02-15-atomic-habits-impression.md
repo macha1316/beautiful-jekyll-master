@@ -3,7 +3,7 @@ layout: post
 title: "複利で伸びる1つの習慣『Atomic Habits』を読んで本当によかった。。"
 subtitle: "習慣は気合いではなく設計で変えられる"
 description: "James Clear著『Atomic Habits』を読んで、日々の行動を続けるために実践したい考え方を感想ベースでまとめました。"
-cover-img: /assets/img/2026-02-15/atomic_habits.jpg
+cover-img: /assets/img/2026-02-15/atomic_habits.webp
 tags: [雑談, 読書感想]
 category: chat
 categories: [chat]
@@ -76,7 +76,7 @@ author: taiyou
 過ごしたくなる場所を先に作るほうが、結果的に続きやすいと感じています。  
 次は植物も置いて、さらに居心地を良くしたいです。
 
-<img src="/assets/img/2026-02-15/1.jpeg" alt="デスク写真" style="height: auto; max-height: 220px" />
+<img src="/assets/img/2026-02-15/1.webp" alt="デスク写真" style="height: auto; max-height: 220px" />
 
 ### 4. 「どんな人間でありたいか」を先に決める
 

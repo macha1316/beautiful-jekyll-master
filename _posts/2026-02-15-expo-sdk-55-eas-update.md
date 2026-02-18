@@ -3,7 +3,7 @@ layout: post
 title: "Expo SDK 55 Betaを見据えたEAS Update運用ガイド"
 subtitle: "New Architecture前提でOTA更新を安全に回す実践手順"
 description: "2026年2月15日時点の公式情報をもとに、Expo SDK 55 Beta移行を見据えたEAS Update運用の設計ポイントを整理します。"
-cover-img: /assets/img/expo.png
+cover-img: /assets/img/expo.webp
 tags: [Expo, EAS Update, React Native, OTA]
 category: app-dev-beginner
 ---

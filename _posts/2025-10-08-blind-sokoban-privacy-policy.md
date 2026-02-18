@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "消える倉庫番プライバシーポリシー"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/blind_sokoban.png
-share-img: /assets/img/blind_sokoban.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/blind_sokoban.webp
+share-img: /assets/img/blind_sokoban.webp
 tags: []
 author: taiyou
 ---

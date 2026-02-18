@@ -3,9 +3,9 @@ layout: post
 title: "ゆめ日記"
 subtitle: "ゆめ日記のアプリ紹介"
 description: ""
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/dream.png
-share-img: /assets/img/dream.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/dream.webp
+share-img: /assets/img/dream.webp
 tags: [ゆめ日記]
 category: app-Intro
 ---
@@ -32,14 +32,14 @@ category: app-Intro
 起きた直後でも迷わず入力できる、日記のようなシンプルなUI。
 思い出せる範囲で書くだけで、夢をしっかり残せます。
 
-<img src="/assets/img/2026-02-01/1.png" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-02-01/1.webp" alt="sdk" style=" height: auto; max-height: 300px" />
 
 ### 2. AIがカテゴリで整理
 
 書いた夢をAIが大まかなカテゴリに分類してくれるので、
 自分では気づかなかったテーマや傾向が見えてきます。
 
-<img src="/assets/img/2026-02-01/2.png" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-02-01/2.webp" alt="sdk" style=" height: auto; max-height: 300px" />
 
 ### 3. 記録を促す通知
 

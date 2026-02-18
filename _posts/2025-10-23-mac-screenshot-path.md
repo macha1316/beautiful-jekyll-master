@@ -3,9 +3,9 @@ layout: post
 title: "Macでスクリーンショットの保存場所をコマンド一つで自由に変える"
 subtitle: "考え中"
 description: "考え中"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-23/samune.png
-share-img: /assets/img/2025-10-23/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-10-23/samune.webp
+share-img: /assets/img/2025-10-23/samune.webp
 tags: [Mac, ユーティリティ]
 category: errlog
 # author: たいよう
@@ -14,7 +14,7 @@ category: errlog
 {% capture bubble_dev_taiyou_intro %}
 たくさんスクショをとる人にとっては嬉しい実装だと思う
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 

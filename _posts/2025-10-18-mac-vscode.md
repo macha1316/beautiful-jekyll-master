@@ -3,9 +3,9 @@ layout: post
 title: "[初心者必見] MacとVSCodeで必須のショートカットキー一覧"
 subtitle: ""
 description: ""
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-18_2/samune.png
-share-img: /assets/img/2025-10-18_2/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-10-18_2/samune.webp
+share-img: /assets/img/2025-10-18_2/samune.webp
 tags: [Mac, VSCode, 初心者必見]
 category: errlog
 author: たいよう
@@ -14,12 +14,12 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 この記事だけ見れば必須のコマンドは一通り覚えられると思う！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 {% capture bubble_dev_josyu_intro %}
 Windows コマンドは載せてないから注意ね
 {% endcapture %}
-{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev_josyu_intro %}
+{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.webp" message=bubble_dev_josyu_intro %}
 
 ## はじめに
 

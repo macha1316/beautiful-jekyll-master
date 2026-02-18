@@ -3,9 +3,9 @@ layout: post
 title: expoでgoogle admobを導入してみた
 subtitle: "Expo SDK53でAdMobのリワードとバナー広告を実装する"
 description: "Expo SDK53環境でGoogle AdMobを導入し、リワード広告とバナー広告をテストするまでの手順を実践ベースで解説します。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/expo_admob.png
-share-img: /assets/img/expo_admob.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/expo_admob.webp
+share-img: /assets/img/expo_admob.webp
 tags: [Expo, Google Admob]
 category: errlog
 author: taiyou
@@ -143,9 +143,9 @@ npm run ios
 ## Simulator 画面
 
 バナー  
-<img src="/assets//img//2025-06-13/admob1.png" alt="scret" style="max-width: 600px;" />  
+<img src="/assets/img/2025-06-13/admob1.webp" alt="scret" style="max-width: 600px;" />  
 リワード  
-<img src="/assets//img//2025-06-13/admob2.png" alt="scret" style="max-width: 600px;" />
+<img src="/assets/img/2025-06-13/admob2.webp" alt="scret" style="max-width: 600px;" />
 
 ## おわりに
 

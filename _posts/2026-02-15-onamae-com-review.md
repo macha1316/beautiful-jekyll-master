@@ -3,7 +3,7 @@ layout: post
 title: "お名前.comはどう？個人ブログで実際に使って分かった結論"
 subtitle: "独自ドメインをこれから取る人向けの体験メモ"
 description: "このサイトでも使っているお名前.comについて、選んだ理由と運用で気をつけている点を体験ベースでまとめました。"
-cover-img: /assets/img/2026-02-15/onamae.jpeg
+cover-img: /assets/img/2026-02-15/onamae.webp
 tags: [雑談, アフィリエイト, ブログ運営]
 category: chat
 ---
@@ -42,7 +42,7 @@ category: chat
 自分の例だと、**2025年5月31日申込の `.com` 1年登録で合計923円（税込）** でした。  
 内訳は `.com 1年登録 750円` + `Whois情報公開代行 0円` + `サービス維持調整費 173円` です。(comで750円は相当安いのでは！？)
 
-<img src="/assets/img/2026-02-15/2.png" alt="お名前.comの請求明細（個人情報をマスクした画像）" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-15/2.webp" alt="お名前.comの請求明細（個人情報をマスクした画像）" style="height: auto; max-height: 520px" />
 
 ### 2. 管理機能が一通り揃っている
 

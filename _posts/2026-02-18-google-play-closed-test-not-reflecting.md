@@ -3,7 +3,7 @@ layout: post
 title: "Google Playでクローズドテストが反映されない時にやったこと"
 subtitle: "1日待っても出ない時の対処メモ"
 description: "Google Playのクローズドテストが反映されず困った時に、自分が解決できた手順を残します。"
-cover-img: /assets/img/googe_store.png
+cover-img: /assets/img/googe_store.webp
 tags: [Google Play, クローズドテスト, エラー解決]
 category: errlog
 ---

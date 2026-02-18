@@ -7,7 +7,7 @@ tags: [Jekyll, sitemap, ブログ運営]
 category: errlog
 categories: [errlog]
 author: taiyou
-cover-img: /assets/img/jekyll.png
+cover-img: /assets/img/jekyll.webp
 ---
 
 ## はじめに
@@ -30,7 +30,7 @@ Search Consoleを見直していて、
 これ、URLが全部相対パスです。  
 「あれ、これで正しいのか？」となって確認を始めました。
 
-<img src="/assets/img/2026-02-16/5.png" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/5.webp" alt="" style="height: auto; max-height: 520px" />
 
 ## 詰まったポイント
 
@@ -44,11 +44,11 @@ url: "https://taiyou-tech-blog.com"
 baseurl: ""
 ```
 
-<img src="/assets/img/2026-02-16/2.png" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/2.webp" alt="" style="height: auto; max-height: 520px" />
 
 修正後は `loc` が `https://taiyou-tech-blog.com/...` 形式になって、想定どおりに出力されました。
 
-<img src="/assets/img/2026-02-16/6.png" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/6.webp" alt="" style="height: auto; max-height: 520px" />
 
 ## ローカル確認で404になった件
 

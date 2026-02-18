@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Idea Memo Spark Support Page"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/app_icon.png
-share-img: /assets/img/app_icon.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/app_icon.webp
+share-img: /assets/img/app_icon.webp
 tags: []
 author: taiyou
 ---

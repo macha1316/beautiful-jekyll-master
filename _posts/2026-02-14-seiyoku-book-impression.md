@@ -3,7 +3,7 @@ layout: post
 title: "普段本を読まない自分が正欲を読んだ感想 (ネタバレなし)"
 subtitle: "普段本を読まない自分が感じたこと"
 description: "朝井リョウさんの『正欲』を、普段本を読まない視点で読んだ感想をネタバレなしでまとめました。"
-cover-img: /assets/img/2026-02-14/seiyoku.png
+cover-img: /assets/img/2026-02-14/seiyoku.webp
 tags: [雑談, 読書感想]
 category: chat
 categories: [chat]

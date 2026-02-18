@@ -3,7 +3,7 @@ layout: post
 title: "Codex Skillsを使ってみたら衝撃だった話（会話しながら独自Skillを作る）"
 subtitle: "初見でもできた、Codexとの対話ハンズオン記録"
 description: "Codex Skillsの仕組みをざっくり説明しつつ、実際にCodexと会話しながらSEO対策Skillを作って運用した手順と結果をまとめました。"
-cover-img: /assets/img/codex.jpeg
+cover-img: /assets/img/codex.webp
 tags: [雑談, Codex, SEO, ブログ運営]
 category: chat
 author: taiyou
@@ -49,7 +49,7 @@ author: taiyou
 
 ## Codexとの実際の会話
 
-<img src="/assets/img/2026-02-17/1.png" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-17/1.webp" alt="" style="height: auto; max-height: 520px" />
 
 > 自分: SEO対策のskill作成お願い
 >
@@ -59,7 +59,7 @@ author: taiyou
 
 ちなみに、skillコマンドはlocalの`user/.codex`以下に作成されます。
 
-<img src="/assets/img/2026-02-17/3.png" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-17/3.webp" alt="" style="height: auto; max-height: 520px" />
 
 ## 実際に作られたSkill
 
@@ -161,7 +161,7 @@ When asked to optimize a post, do all of the following:
 このあたりは、頭では分かっていても地味に抜けやすいので、
 Skillでチェック順を固定化した恩恵が大きかったです。
 
-<img src="/assets/img/2026-02-17/5.png" alt="Codex Skillsで既存記事をSEO改善した実行例" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-17/5.webp" alt="Codex Skillsで既存記事をSEO改善した実行例" style="height: auto; max-height: 520px" />
 
 ## 他にどんなことができそう？
 

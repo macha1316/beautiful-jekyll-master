@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 英語長文リーダー サポート
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/eigo-read.png
-share-img: /assets/img/eigo-read.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/eigo-read.webp
+share-img: /assets/img/eigo-read.webp
 tags: []
 author: taiyou
 ---

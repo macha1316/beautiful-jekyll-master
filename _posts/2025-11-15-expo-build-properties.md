@@ -3,9 +3,9 @@ layout: post
 title: "Expo＋Firebaseで出る iOS ビルドエラーをexpo-build-propertiesで解決"
 subtitle: "Swift podsの静的リンクとRNヘッダのモジュール化問題を設定で回避"
 description: "deploymentTargetやuseFrameworksなどのexpo-build-properties設定を使って、Firebase関連のiOSビルドエラー（静的ライブラリ／non-modularヘッダ）を安定的に対処する手順。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-11-15/samune.png
-share-img: /assets/img/2025-11-15/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-11-15/samune.webp
+share-img: /assets/img/2025-11-15/samune.webp
 tags: [Expo, react-native, エラー解決]
 category: errlog
 ---
@@ -13,7 +13,7 @@ category: errlog
 {% capture bubble_dev_taiyou_intro %}
 絶対にまた同じ問題に直面する気がするので備忘録です〜
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 

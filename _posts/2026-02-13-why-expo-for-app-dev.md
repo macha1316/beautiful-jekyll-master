@@ -3,7 +3,7 @@ layout: post
 title: "今からアプリ開発を始めるならExpoがおすすめな5つの理由"
 subtitle: "個人開発の実体験から、初心者がExpoで最短リリースする考え方"
 description: "これからアプリ開発を始める初心者向けに、Expoがおすすめな理由を5つに整理。セットアップ、両OS対応、公開フロー、アップデート運用まで実体験ベースで解説します。"
-cover-img: /assets/img/beginner.png
+cover-img: /assets/img/beginner.webp
 tags: [Expo, React Native, アプリ開発, 初心者]
 category: app-dev-beginner
 ---
@@ -22,7 +22,7 @@ category: app-dev-beginner
 
 この記事では、Expoをおすすめする理由を実践目線で5つに分けてまとめます。
 
-<img src="/assets/img/expo.png" alt="Expoロゴ" style="height: auto; max-height: 220px" />
+<img src="/assets/img/expo.webp" alt="Expoロゴ" style="height: auto; max-height: 220px" />
 
 ## セットアップで詰まりにくい
 

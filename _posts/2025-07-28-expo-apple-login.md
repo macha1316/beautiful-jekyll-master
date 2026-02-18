@@ -3,9 +3,9 @@ layout: post
 title: "expo + firebaseアプリにAppleサインインの実装(EXPO SDK53)"
 subtitle: "Expo SDK53でFirebase AuthenticationにAppleサインインを導入"
 description: "Expo SDK53とFirebase環境でAppleサインインを実装した手順と、つまずきやすいポイントを実体験ベースでまとめました。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/GitHub.png
-share-img: /assets/img/GitHub.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/GitHub.webp
+share-img: /assets/img/GitHub.webp
 tags: [Expo]
 category: errlog
 author: taiyou
@@ -24,7 +24,7 @@ Expo + firebase で管理しているアプリに Apple SignIn を実装して�
 ## 完成形
 
 このような形で firebase の Authentication にアカウントが追加されます。
-<img src="/assets//img//2025-07-28/1.png" alt="sdk" style="max-width: 600px;" />
+<img src="/assets/img/2025-07-28/1.webp" alt="sdk" style="max-width: 600px;" />
 <br>
 <br>
 

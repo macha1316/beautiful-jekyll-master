@@ -3,9 +3,9 @@ layout: post
 title: "3ヶ月全振りで個人アプリ開発だけして分かった、やってよかったこと／今ならやらないこと"
 subtitle: "3ヶ月で5本作って見えた「やるべきこと」と「やらないこと」"
 description: "個人開発に全振りした3ヶ月の記録。5本リリースして分かった、価値の届け方と迷走の学び。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2026-01-23/samune.png
-share-img: /assets/img/2026-01-23/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2026-01-23/samune.webp
+share-img: /assets/img/2026-01-23/samune.webp
 tags: [成長日記]
 category: perso-dev
 ---

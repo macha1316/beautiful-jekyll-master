@@ -3,9 +3,9 @@ layout: post
 title: "Google Adsenseの審査に通ったので意識したこと"
 subtitle: "雑記ブログでも通過できた準備と運用のコツ"
 description: "申請から 2 日で Adsense 審査を通過したときに意識したコンテンツ改善、画像活用、広告配置をまとめました。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-25/samune.png
-share-img: /assets/img/2025-10-25/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-10-25/samune.webp
+share-img: /assets/img/2025-10-25/samune.webp
 tags: [Google Adsense, 雑談]
 category: perso-dev
 ---
@@ -13,7 +13,7 @@ category: perso-dev
 {% capture bubble_dev_taiyou_intro %}
 広告審査通すのに意識したことを書いていきます
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 

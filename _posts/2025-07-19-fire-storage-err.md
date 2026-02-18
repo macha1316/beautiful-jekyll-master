@@ -3,9 +3,9 @@ layout: post
 title: "[FirebaseError: Firebase Storage: Object '' does not exist. (storage/object-not-found)]の時に確認すべきこと"
 subtitle: "Firebase Storageのobject-not-foundエラー原因と解決メモ"
 description: "Firebase Storageでobject-not-foundエラーが発生したときに確認したポイントと、実際に解決できた原因を共有します。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/firestorage-logo.png
-share-img: /assets/img/firestorage-logo.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/firestorage-logo.webp
+share-img: /assets/img/firestorage-logo.webp
 tags: [Firebase, Expo, エラー解決]
 category: errlog
 author: taiyou
@@ -27,7 +27,7 @@ fireStorage から画像を取得しようとしても
 firebase を無料枠で使用している場合、料金不要のロケーションを選択する必要があるようです。
 当たり前かもしれませんが、エラーメッセージ的にバケットまでは参照できてそうだから、気がつきませんでした。。。
 
-<img src="/assets//img//2025-07-19/firestorage.png" alt="scret" style="max-width: 600px;" />
+<img src="/assets/img/2025-07-19/firestorage.webp" alt="scret" style="max-width: 600px;" />
 
 これで問題なく参照できます。
 

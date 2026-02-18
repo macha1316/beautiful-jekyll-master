@@ -3,9 +3,9 @@ layout: post
 title: "Android App Bundle が誤った鍵で署名されています。のエラーに対処"
 subtitle: "Expoを使っている場合の対応策です"
 description: "Expo で誤って新しいアップロードキーを作ってしまい、Play Console で AAB を受け付けられなくなった時の復旧手順。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2026-01-20/samune.png
-share-img: /assets/img/2026-01-20/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2026-01-20/samune.webp
+share-img: /assets/img/2026-01-20/samune.webp
 tags: [Expo, react-native, エラー解決]
 category: errlog
 ---
@@ -13,7 +13,7 @@ category: errlog
 {% capture bubble_dev_taiyou_intro %}
 考え中
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 
@@ -25,7 +25,7 @@ category: errlog
 この場合は、**ローカルで新しいアップロードキーを作り直し、Expo と Play Console の両方に適用**すれば復旧できます。
 以下、実際にやった手順をまとめます。
 
-<img src="/assets/img/2026-01-20/1.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/1.webp" alt="sdk" style=" height: auto; max-height: 600px" />
 
 ## 解決策
 
@@ -110,7 +110,7 @@ eas.jsonにはbuild時のcredentialsSourceにlocalを参照するように記述
 このようなディレクトリ構造になりました。  
 囲んであるのが、今回作成か変更を加えたファイルになります。
 
-<img src="/assets/img/2026-01-20/4.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/4.webp" alt="sdk" style=" height: auto; max-height: 600px" />
 
 ### 4. EAS に新しいキーを登録する
 
@@ -128,14 +128,14 @@ Play Console の
 **「アプリの完全性 > Play アプリ署名の設定 > アップロード鍵の証明書 > アップロード鍵のリセットのリクエスト** から  
 さきほど生成した`upload_certificate.pem` を使って申請します。
 
-<img src="/assets/img/2026-01-20/2.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/2.webp" alt="sdk" style=" height: auto; max-height: 600px" />
 
 ## 待つ
 
 申請が完了したら、もう少しだけ待ってねという通知が来ると思うので、新しいキーが有効になるまで待ちます。
 有効になったら、新規AABを再提出しましょう！
 
-<img src="/assets/img/2026-01-20/3.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/3.webp" alt="sdk" style=" height: auto; max-height: 600px" />
 
 ## おわりに
 

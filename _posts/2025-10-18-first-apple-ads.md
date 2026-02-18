@@ -3,9 +3,9 @@ layout: post
 title: "初めてApple Adsに自分のアプリを出してみた"
 subtitle: "考え中"
 description: ""
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-10-18/samune.png
-share-img: /assets/img/2025-10-18/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-10-18/samune.webp
+share-img: /assets/img/2025-10-18/samune.webp
 tags: [Apple Ads]
 category: errlog
 author: たいよう
@@ -14,17 +14,17 @@ author: たいよう
 {% capture bubble_dev_taiyou_intro %}
 初めて Apple Ads に自分のアプリの広告を出してみたよ！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 {% capture bubble_dev_josyu_intro %}
 効果あるのかな 🤔
 {% endcapture %}
-{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.png" message=bubble_dev_josyu_intro %}
+{% include speech-bubble.html side="left" name="助手" avatar="/assets/img/josyu.webp" message=bubble_dev_josyu_intro %}
 
 {% capture bubble_dev_taiyou_intro %}
 実際の数値を見てみよう！
 {% endcapture %}
-{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="taiyou" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 
@@ -35,7 +35,7 @@ author: たいよう
 
 広告を出したのは「アイデアメモ -AI」（英語名: Idea Memo Spark）というアプリです。
 
-<img src="/assets/img/2025-10-18/idea-note-1.png" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/idea-note-1.webp" alt="sdk" style=" height: auto;" />
 [アイデアメモ-AI](https://apps.apple.com/jp/app/%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2%E3%83%A1%E3%83%A2-ai/id6752848069)
 
 ## どのようなキャンペーンで出したか
@@ -55,7 +55,7 @@ App Store 内で自分のアプリを宣伝する広告単位のことで、例�
 
 このようにすることで、別々の単価で広告が出せます。
 
-<img src="/assets/img/2025-10-18/1.png" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/1.webp" alt="sdk" style=" height: auto;" />
 
 ## 数値で見る
 
@@ -68,14 +68,14 @@ App Store 内で自分のアプリを宣伝する広告単位のことで、例�
 `インプレッション` ... ユーザーにアプリが表示された回数のこと。  
 今回は`新興国キャンペーン`が`93680回`と圧倒的に多い結果になりました。1DL あたりの単価が安いにもかかわらずここまで表示されました。逆に他のキャンペーンでは、もっと単価を上げないと表示すらされないということです。
 
-<img src="/assets/img/2025-10-18/2.png" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/2.webp" alt="sdk" style=" height: auto;" />
 
 ### インストール数
 
 インストール数 ... ユーザーが実際にインストールした回数。  
 新興国では`93680回`表示されたにもかかわらず、インストールは`20回`程度にとどまっています。これは検索タブ広告がアプリの周知を目的として使われるためで、インプレッションに対してインストール数が大幅に下がる傾向があります。
 
-<img src="/assets/img/2025-10-18/3.png" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/3.webp" alt="sdk" style=" height: auto;" />
 
 ### コンバージョン率
 

@@ -3,9 +3,9 @@ layout: post
 title: GitHub Pages × Jekyllでブログを作るときにつまづいたことまとめ
 subtitle: "初心者がGitHub PagesとJekyll構築で詰まったエラー対処まとめ"
 description: "GitHub Pages × Jekyllでブログを公開する際に実際につまずいたポイントと解決手順を、初心者目線でまとめました。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/GitHub.png
-share-img: /assets/img/GitHub.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/GitHub.webp
+share-img: /assets/img/GitHub.webp
 tags: [Jekyll]
 category: errlog
 author: taiyou
@@ -53,13 +53,13 @@ Error: Get Pages site failed. Please verify that the repository has Pages enable
 Error: HttpError: Resource not accessible by integration - https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site
 ```
 
-![画像読み込みエラー](/assets/img/2025-06-02/permission.png)
+![画像読み込みエラー](/assets/img/2025-06-02/permission.webp)
 
 私は最初 private でリポジトリを管理していたのですが、Github Pages を使うには public に設定しないといけないみたいです。
 これに気づかずに多くの時間を浪費しました 😭
 
 こうなってたら private になっている ↓
-![画像読み込みエラー](/assets/img/2025-06-02/change-public.png)
+![画像読み込みエラー](/assets/img/2025-06-02/change-public.webp)
 
 <br>
 

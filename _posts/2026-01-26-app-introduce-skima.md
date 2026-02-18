@@ -3,9 +3,9 @@ layout: post
 title: "focus now タスク管理 時間管理"
 subtitle: "focus nowのアプリ紹介"
 description: ""
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/focus_now.png
-share-img: /assets/img/focus_now.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/focus_now.webp
+share-img: /assets/img/focus_now.webp
 tags: [focus now]
 category: app-Intro
 ---
@@ -38,7 +38,7 @@ focus nowは、そんな状態を減らすために作られました。
 今からすぐ始められる形になります。  
 大体5秒から20秒ほどでタスクが作成されます。
 
-<img src="/assets/img/2026-01-26/1.png" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-01-26/1.webp" alt="sdk" style=" height: auto; max-height: 300px" />
 
 ### 3. 集中モード
 
@@ -46,7 +46,7 @@ focus nowは、そんな状態を減らすために作られました。
 今やっているタスクの残り時間のみが表示されます。  
 他のことに気を取られずに集中しましょう🧘
 
-<img src="/assets/img/2026-01-26/2.png" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-01-26/2.webp" alt="sdk" style=" height: auto; max-height: 300px" />
 
 ### 4. よく使うタスクは保存して呼び出し
 

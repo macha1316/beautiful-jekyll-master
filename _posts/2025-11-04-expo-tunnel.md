@@ -3,9 +3,9 @@ layout: post
 title: "同じ Wi-Fi でも Expo Go でテストできないときの対処方法"
 subtitle: "外出先 Wi-Fi でも Expo Go を繋ぐための手順"
 description: "Expo Go が外部 Wi-Fi で繋がらないときに試したトンネル経由の接続方法をまとめました。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-11-04/samune.png
-share-img: /assets/img/2025-11-04/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-11-04/samune.webp
+share-img: /assets/img/2025-11-04/samune.webp
 tags: [Expo, react-native, エラー解決]
 category: errlog
 ---
@@ -13,7 +13,7 @@ category: errlog
 {% capture bubble_dev_taiyou_intro %}
 外で Expo Go が使えなくて困っている人の役に立てば幸いです ☺️
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## はじめに
 
@@ -31,7 +31,7 @@ category: errlog
 
 初回実行時に `@expo/ngrok` のインストールを求められますが、私の環境では自動インストールが失敗しました。
 
-<img src="/assets/img/2025-11-04/3.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-11-04/3.webp" alt="sdk" style=" height: auto; max-height: 600px" />
  
 私と同じようになった場合は、次のコマンドで手動インストールしましょう。
 
@@ -42,7 +42,7 @@ sudo npm install -g @expo/ngrok@^4.1.0 --unsafe-perm
 インストール後に再度 `npx expo start --tunnel` を実行すると、`Expo Go` からアプリにアクセスできました ✨
 懸念点として、通常の Wi-Fi 接続よりも端末にダウンロードされるまでの時間が大幅に伸びます。ここは妥協ポイントとして受け入れることにしました 😭
 
-<img src="/assets/img/2025-11-04/5.png" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-11-04/5.webp" alt="sdk" style=" height: auto; max-height: 600px" />
 
 ## おわり
 

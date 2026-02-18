@@ -3,9 +3,9 @@ layout: post
 title: "jekyll で作成したサイトにサイドバー広告つけてみた"
 subtitle: "beautiful-jekyllにサイドバー広告を追加する方法"
 description: "beautiful-jekyllテンプレートで作成したサイトに、HTMLとCSSを編集してサイドバー広告を表示する手順を解説します。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/GitHub.png
-share-img: /assets/img/GitHub.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/GitHub.webp
+share-img: /assets/img/GitHub.webp
 tags: [Jekyll]
 category: errlog
 author: taiyou

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Parallaxサポートページ"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/icon.png
-share-img: /assets/img/icon.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/icon.webp
+share-img: /assets/img/icon.webp
 tags: []
 author: taiyou
 ---

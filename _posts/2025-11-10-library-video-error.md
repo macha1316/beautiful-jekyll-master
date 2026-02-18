@@ -3,9 +3,9 @@ layout: post
 title: "Error: The operation couldn’t be completed. (PHPhotosErrorDomain error 3164.) の対処"
 subtitle: "iCloud 上の動画を取るときの 3164 対策"
 description: "expo-image-pickerを使って、動画をライブラリから取得しようとした時に起きました。"
-cover-img: /assets/img/header.png
-thumbnail-img: /assets/img/2025-11-10/samune.png
-share-img: /assets/img/2025-11-10/samune.png
+cover-img: /assets/img/header.webp
+thumbnail-img: /assets/img/2025-11-10/samune.webp
+share-img: /assets/img/2025-11-10/samune.webp
 tags: [Expo, react-native, エラー解決]
 category: errlog
 ---
@@ -13,7 +13,7 @@ category: errlog
 {% capture bubble_dev_taiyou_intro %}
 日本語での対処方法があらず苦戦しました 💦
 {% endcapture %}
-{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.png" message=bubble_dev_taiyou_intro %}
+{% include speech-bubble.html side="right" name="たいよう" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
 ## 症状
 
