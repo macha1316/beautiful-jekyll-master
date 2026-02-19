@@ -1,18 +1,20 @@
 ---
 layout: post
 title: "Codex Skillsを使ってみたら衝撃だった話（会話しながら独自Skillを作る）"
-subtitle: "初見でもできた、Codexとの対話ハンズオン記録"
-description: "Codex Skillsの仕組みをざっくり説明しつつ、実際にCodexと会話しながらSEO対策Skillを作って運用した手順と結果をまとめました。"
+subtitle: "初見でもできた、作成から運用までの実践メモ"
+description: "Codex Skillsの基本と、ブログ記事のSEOチェックを自動化するSkillを会話ベースで作る手順・運用結果を具体例つきで解説します。"
 cover-img: /assets/img/codex.webp
-tags: [雑談, Codex, SEO, ブログ運営]
+tags: ["Codex Skills", Jekyll, SEO, ブログ運営]
 category: chat
 author: taiyou
 ---
 
-## はじめに
+{% capture bubble_dev_taiyou_intro %}
+なんでもっと早くSkillについて調べなかったのか後悔
+{% endcapture %}
+{% include speech-bubble.html side="left" name="taiyou" avatar="/assets/img/hiromasa.webp" message=bubble_dev_taiyou_intro %}
 
-最近、Codex-Skillsをちゃんと触ってみたんですが、
-正直、**「これ、思ってたよりずっと実用的だな…」** というのが第一印象でした。
+## はじめに
 
 この記事では、
 
@@ -20,27 +22,27 @@ author: taiyou
 - 実際にCodexと会話しながらどう作るか
 - 最終的にどんなSkillができたか
 
-を、1本でまとめます。
+を、手順ベースで書いていきます。
 
 ## そもそもCodex Skillsって何？
 
-ざっくり言うと、**Codexに特定タスクのやり方を覚えさせるためのローカル手順書**です。
+Codex Skillsは、**特定タスクの進め方をCodexに渡すためのローカル手順書**です。
 
 普通に毎回プロンプトで指示しても動いてくれますが、
-同じ作業を繰り返すなら、Skill化しておくとかなりラクになります。
+同じ作業を繰り返すなら、Skill化しておくと毎回の手間が減ります。
 
 例えばこんな用途です。
 
-- Jekyll記事のSEOチェック手順を固定化する
+- ブログ記事のSEOチェック手順を固定化する
 - エラー調査時のチェック順を固定化する
 - リリース前の確認手順をテンプレ化する
 
-つまり「よくやる作業」を再利用可能な形にするイメージです。
+要するに「よくやる作業」を再利用できる形にしておく方法です。
 
 ## 今回やったこと（ハンズオン）
 
 今回は、
-**「Jekyll記事のSEOを整えるためのSkill」** を作ってみました。
+**「ブログ記事のSEOを整えるためのSkill」** を作成しました。
 
 流れはシンプルです。
 
@@ -49,17 +51,18 @@ author: taiyou
 
 ## Codexとの実際の会話
 
-<img src="/assets/img/2026-02-17/1.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-17/1.webp" alt="CodexにSEO対策Skillの作成を依頼している会話画面" style="height: auto; max-height: 520px" />
 
 > 自分: SEO対策のskill作成お願い
 >
 > Codex: 了解。(必要なファイルを作成)
 
-あとは、skillが作成してくれた、skill名を叩くだけで、記事内容を読み取って、どこがSEO的にダメかを見て修正まで行ってくれます。なんて、便利な。。プロンプトでもできることですが、skillを使えば、1コマンドで済むという。
+作成後は、skill名を実行するだけで記事を読んで改善点を出し、修正まで進めてくれます。
+プロンプトで都度指示する方法でも可能ですが、skill化すると1コマンドで進められます。
 
-ちなみに、skillコマンドはlocalの`user/.codex`以下に作成されます。
+skillコマンドはローカルの`user/.codex`以下に作成されます。
 
-<img src="/assets/img/2026-02-17/3.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-17/3.webp" alt="ローカルの .codex 配下にSkillが作成された様子" style="height: auto; max-height: 520px" />
 
 ## 実際に作られたSkill
 
@@ -142,11 +145,11 @@ When asked to optimize a post, do all of the following:
 - 記事ごとのSEO品質がぶれにくい
 
 「最終調整は人間、土台はSkill」で分担すると、
-ちょうどいいバランスで回せる感じです。
+無理なく運用を続けられます。
 
 ## 実際に使ってみた例
 
-実際に、初期に作って放置していたこの記事に適用しました。
+実際に、初期に作って放置していた記事へ適用しました。
 
 - 対象記事: [GitHub Pages × JekyllにGoogle Analyticsを設定する手順]({% post_url 2025-06-02-jekyll-analytics %})
 
@@ -175,17 +178,19 @@ SEOはあくまで1例で、Skillsはもっと広く使えます。
 
 つまり、コード作業だけでなく、
 「考える順番」や「確認漏れを減らす型」を持たせたい場面なら
-だいたいSkills化の余地があると思っています。
+Skills化できる場面は広いです。
 
 ## まとめ
 
 Codex Skillsは、
 「便利そうだけど設定が重そう」という印象がありました。
 
-でも実際は、**会話しながら小さく作って育てる** だけで十分使えます。
+実際は、**会話しながら少しずつ作る** だけでも十分に使えます。
 
 まだ微妙だなと思う点はその都度どんどん改善して、
-自分にとって使いやすいSkillに育てていくのが一番よさそうです。
+自分の作業に合う形へ少しずつ調整していくのが現実的です。
+
+関連記事:
 
 最後まで読んでいただきありがとうございます！  
 私の記事が少しでも参考になったなら幸いです。
