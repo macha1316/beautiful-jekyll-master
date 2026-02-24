@@ -17,9 +17,11 @@ layout: base
       "紹介 / ログ:intro-log,開発:development" | split: "," %}
       {% for cat in category_order %} {% assign category_posts = posts |
       where_exp: "post", "post.categories contains cat" %} {% assign
-      category_label = cat %} {% assign category_path = cat %} {% for item in
-      category_paths %} {% assign parts = item | split: ":" %} {% if parts[0]
-      == cat %} {% assign category_path = parts[1] %} {% endif %} {% endfor %}
+      category_label = cat %} {% if cat == "紹介 / ログ" %} {% assign
+      category_label = "商品レビュー / 雑談" %} {% endif %} {% assign
+      category_path = cat %} {% for item in category_paths %} {% assign parts =
+      item | split: ":" %} {% if parts[0] == cat %} {% assign category_path =
+      parts[1] %} {% endif %} {% endfor %}
       {% assign cat_dom_id = cat | replace: " ", "-" | replace: "/", "-" %} {%
       if category_posts.size > 0 %}
       <section class="category-group">

@@ -1,6 +1,6 @@
 ---
 layout: category
-title: 紹介 / ログ
+title: 商品レビュー / 雑談
 permalink: /category/intro-log/
 pagination:
   enabled: true
