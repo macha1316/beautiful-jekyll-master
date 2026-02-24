@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.webp
 share-img: /assets/img/2025-06-17/random-word-api_bg.webp
 tags: [API]
-category: errlog
+category: 開発
 author: taiyou
 ---
 

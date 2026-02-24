@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-21_2/samune.webp
 share-img: /assets/img/2025-10-21_2/samune.webp
 tags: [Google Play Console, RevenueCat]
-category: errlog
+category: 開発
 author: たいよう
 ---
 

@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-23/samune.webp
 share-img: /assets/img/2025-10-23/samune.webp
 tags: [Mac, ユーティリティ]
-category: errlog
+category: 開発
 # author: たいよう
 ---
 

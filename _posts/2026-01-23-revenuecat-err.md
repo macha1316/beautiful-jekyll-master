@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-11-15/samune.webp
 share-img: /assets/img/2025-11-15/samune.webp
 tags: [エラー解決, RevenueCat]
-category: errlog
+category: 開発
 ---
 
 ## はじめに

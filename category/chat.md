@@ -1,8 +1,8 @@
 ---
 layout: category
-title: 雑談
-permalink: /category/chat/
+title: 紹介 / ログ
+permalink: /category/intro-log/
 pagination:
   enabled: true
-  category: chat
+  category: 紹介 / ログ
 ---

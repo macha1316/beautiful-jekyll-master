@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-18/samune.webp
 share-img: /assets/img/2025-10-18/samune.webp
 tags: [Apple Ads]
-category: errlog
+category: 開発
 author: たいよう
 ---
 

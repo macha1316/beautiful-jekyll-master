@@ -5,7 +5,7 @@ subtitle: "腰の負担軽減と環境が変わった実体験"
 description: "昇降式デスクを導入したエンジニアが、腰の負担・集中力・作業継続時間の変化を体験ベースで解説します。選び方の注意点も紹介。"
 cover-img: /assets/img/2026-02-20/syoukou-desk.webp
 tags: [昇降式デスク, デスク環境, 生産性, エンジニア]
-category: chat
+category: 紹介 / ログ
 ---
 
 ## はじめに

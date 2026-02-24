@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-18_2/samune.webp
 share-img: /assets/img/2025-10-18_2/samune.webp
 tags: [Mac, VSCode, 初心者必見]
-category: errlog
+category: 開発
 author: たいよう
 ---
 

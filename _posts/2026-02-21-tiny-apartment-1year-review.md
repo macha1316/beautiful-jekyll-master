@@ -4,8 +4,8 @@ title: "激狭アパートに約1年住んでみたリアルな感想"
 subtitle: "3.5畳＋ロフト付きで一人暮らしした記録"
 description: "3.5畳＋ロフトの激狭物件に約1年住んで感じた、良かった点としんどかった点を正直にまとめました。"
 cover-img: /assets/img/2026-02-21/gekisema.webp
-tags: [雑談, 一人暮らし, 住まい]
-category: chat
+tags: [紹介 / ログ, 一人暮らし, 住まい]
+category: 紹介 / ログ
 ---
 
 ## はじめに

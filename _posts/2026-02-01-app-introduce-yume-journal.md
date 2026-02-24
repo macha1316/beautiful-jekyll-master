@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/dream.webp
 share-img: /assets/img/dream.webp
 tags: [ゆめ日記]
-category: app-Intro
+category: 紹介 / ログ
 ---
 
 ## アプリ概要

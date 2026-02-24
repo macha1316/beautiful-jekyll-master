@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/focus_now.webp
 share-img: /assets/img/focus_now.webp
 tags: [focus now]
-category: app-Intro
+category: 紹介 / ログ
 ---
 
 ## アプリ概要

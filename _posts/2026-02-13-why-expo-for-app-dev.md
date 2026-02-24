@@ -5,7 +5,7 @@ subtitle: "個人開発の実体験から、初心者がExpoで最短リリー�
 description: "これからアプリ開発を始める初心者向けに、Expoがおすすめな理由を5つに整理。セットアップ、両OS対応、公開フロー、アップデート運用まで実体験ベースで解説します。"
 cover-img: /assets/img/beginner.webp
 tags: [Expo, React Native, アプリ開発, 初心者]
-category: app-dev-beginner
+category: 開発
 ---
 
 ## はじめに

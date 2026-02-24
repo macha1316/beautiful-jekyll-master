@@ -1,8 +1,8 @@
 ---
 layout: category
-title: トラブル・検証
-permalink: /category/errlog/
+title: 開発
+permalink: /category/development/
 pagination:
   enabled: true
-  category: errlog
+  category: 開発
 ---

@@ -4,9 +4,9 @@ title: "正欲が衝撃だったので感想 (物語のネタバレなし)"
 subtitle: "普段本を読まない自分が感じたこと"
 description: "朝井リョウさんの『正欲』を、普段本を読まない視点で読んだ感想をネタバレなしでまとめました。"
 cover-img: /assets/img/2026-02-14/seiyoku.webp
-tags: [雑談, 読書感想]
-category: chat
-categories: [chat]
+tags: [紹介 / ログ, 読書感想]
+category: 紹介 / ログ
+categories: [紹介 / ログ]
 author: taiyou
 ---
 

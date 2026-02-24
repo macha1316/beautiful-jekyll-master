@@ -4,8 +4,8 @@ title: "Jekyll sitemapでlocが相対パスになる原因と対処法"
 subtitle: "url設定で絶対URLに直す手順を検証ベースで解説"
 description: "Jekyllサイトでsitemap.xmlを設定したとき、locが相対パスで出力される問題に遭遇。原因と修正手順を体験ベースでまとめました。"
 tags: [Jekyll, sitemap, ブログ運営]
-category: errlog
-categories: [errlog]
+category: 開発
+categories: [開発]
 author: taiyou
 cover-img: /assets/img/jekyll.webp
 ---

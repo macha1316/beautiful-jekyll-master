@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/firestorage-logo.webp
 share-img: /assets/img/firestorage-logo.webp
 tags: [Firebase, Expo, エラー解決]
-category: errlog
+category: 開発
 author: taiyou
 ---
 

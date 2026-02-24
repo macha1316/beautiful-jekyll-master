@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2026-01-23/samune.webp
 share-img: /assets/img/2026-01-23/samune.webp
 tags: [成長日記]
-category: perso-dev
+category: 開発
 ---
 
 ## はじめに

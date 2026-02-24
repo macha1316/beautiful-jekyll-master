@@ -4,9 +4,9 @@ title: "朝井リョウ『何者』を読んだ感想（できる限りネタバ
 subtitle: "『正欲』の次に読んで、視点の仕掛けにやられた話"
 description: "朝井リョウさんの『何者』を読了直後のテンションで、ネタバレを避けつつ感想をまとめました。前半と後半で見え方が変わる構成の面白さを中心に書いています。"
 cover-img: /assets/img/2026-02-22/nanimono.webp
-tags: [雑談, 読書感想]
-category: chat
-categories: [chat]
+tags: [紹介 / ログ, 読書感想]
+category: 紹介 / ログ
+categories: [紹介 / ログ]
 author: taiyou
 ---
 

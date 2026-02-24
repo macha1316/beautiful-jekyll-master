@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/unity.webp
 share-img: /assets/img/unity.webp
 tags: [Google Play, Unity, エラー解決]
-category: errlog
+category: 開発
 author: taiyou
 ---
 

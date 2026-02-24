@@ -5,7 +5,7 @@ subtitle: "初見でもできた、作成から運用までの実践メモ"
 description: "Codex Skillsの基本と、ブログ記事のSEOチェックを自動化するSkillを会話ベースで作る手順・運用結果を具体例つきで解説します。"
 cover-img: /assets/img/codex.webp
 tags: ["Codex Skills", Jekyll, SEO, ブログ運営]
-category: chat
+category: 紹介 / ログ
 author: taiyou
 ---
 

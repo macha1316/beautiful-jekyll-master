@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/expo_admob.webp
 share-img: /assets/img/expo_admob.webp
 tags: [Expo, Google Admob]
-category: errlog
+category: 開発
 author: taiyou
 ---
 

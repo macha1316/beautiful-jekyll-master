@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/GitHub.webp
 share-img: /assets/img/GitHub.webp
 tags: [Expo]
-category: errlog
+category: 開発
 author: taiyou
 ---
 

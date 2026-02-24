@@ -6,8 +6,8 @@ description: "申請から 2 日で Adsense 審査を通過したときに意識
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-25/samune.webp
 share-img: /assets/img/2025-10-25/samune.webp
-tags: [Google Adsense, 雑談]
-category: perso-dev
+tags: [Google Adsense, 紹介 / ログ]
+category: 開発
 ---
 
 {% capture bubble_dev_taiyou_intro %}

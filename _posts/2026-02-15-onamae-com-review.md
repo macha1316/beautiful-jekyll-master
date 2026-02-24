@@ -4,8 +4,8 @@ title: "お名前.comはどう？個人ブログで実際に使って分かっ�
 subtitle: "独自ドメインをこれから取る人向けの体験メモ"
 description: "このサイトでも使っているお名前.comについて、選んだ理由と運用で気をつけている点を体験ベースでまとめました。"
 cover-img: /assets/img/2026-02-15/onamae.webp
-tags: [雑談, アフィリエイト, ブログ運営]
-category: chat
+tags: [紹介 / ログ, アフィリエイト, ブログ運営]
+category: 紹介 / ログ
 ---
 
 ## はじめに

@@ -7,7 +7,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2026-01-20/samune.webp
 share-img: /assets/img/2026-01-20/samune.webp
 tags: [Expo, react-native, エラー解決]
-category: errlog
+category: 開発
 ---
 
 {% capture bubble_dev_taiyou_intro %}
