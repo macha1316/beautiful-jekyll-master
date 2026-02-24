@@ -38,6 +38,7 @@ avatar: "/assets/img/hiromasa.webp"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
+show-avatar-in-navbar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
