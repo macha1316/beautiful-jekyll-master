@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "UGREEN 縦型 ノートパソコンスタンド購入レビュー"
+title: "【デスクが激変】散らかりに絶望していたエンジニアが UGREEN 縦型ノートパソコンスタンドを置いたら、作業効率まで上がった話"
 subtitle: "机周りの整理のために買ってみた"
 description: "UGREENの縦置きノートPCスタンド(UGREEN Vertical Laptop Stand)を実際に使ってみて、良かった点と気になった点を体験ベースでまとめました。"
 cover-img: /assets/img/2026-02-19/samune.webp
