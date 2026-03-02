@@ -30,7 +30,7 @@ category: 紹介 / ログ
 あと、横置きのままだと地味に場所を取るので、
 「縦置きスタンドを1回試してみるか」と思って購入しました。
 
-<img src="/assets/img/2026-02-19/1.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-19/1.webp" alt="UGREENノートPC縦置きスタンドをデスクに設置した外観" style="height: auto; max-height: 520px" />
 
 ## 使ってみた感想
 
@@ -50,20 +50,20 @@ PCを縦に置けるだけでデスクの広さがかなり変わりました。
 デスクが散らかって見えにくくなるだけで、気分がかなり違います。
 
 ビフォー
-<img src="/assets/img/2026-02-19/7.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-19/7.webp" alt="縦置きスタンド導入前のデスク（ビフォー）" style="height: auto; max-height: 520px" />
 
 アフター
-<img src="/assets/img/2026-02-19/8.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-19/8.webp" alt="縦置きスタンド導入後のデスク（アフター）" style="height: auto; max-height: 520px" />
 
 **質感がよく、デスク全体の雰囲気に合う**  
 UGREENらしくアルミの質感がしっかりしていて、価格帯を考えると満足感は高めです。
 Macの色味ともなじみやすく、デスク全体の統一感も出しやすいと感じました。
 
 まえ
-<img src="/assets/img/2026-02-19/4.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-19/4.webp" alt="UGREENスタンドの正面から見た外観" style="height: auto; max-height: 520px" />
 
 うしろ
-<img src="/assets/img/2026-02-19/5.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-19/5.webp" alt="UGREENスタンドの背面から見た外観" style="height: auto; max-height: 520px" />
 
 ### 微妙な点
 

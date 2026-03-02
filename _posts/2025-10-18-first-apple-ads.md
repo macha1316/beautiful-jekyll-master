@@ -35,7 +35,7 @@ author: たいよう
 
 広告を出したのは「アイデアメモ -AI」（英語名: Idea Memo Spark）というアプリです。
 
-<img src="/assets/img/2025-10-18/idea-note-1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/idea-note-1.webp" alt="アイデアメモ-AIアプリのApp Storeページ" style=" height: auto;" />
 [アイデアメモ-AI](https://apps.apple.com/jp/app/%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2%E3%83%A1%E3%83%A2-ai/id6752848069)
 
 ## どのようなキャンペーンで出したか
@@ -55,7 +55,7 @@ App Store 内で自分のアプリを宣伝する広告単位のことで、例�
 
 このようにすることで、別々の単価で広告が出せます。
 
-<img src="/assets/img/2025-10-18/1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/1.webp" alt="Apple Adsのキャンペーン一覧画面（新興国・中堅・海外の3グループ）" style=" height: auto;" />
 
 ## 数値で見る
 
@@ -68,14 +68,14 @@ App Store 内で自分のアプリを宣伝する広告単位のことで、例�
 `インプレッション` ... ユーザーにアプリが表示された回数のこと。  
 今回は`新興国キャンペーン`が`93680回`と圧倒的に多い結果になりました。1DL あたりの単価が安いにもかかわらずここまで表示されました。逆に他のキャンペーンでは、もっと単価を上げないと表示すらされないということです。
 
-<img src="/assets/img/2025-10-18/2.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/2.webp" alt="Apple Adsのインプレッション数グラフ（新興国93,680回）" style=" height: auto;" />
 
 ### インストール数
 
 インストール数 ... ユーザーが実際にインストールした回数。  
 新興国では`93680回`表示されたにもかかわらず、インストールは`20回`程度にとどまっています。これは検索タブ広告がアプリの周知を目的として使われるためで、インプレッションに対してインストール数が大幅に下がる傾向があります。
 
-<img src="/assets/img/2025-10-18/3.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-18/3.webp" alt="Apple Adsのインストール数グラフ" style=" height: auto;" />
 
 ### コンバージョン率
 

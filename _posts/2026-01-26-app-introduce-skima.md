@@ -38,7 +38,7 @@ focus nowは、そんな状態を減らすために作られました。
 今からすぐ始められる形になります。  
 大体5秒から20秒ほどでタスクが作成されます。
 
-<img src="/assets/img/2026-01-26/1.webp" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-01-26/1.webp" alt="focus nowアプリのタスクリスト画面" style=" height: auto; max-height: 300px" />
 
 ### 3. 集中モード
 
@@ -46,7 +46,7 @@ focus nowは、そんな状態を減らすために作られました。
 今やっているタスクの残り時間のみが表示されます。  
 他のことに気を取られずに集中しましょう🧘
 
-<img src="/assets/img/2026-01-26/2.webp" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-01-26/2.webp" alt="focus nowアプリの集中モード画面（現在タスクの残り時間のみ表示）" style=" height: auto; max-height: 300px" />
 
 ### 4. よく使うタスクは保存して呼び出し
 

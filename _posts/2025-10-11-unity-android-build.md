@@ -21,21 +21,21 @@ Android 向けリリースはやることが多い。。。
 Unity でビルドした `aab ファイル`を Google Play Console で提出しようとした時に
 次のような警告がでてきました。
 
-<img src="/assets/img/2025-10-11/1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-11/1.webp" alt="Google Play ConsoleのAABデバッグ署名警告画面" style=" height: auto;" />
 
 この警告を解消する方法を丁寧に解説していきます!
 
 ## KeyStore からリリース用署名キーを作成する
 
-<img src="/assets/img/2025-10-11/2.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-11/2.webp" alt="UnityのProject Settings → Player → Android設定画面" style=" height: auto;" />
 
 Unity で `Project Settings` -> `Player` -> `android` -> `Publishing Settings` へ移動
 
-<img src="/assets/img/2025-10-11/4.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-11/4.webp" alt="UnityのKey Store Manager画面" style=" height: auto;" />
 
 `Key Store Manager` を開いて、`Create New` > `AnyWhere` でキーを保存場所を決めましょう(ローカルのどこでも構いませんが、忘れない場所に保存しておきましょう)
 
-<img src="/assets/img/2025-10-11/3.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-11/3.webp" alt="KeyStoreのパスワード・Alias設定フォーム画面" style=" height: auto;" />
 
 ```
 keyStore のパスワード
@@ -45,7 +45,7 @@ key のパスワード
 
 それぞれ設定して`Add Key`します。(どんな値でも構いませんが忘れない値にしましょう)
 
-<img src="/assets/img/2025-10-11/5.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-11/5.webp" alt="リリース用署名キー設定完了後のUnityビルド設定画面" style=" height: auto;" />
 
 そうしたら再度ビルドして google play console にアップロードしましょう！  
 問題なくアップされたら成功です ✨

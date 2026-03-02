@@ -25,7 +25,7 @@ Emulator っていうのを先に立ち上げるんだよね!
 
 Expo なら Mac で簡単に android 向けのテストが可能です。しかし、少しだけ環境を整えるのに苦労したので備忘録も込めて記事にしました。
 
-<img src="/assets/img/2025-10-17/1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-17/1.webp" alt="No Android connected device foundのエラーメッセージ" style=" height: auto;" />
 
 ## Emulator を立ち上げる
 
@@ -38,15 +38,15 @@ Expo なら Mac で簡単に android 向けのテストが可能です。しか�
 
 こちらの`More Actions`から`Virtual Device Manager`を選択
 
-<img src="/assets/img/2025-10-17/2.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-17/2.webp" alt="Android StudioのMore Actions → Virtual Device Manager選択画面" style=" height: auto;" />
 
 Device を選択して`Play▶️`を押します。
 
-<img src="/assets/img/2025-10-17/3.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-17/3.webp" alt="Virtual Device ManagerでデバイスのPlay▶ボタンを押す画面" style=" height: auto;" />
 
 再度プロジェクトに戻り`npm run android`すると、先ほど立ち上げた Emulator で立ち上がります。
 
-<img src="/assets/img/2025-10-17/5.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-17/5.webp" alt="Expo GoがAndroidエミュレータで正常に起動した画面" style=" height: auto;" />
 
 ## おわり
 

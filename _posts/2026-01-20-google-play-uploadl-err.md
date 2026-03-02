@@ -25,7 +25,7 @@ category: 開発
 この場合は、**ローカルで新しいアップロードキーを作り直し、Expo と Play Console の両方に適用**すれば復旧できます。
 以下、実際にやった手順をまとめます。
 
-<img src="/assets/img/2026-01-20/1.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/1.webp" alt="Google Play ConsoleのAAB「誤った鍵で署名されています」エラー画面" style=" height: auto; max-height: 600px" />
 
 ## 解決策
 
@@ -110,7 +110,7 @@ eas.jsonにはbuild時のcredentialsSourceにlocalを参照するように記述
 このようなディレクトリ構造になりました。  
 囲んであるのが、今回作成か変更を加えたファイルになります。
 
-<img src="/assets/img/2026-01-20/4.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/4.webp" alt="Expoプロジェクトのディレクトリ構造（新規作成ファイル含む）" style=" height: auto; max-height: 600px" />
 
 ### 4. EAS に新しいキーを登録する
 
@@ -128,14 +128,14 @@ Play Console の
 **「アプリの完全性 > Play アプリ署名の設定 > アップロード鍵の証明書 > アップロード鍵のリセットのリクエスト** から  
 さきほど生成した`upload_certificate.pem` を使って申請します。
 
-<img src="/assets/img/2026-01-20/2.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/2.webp" alt="Play ConsoleのアップロードキーリセットリクエストページのPEM提出画面" style=" height: auto; max-height: 600px" />
 
 ## 待つ
 
 申請が完了したら、もう少しだけ待ってねという通知が来ると思うので、新しいキーが有効になるまで待ちます。
 有効になったら、新規AABを再提出しましょう！
 
-<img src="/assets/img/2026-01-20/3.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-20/3.webp" alt="Play Consoleのアップロードキー申請完了通知画面" style=" height: auto; max-height: 600px" />
 
 ## おわりに
 

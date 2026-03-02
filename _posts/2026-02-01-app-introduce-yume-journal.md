@@ -32,14 +32,14 @@ category: 紹介 / ログ
 起きた直後でも迷わず入力できる、日記のようなシンプルなUI。
 思い出せる範囲で書くだけで、夢をしっかり残せます。
 
-<img src="/assets/img/2026-02-01/1.webp" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-02-01/1.webp" alt="ゆめ日記アプリの夢の記録入力画面" style=" height: auto; max-height: 300px" />
 
 ### 2. AIがカテゴリで整理
 
 書いた夢をAIが大まかなカテゴリに分類してくれるので、
 自分では気づかなかったテーマや傾向が見えてきます。
 
-<img src="/assets/img/2026-02-01/2.webp" alt="sdk" style=" height: auto; max-height: 300px" />
+<img src="/assets/img/2026-02-01/2.webp" alt="ゆめ日記アプリのAIカテゴリ分類画面" style=" height: auto; max-height: 300px" />
 
 ### 3. 記録を促す通知
 

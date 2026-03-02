@@ -20,7 +20,7 @@ Android Emulator が突然ネットに繋がらなくなり、開発が止まっ
 
 Android Emulator でブラウザも API 通信も通らなくなり、アプリの動作確認ができなくなるトラブルに遭遇しました。再インストールなど大掛かりな対応をする前に、DNS を指定して立ち上げ直すだけで解決できたので、忘備録として残しておきます。
 
-<img src="/assets/img/2025-10-20/1.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-10-20/1.webp" alt="EmulatorのDNSエラーでインターネット接続できない画面" style=" height: auto; max-height: 600px" />
 
 ## 解決方法
 
@@ -29,7 +29,7 @@ Android Emulator でブラウザも API 通信も通らなくなり、アプリ�
 `Android Studio`で使用する端末名を調べます。
 私は`Medium_Phone_API_36.0`です。
 
-<img src="/assets/img/2025-10-20/5.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-10-20/5.webp" alt="Android StudioのVirtual Device Manager端末名確認画面" style=" height: auto; max-height: 600px" />
 
 ### Terminal から Emulator を立ち上げる
 
@@ -44,11 +44,11 @@ cd Library/Android/sdk/emulator
 1 行目 emulator ディレクトリへ移動  
 2 行目 DNS サーバーを 8.8.8.8 に指定して対象の 端末 を起動
 
-<img src="/assets/img/2025-10-20/6.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-10-20/6.webp" alt="ターミナルでDNSサーバー指定のエミュレータ起動コマンドを実行した画面" style=" height: auto; max-height: 600px" />
 
 すると、`Emulator`でインターネット接続されていることが確認できます ✨
 
-<img src="/assets/img/2025-10-20/2.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-10-20/2.webp" alt="EmulatorでGoogleへのインターネット接続が確認できた画面" style=" height: auto; max-height: 600px" />
 
 ## おわり
 

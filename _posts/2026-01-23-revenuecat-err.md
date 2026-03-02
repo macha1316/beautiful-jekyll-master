@@ -16,14 +16,14 @@ category: 開発
 今回はRecenueCatを使ってAndroidの課金システムを実装していた時に起きた`Could not validate subscriptions API permissions`という問題に対する対処方法について書いていきます。  
 非常にシンプルな原因だったのですが、他にも同様のエラーで悩んでいる人のために残しておこうと思います。
 
-<img src="/assets/img/2026-01-23/1.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-23/1.webp" alt="RevenueCatの「Could not validate subscriptions API permissions」エラー画面" style=" height: auto; max-height: 600px" />
 
 ## 結論
 
 Google Play Consoleでアプリのリリースをすればエラーは解消されます。  
 というのも、RevenueCat はアプリを一度も Play ストアに公開していない状態だと、サブスク情報を取得できません。なので、クローズドトラックでいいので公開しましょう。
 
-<img src="/assets/img/2026-01-23/2.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2026-01-23/2.webp" alt="Google Play Consoleでクローズドトラックのアプリリリースをしている画面" style=" height: auto; max-height: 600px" />
 
 ## おわりに
 

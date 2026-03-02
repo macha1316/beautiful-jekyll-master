@@ -19,7 +19,7 @@ Expo SDK を 52 から 53 にアップデートしたらライブラリの互換
 
 ## エラー内容
 
-<img src="/assets/img/2025-06-03/expo_sdk_err.webp" alt="sdk" style="max-width: 300px;" />
+<img src="/assets/img/2025-06-03/expo_sdk_err.webp" alt="Expo SDKのバージョン互換性エラーメッセージ" style="max-width: 300px;" />
 
 ## 解決策
 

@@ -20,7 +20,7 @@ author: たいよう
 
 以下のように`ユーザーを増やす`のタブ -> `ストアの掲載情報`から修正できます。
 
-<img src="/assets/img/2025-10-21/1.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-10-21/1.webp" alt="Google Play Consoleの「ユーザーを増やす」→「ストアの掲載情報」メニュー画面" style=" height: auto; max-height: 600px" />
 
 ## おわり
 

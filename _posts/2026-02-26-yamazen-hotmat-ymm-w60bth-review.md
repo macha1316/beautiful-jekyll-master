@@ -50,7 +50,7 @@ category: 紹介 / ログ
 自分はこんな感じで、昇降式デスクにすっぽりとハマる形で使っています。
 冷凍庫が左側にありますけど、それでもグニャッとして入るくらいにはコンパクトです。
 
-<img src="/assets/img/2026-02-26/1.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-26/1.webp" alt="昇降式デスク下にヤマゼンのホットマットYMM-W60BTHを設置した写真" style="height: auto; max-height: 520px" />
 
 **強弱の切替ができる**
 気温や体感に合わせて調整できるのが地味に便利です。

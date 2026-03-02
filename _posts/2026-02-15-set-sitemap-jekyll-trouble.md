@@ -30,7 +30,7 @@ Search Consoleを見直していて、
 これ、URLが全部相対パスです。  
 「あれ、これで正しいのか？」となって確認を始めました。
 
-<img src="/assets/img/2026-02-16/5.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/5.webp" alt="sitemap.xmlのlocが相対パスで出力されている画面" style="height: auto; max-height: 520px" />
 
 ## 詰まったポイント
 
@@ -44,11 +44,11 @@ url: "https://taiyou-tech-blog.com"
 baseurl: ""
 ```
 
-<img src="/assets/img/2026-02-16/2.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/2.webp" alt="_config.ymlにurl設定を追加した画面" style="height: auto; max-height: 520px" />
 
 修正後は `loc` が `https://taiyou-tech-blog.com/...` 形式になって、想定どおりに出力されました。
 
-<img src="/assets/img/2026-02-16/6.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-16/6.webp" alt="locが絶対URLで正しく出力されたsitemap.xmlの画面" style="height: auto; max-height: 520px" />
 
 ## ローカル確認で404になった件
 

@@ -36,7 +36,7 @@ author: たいよう
 Expo で android 向けにアップロードし終えひと段落かと思いきや、このような警告が出てきたことはないでしょうか。
 `アプリは16KBメモリのページサイズをサポートしている必要があります`
 
-<img src="/assets/img/2025-10-15/1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/1.webp" alt="Google Play Consoleの16KBメモリページサイズ対応警告画面" style=" height: auto;" />
 
 よくわからず放置していたのですが、いつかは解消しないといけないことなので重い腰を上げて問題解決してみました。
 
@@ -47,13 +47,13 @@ Expo で android 向けにアップロードし終えひと段落かと思いき
 最初に何の`.so`かを突き止めます。
 Google Play Console で問題が起きているプロジェクトに入り、以下の画像の`最新のリリースとApp Bundle`へ進みます。
 
-<img src="/assets/img/2025-10-15/1.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/1.webp" alt="Google Play ConsoleのApp Bundle詳細ページへの導線" style=" height: auto;" />
 
 その App Bundle のページを下の方にスクロールすると、`16KB非対応`の項目が出てくると思います。
 その項目をどこかにメモしておきましょう。  
 今回の場合は`base/lib/arm64-v8a/librenderscript-toolkit.so`と`base/lib/x86_64/librenderscript-toolkit.so`です。
 
-<img src="/assets/img/2025-10-15/5.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/5.webp" alt="App Bundleの16KB非対応ライブラリ一覧" style=" height: auto;" />
 
 ### Expo プロジェクト内での作業
 
@@ -72,7 +72,7 @@ cd android
 ./gradlew app:dependencies > deps.txt
 ```
 
-<img src="/assets/img/2025-10-15/6.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/6.webp" alt="gradlew app:dependencies実行中の画面" style=" height: auto;" />
 
 おそらく少し時間がかかると思いますが、android アップで使われている依存関係の一覧を `deps.txt` に列挙してくれています。
 
@@ -83,17 +83,17 @@ cd android
 grep -i renderscript deps.txt
 ```
 
-<img src="/assets/img/2025-10-15/2.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/2.webp" alt="grep -i renderscriptの検索結果（vexoライブラリが検出された画面）" style=" height: auto;" />
 
 すると、今回は`vexo`というライブラリが問題の根源であるということがわかりました。
 `package.json`を見てみると確かにありますね。
 
-<img src="/assets/img/2025-10-15/3.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/3.webp" alt="package.jsonでvexoライブラリが含まれていることを確認した画面" style=" height: auto;" />
 
 一応公式ドキュメントを確認してみると、まさかのマイナーアップデート 1 つずれ 😱  
 `expo-image`とかが原因だと思っていたので、1 から探していたら非常に時間がかかっちゃっていたと思います。。。
 
-<img src="/assets/img/2025-10-15/4.webp" alt="sdk" style=" height: auto;" />
+<img src="/assets/img/2025-10-15/4.webp" alt="vexoライブラリの公式ドキュメントでバージョンを確認した画面" style=" height: auto;" />
 
 ## おわり
 

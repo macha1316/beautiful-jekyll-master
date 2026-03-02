@@ -31,7 +31,7 @@ category: 開発
 
 初回実行時に `@expo/ngrok` のインストールを求められますが、私の環境では自動インストールが失敗しました。
 
-<img src="/assets/img/2025-11-04/3.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-11-04/3.webp" alt="@expo/ngrokの自動インストールが失敗したエラー画面" style=" height: auto; max-height: 600px" />
  
 私と同じようになった場合は、次のコマンドで手動インストールしましょう。
 
@@ -42,7 +42,7 @@ sudo npm install -g @expo/ngrok@^4.1.0 --unsafe-perm
 インストール後に再度 `npx expo start --tunnel` を実行すると、`Expo Go` からアプリにアクセスできました ✨
 懸念点として、通常の Wi-Fi 接続よりも端末にダウンロードされるまでの時間が大幅に伸びます。ここは妥協ポイントとして受け入れることにしました 😭
 
-<img src="/assets/img/2025-11-04/5.webp" alt="sdk" style=" height: auto; max-height: 600px" />
+<img src="/assets/img/2025-11-04/5.webp" alt="Expo Goがトンネル経由でアプリ接続に成功した画面" style=" height: auto; max-height: 600px" />
 
 ## おわり
 

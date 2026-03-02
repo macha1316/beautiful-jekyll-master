@@ -51,7 +51,7 @@ category: 紹介 / ログ
 
 昇降式デスクはデスクが広く使えるものが多いです。自分のデスクもとても広く、モニターとMacと本棚と植物と〜と好きなものを色々置けます。自分の気持ちのいいデスク空間を作るという観点からも買って良かったです。
 
-<img src="/assets/img/2026-02-20/8.webp" alt="" style="height: auto; max-height: 520px" />
+<img src="/assets/img/2026-02-20/8.webp" alt="モニターやMac・植物を置いた昇降式デスク全体の様子" style="height: auto; max-height: 520px" />
 
 ### 3. 気分転換に立ち仕事ができる
 
