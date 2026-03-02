@@ -2,7 +2,7 @@
 layout: post
 title: "[初心者必見] MacとVSCodeで必須のショートカットキー一覧"
 subtitle: ""
-description: ""
+description: "MacとVSCodeで必須のショートカットキーを厳選してまとめました。WindowsからMacに移行した方でも迷わず使える、コピー・移動・検索・行選択などの基本操作を一覧で紹介します。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-18_2/samune.webp
 share-img: /assets/img/2025-10-18_2/samune.webp

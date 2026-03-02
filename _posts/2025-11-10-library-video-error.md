@@ -2,7 +2,7 @@
 layout: post
 title: "Error: The operation couldn’t be completed. (PHPhotosErrorDomain error 3164.) の対処"
 subtitle: "iCloud 上の動画を取るときの 3164 対策"
-description: "expo-image-pickerを使って、動画をライブラリから取得しようとした時に起きました。"
+description: "expo-image-pickerでiCloud上の動画を取得した際に発生するPHPhotosErrorDomain error 3164の原因と、allowsEditing: trueで解消できた対処方法を紹介します。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-11-10/samune.webp
 share-img: /assets/img/2025-11-10/samune.webp

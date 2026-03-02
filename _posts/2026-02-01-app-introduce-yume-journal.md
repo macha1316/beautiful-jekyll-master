@@ -2,7 +2,7 @@
 layout: post
 title: "ゆめ日記"
 subtitle: "ゆめ日記のアプリ紹介"
-description: ""
+description: "見た夢をすぐ記録できるアプリ「ゆめ日記」の紹介。AIがカテゴリ分類してくれるので夢のパターンや傾向が見えてきます。習慣化しやすい通知機能付きでiOS・Android対応。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/dream.webp
 share-img: /assets/img/dream.webp

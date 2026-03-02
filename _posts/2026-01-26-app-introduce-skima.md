@@ -2,7 +2,7 @@
 layout: post
 title: "focus now タスク管理 時間管理"
 subtitle: "focus nowのアプリ紹介"
-description: ""
+description: "「今やること」を音声でつぶやくだけでタスク化できるアプリ「focus now」を紹介。集中モードや実績記録機能で、ダラダラを減らして行動につなげる仕組みをまとめました。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/focus_now.webp
 share-img: /assets/img/focus_now.webp

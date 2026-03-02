@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Macでスクリーンショットの保存場所をコマンド一つで自由に変える"
-subtitle: "考え中"
-description: "考え中"
+subtitle: "シェルスクリプトで保存先をワンコマンド切り替え"
+description: "Macのスクリーンショット保存先をコマンド一つで変更する方法を解説。シェルスクリプトを使えば頻繁に保存先を切り替えることも可能です。プログラミング未経験でも試せます。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-23/samune.webp
 share-img: /assets/img/2025-10-23/samune.webp

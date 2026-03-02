@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "初めてApple Adsに自分のアプリを出してみた"
-subtitle: "考え中"
-description: ""
+subtitle: "新興国・日本・海外3キャンペーンの実数値を公開"
+description: "個人開発アプリを初めてApple Adsに出稿した結果を公開。インプレッション・インストール数・コンバージョン率の実数値と、キャンペーン設計の気づきをまとめました。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-18/samune.webp
 share-img: /assets/img/2025-10-18/samune.webp

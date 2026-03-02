@@ -2,7 +2,7 @@
 layout: post
 title: "No Android connected device found, and no emulators could be started automatically.のエラー対処方法"
 subtitle: "Expoでandroid端末向けにテストしたい時"
-description: ""
+description: "ExpoでAndroid向けテスト時に発生する「No Android connected device found」エラーの原因と、Android StudioのEmulatorを起動して解決する手順をまとめました。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-17/no_device2.webp
 share-img: /assets/img/2025-10-17/no_device2.webp

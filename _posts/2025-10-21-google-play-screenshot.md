@@ -2,7 +2,7 @@
 layout: post
 title: "Google Play Consoleで新しいバージョンでスクリーンショットを変える方法"
 subtitle: "どこでスクショを変えられるか一見わかりづらいため記事にしてみました"
-description: "Android Emulatorの通信ができないときにDNSを指定して復旧する方法を紹介します"
+description: "Google Play ConsoleでAndroidアプリのストアスクリーンショットを変更する方法を解説。「ユーザーを増やす」→「ストアの掲載情報」から変更できる手順をまとめました。"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/2025-10-21/samune.webp
 share-img: /assets/img/2025-10-21/samune.webp
