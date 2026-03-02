@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/GitHub.webp
 share-img: /assets/img/GitHub.webp
 tags: [Jekyll]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

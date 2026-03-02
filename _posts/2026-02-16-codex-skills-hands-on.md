@@ -6,7 +6,7 @@ description: "Codex Skillsの基本と、ブログ記事のSEOチェックを自
 cover-img: /assets/img/codex.webp
 tags: ["Codex Skills", Jekyll, SEO, ブログ運営]
 category: 紹介 / ログ
-author: taiyou
+author: たいよう
 ---
 
 {% capture bubble_dev_taiyou_intro %}

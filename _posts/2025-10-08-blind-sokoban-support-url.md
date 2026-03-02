@@ -6,7 +6,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/blind_sokoban.webp
 share-img: /assets/img/blind_sokoban.webp
 tags: []
-author: taiyou
+author: たいよう
 ---
 
 消える倉庫番 サポートページ

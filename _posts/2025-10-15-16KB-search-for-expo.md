@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/2025-10-15/samune.webp
 share-img: /assets/img/2025-10-15/samune.webp
 tags: [Expo, エラー解決]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 {% capture bubble_dev %}

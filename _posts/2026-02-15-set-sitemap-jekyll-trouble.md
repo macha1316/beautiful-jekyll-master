@@ -6,7 +6,7 @@ description: "Jekyllサイトでsitemap.xmlを設定したとき、locが相対�
 tags: [Jekyll, sitemap, ブログ運営]
 category: 開発
 categories: [開発]
-author: taiyou
+author: たいよう
 cover-img: /assets/img/jekyll.webp
 ---
 

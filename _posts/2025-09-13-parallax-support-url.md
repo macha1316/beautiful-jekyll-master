@@ -6,7 +6,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/icon.webp
 share-img: /assets/img/icon.webp
 tags: []
-author: taiyou
+author: たいよう
 ---
 
 Parallax サポートページ

@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/2025-06-17/random-word-api_bg.webp
 share-img: /assets/img/2025-06-17/random-word-api_bg.webp
 tags: [API]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

@@ -6,7 +6,7 @@ description: "ChatGPTをメインで使っていた筆者が、Claudeを1週間�
 cover-img: /assets/img/2026-03-01/5.webp
 tags: ["Claude", "ChatGPT", "AI", "ツール紹介"]
 category: 紹介 / ログ
-author: taiyou
+author: たいよう
 ---
 
 {% capture bubble_dev_taiyou_intro %}

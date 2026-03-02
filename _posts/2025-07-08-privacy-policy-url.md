@@ -6,7 +6,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/eigo-read.webp
 share-img: /assets/img/eigo-read.webp
 tags: []
-author: taiyou
+author: たいよう
 ---
 
 プライバシーポリシー

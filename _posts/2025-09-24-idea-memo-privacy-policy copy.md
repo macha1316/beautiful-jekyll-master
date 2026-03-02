@@ -6,7 +6,7 @@ cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/app_icon.webp
 share-img: /assets/img/app_icon.webp
 tags: []
-author: taiyou
+author: たいよう
 ---
 
 Privacy Policy

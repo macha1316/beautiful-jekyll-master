@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/expo_admob.webp
 share-img: /assets/img/expo_admob.webp
 tags: [Expo, Google Admob]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

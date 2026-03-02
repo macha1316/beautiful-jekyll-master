@@ -7,7 +7,7 @@ cover-img: /assets/img/2026-02-22/nanimono.webp
 tags: [紹介 / ログ, 読書感想]
 category: 紹介 / ログ
 categories: [紹介 / ログ]
-author: taiyou
+author: たいよう
 ---
 
 ※この記事にはアフィリエイトリンクを含みます。

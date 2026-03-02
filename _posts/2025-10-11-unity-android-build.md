@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/unity.webp
 share-img: /assets/img/unity.webp
 tags: [Google Play, Unity, エラー解決]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 {% capture bubble_dev %}

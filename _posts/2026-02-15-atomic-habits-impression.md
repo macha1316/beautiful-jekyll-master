@@ -7,7 +7,7 @@ cover-img: /assets/img/2026-02-15/atomic_habits.webp
 tags: [紹介 / ログ, 読書感想]
 category: 紹介 / ログ
 categories: [紹介 / ログ]
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

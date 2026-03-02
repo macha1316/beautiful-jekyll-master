@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/firestorage-logo.webp
 share-img: /assets/img/firestorage-logo.webp
 tags: [Firebase, Expo, エラー解決]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

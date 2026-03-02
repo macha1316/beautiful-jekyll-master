@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/2025-06-03/expo_logo.webp
 share-img: /assets/img/2025-06-03/expo_logo.webp
 tags: [Expo]
 category: 開発
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに

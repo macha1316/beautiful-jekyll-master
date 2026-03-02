@@ -7,7 +7,7 @@ cover-img: /assets/img/2026-02-28/1.webp
 tags: [紹介 / ログ, ガジェット, 一人暮らし]
 category: 紹介 / ログ
 categories: [紹介 / ログ]
-author: taiyou
+author: たいよう
 ---
 
 ## はじめに
