@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 title: "Parallaxサポートページ"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/icon.webp

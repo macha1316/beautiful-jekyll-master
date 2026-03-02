@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 title: "Parallaxプライバシーポリシー"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/icon.webp

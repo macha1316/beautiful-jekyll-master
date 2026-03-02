@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 title: 英語長文リーダー 利用規約
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/eigo-read.webp

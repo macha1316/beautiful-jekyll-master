@@ -58,7 +58,9 @@
 
   <meta name="description" content="{{ description }}" />
 
-  {% if site.mobile-theme-col %}
+  {% if page.noindex %}
+  <meta name="robots" content="noindex,nofollow" />
+  {% endif %} {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}" />
   {% endif %} {% if site.keywords %}
   <meta name="keywords" content="{{ site.keywords }}" />
@@ -141,5 +143,6 @@
   {% if favicon_exists == 1 %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
   {% endif %} {% if page.head-extra %} {% for file in page.head-extra %} {%
-  include {{ file }} %} {% endfor %} {% endif %}
+  include {{ file }} %} {% endfor %} {% endif %} {% unless page.noindex %}
+  {% include json-ld.html %} {% endunless %}
 </head>

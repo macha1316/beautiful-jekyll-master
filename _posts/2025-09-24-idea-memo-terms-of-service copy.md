@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 title: "Idea Memo Spark Terms of Service"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/app_icon.webp

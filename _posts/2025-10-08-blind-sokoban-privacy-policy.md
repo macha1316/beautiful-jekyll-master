@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 title: "消える倉庫番プライバシーポリシー"
 cover-img: /assets/img/header.webp
 thumbnail-img: /assets/img/blind_sokoban.webp
