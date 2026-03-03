@@ -2,7 +2,7 @@
 name: new-post
 description: 新しいブログ記事を書くときに使う。トピックやタイトル案を渡すとドラフトを_posts/に作成する。
 disable-model-invocation: true
-argument-hint: [記事のトピックや書きたいこと]
+argument-hint: "[記事のトピックや書きたいこと]"
 ---
 
 今日の日付: !`date +%Y-%m-%d`
@@ -18,6 +18,7 @@ argument-hint: [記事のトピックや書きたいこと]
 ## Step 2: 記事タイプの判断
 
 トピックから記事タイプを判断する:
+
 - **レビュー系**（商品・サービス）: category: 紹介 / ログ, tags: [紹介 / ログ, ガジェット] など
 - **技術系**（開発・プログラミング）: category: 開発, tags: [Expo, React Native, アプリ開発] など
 - **読書感想**: category: 紹介 / ログ, tags: [紹介 / ログ, 読書感想]
@@ -33,12 +34,18 @@ argument-hint: [記事のトピックや書きたいこと]
 `assets/img/YYYY-MM-DD/` ディレクトリが存在するか確認し、`.webp` ファイルの一覧を取得する。
 
 ファイルが存在する場合:
+
 - 各画像ファイルをRead toolで読み込み、**何が写っているか**を把握する
 - 記事の内容と照らし合わせて、どの見出しの近くに挿入するのが自然かを判断しておく
 
 画像の挿入形式:
+
 ```html
-<img src="/assets/img/YYYY-MM-DD/1.webp" alt="説明" style="height: auto; max-height: 520px" />
+<img
+  src="/assets/img/YYYY-MM-DD/1.webp"
+  alt="説明"
+  style="height: auto; max-height: 520px"
+/>
 ```
 
 `cover-img` には最も記事を代表する画像（外観・全体感が分かるもの）を使う。
@@ -47,6 +54,7 @@ argument-hint: [記事のトピックや書きたいこと]
 ## Step 5: ドラフト作成
 
 frontmatterを以下の形式で書く:
+
 ```
 ---
 layout: post
@@ -62,6 +70,7 @@ author: taiyou
 ```
 
 本文の構成ルール（過去記事のトーンを参考に）:
+
 - **結論から先に書く**（「結論から言うと〜」という書き出しが多い）
 - 一人暮らし・個人開発者目線の等身大な体験談ベース
 - 「よかった点」「微妙な点」を正直に書く
