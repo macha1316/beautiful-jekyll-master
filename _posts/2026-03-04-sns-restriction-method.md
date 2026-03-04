@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "【SNS制限】ブラウザ拡張でSNSを制限する！"
+title: "【SNS制限】StayFocusdのブラウザ拡張でSNSを制限する！"
 subtitle: "StayFocusdを使えば、意志の力に頼らずSNSを断てる"
 description: "SNSの見すぎを防ぐために私が実践している方法を紹介します。スマホではなくPC作業中のブラウザ拡張「StayFocusd」でYouTubeなどをブロックする仕組みと設定方法をまとめました。"
 cover-img: /assets/img/2026-03-04/4.webp
