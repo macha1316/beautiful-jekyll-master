@@ -26,14 +26,21 @@ cwebp -q 85 "入力ファイル" -o "ディレクトリ/N.webp"
 
 **HEICなどcwebpが非対応の形式の場合:**
 ```
-sips -s format png "入力ファイル" --out "中間.png"
+magick "入力ファイル" -auto-orient "中間.png"
 # PNGが生成できた場合のみ続行
 cwebp -q 85 -quiet "中間.png" -o "ディレクトリ/N.webp"
 rm "中間.png"
 ```
 
+**通常形式でもEXIF回転が含まれる可能性がある場合（jpg, jpeg）:**
+```
+magick "入力ファイル" -auto-orient "中間.png"
+cwebp -q 85 -quiet "中間.png" -o "ディレクトリ/N.webp"
+rm "中間.png"
+```
+
 注意:
-- `sips` に `--quiet` オプションは存在しないので使わないこと
+- `-auto-orient` でEXIFの向き情報を画素に反映してから変換することで、横向きになるのを防ぐ
 - 変換が成功した（webpファイルが生成された）場合のみ元ファイルを削除する
 - 失敗した場合は元ファイルを保持してエラーを報告する
 
